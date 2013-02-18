@@ -17,7 +17,11 @@
 //= require ember
 //= require ember-data
 //= require_self
-//= require opencv
-Opencv = Ember.Application.create();
 //= require_tree .
 //= require ember
+//= require_tree ./vendor
+//
+//
+//= require md5
+//= require jquery_ujs
+//= require app

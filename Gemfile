@@ -6,6 +6,7 @@ gem 'rails', '3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
 
 # Gems used only for assets and not required
@@ -21,11 +22,14 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'pry'
+gem 'pry-rails'
+gem 'strong_parameters'
 
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
-gem "ember-rails"
+gem "ember-rails", :git => "https://github.com/emberjs/ember-rails.git"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

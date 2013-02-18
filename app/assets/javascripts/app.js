@@ -1,3 +1,4 @@
+//= require_self
 //= require ./store
 //= require_tree ./models
 //= require_tree ./controllers
@@ -6,4 +7,5 @@
 //= require_tree ./templates
 //= require ./router
 //= require_tree ./routes
-//= require_self
+
+App = Em.Application.create({LOG_TRANSITIONS: true});
