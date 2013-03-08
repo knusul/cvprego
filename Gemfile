@@ -30,6 +30,10 @@ gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 gem "ember-rails", :git => "https://github.com/emberjs/ember-rails.git"
+group :development, :test do
+  gem 'guard-jasmine'
+  gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
