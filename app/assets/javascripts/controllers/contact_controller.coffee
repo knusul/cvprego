@@ -2,8 +2,6 @@ App.ContactController = Em.ObjectController.extend
   needs: ['contact']
 
   startEditing:  ->
-    console.log "startEditing"
-# add the contact and its associated phone numbers to a local transaction
     contact = @get('content')
     transaction = contact.get('store').transaction()
     transaction.add(contact)

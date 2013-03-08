@@ -5,3 +5,6 @@ App.ContactsNewView = Ember.View.extend
     @$().modal 'show'
     @$().on 'hidden', =>
       @get('controller.target.router').transitionTo('contacts.index')
+
+  willDestroyElement: ->
+    @$().modal 'hide'

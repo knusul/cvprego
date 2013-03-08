@@ -19,7 +19,7 @@ App.ContactsNewController = Em.ObjectController.extend
     # when creating new records, it's necessary to wait for the record to be assigned
     # an id before we can transition to its route (which depends on its id)
     if (@get('content.id'))
-      @transitionToRoute('contact', @get('content'))
+      @transitionToRoute('contacts')
   ).observes('content.id')
 
   cancel:  ->

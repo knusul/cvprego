@@ -6,18 +6,11 @@
   <div class="control-group">
     <form {{action save on="submit"}} class="form-horizontal">
       <legend>Create Contact</legend>
-
       {{partial "contact_edit_fields"}}
-
-      <div class="form-actions">
-        {{submitButton "Create"}}
-        <button class="btn" {{action cancel}}>Cancel</button>
-      </div>
     </form>
   </div>
 
   <div class="modal-footer">
     <a class="btn btn-dark" href="javascript;:" {{action cancel content}}>Cancel</a>
     <button class="btn btn-success" type="submit" {{action save content}}>Save</button>
-    <a class="btn btn-danger" {{action destroyRecord}}>Remove</a>
   </div>

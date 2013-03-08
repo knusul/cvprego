@@ -20,8 +20,6 @@
 //= require_tree .
 //= require ember
 //= require_tree ./vendor
-//
-//
 //= require md5
 //= require jquery_ujs
 //= require app
