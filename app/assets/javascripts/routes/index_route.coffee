@@ -1,6 +1,9 @@
 App.IndexRoute = Ember.Route.extend
   renderTemplate: ->
-    @render()
+    @render "details",
+      controller: 'details'
+      outlet: 'details'
+
     @render "experiences",
       controller: 'experiences'
       outlet: 'experiences'

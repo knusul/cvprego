@@ -1,0 +1,21 @@
+DETAILS
+<div class="span12">
+  <form {{action save on="submit"}} class="form-horizontal">
+    <legend>Details</legend>
+
+    <div class="control-group">
+      <label class="control-label" for="firstName">First name</label>
+      <div class="controls">
+        {{view Ember.TextField valueBinding="firstName" id="firstName" placeholder="First name" required="true"}}
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="lastName">Last name</label>
+      <div class="controls">
+        {{view Ember.TextField valueBinding="lastName" id="lastName" placeholder="Last name" required="true"}}
+      </div>
+    </div>
+
+  </form>
+</div>
+
