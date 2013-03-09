@@ -1,3 +1,3 @@
 App.ExperiencesController = Em.ArrayController.extend
-  sortProperties: ['lastName', 'firstName']
+  sortProperties: ['toDate', 'fromDate']
   activeExperienceId: null

@@ -1,7 +1,7 @@
 class ExperienceSerializer < ActiveModel::Serializer
   attributes :id,
-             :first_name,
-             :last_name,
+             :from_date,
+             :to_date,
              :email,
              :notes
 

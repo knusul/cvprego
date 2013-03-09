@@ -1,9 +1,9 @@
 class Experience < ActiveRecord::Base
-  validates :first_name, :presence => true
-  validates :last_name, :presence => true
+  validates :from_date, :presence => true
+  validates :to_date, :presence => true
   has_many :phone_numbers, :dependent => :destroy
 
   def full_name
-    self.first_name + ' ' + self.last_name
+    self.from_date + ' ' + self.to_date
   end
 end

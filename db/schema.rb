@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(:version => 20130216162740) do
   end
 
   create_table "experiences", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "from_date"
+    t.string   "to_date"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "email"

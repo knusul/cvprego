@@ -40,8 +40,8 @@ class ExperiencesController < ApplicationController
 private
 
   def permitted_params
-    params.require(:experience).permit(:first_name,
-                                    :last_name,
+    params.require(:experience).permit(:from_date,
+                                    :to_date,
                                     :email,
                                     :notes,
                                     :phone_numbers)

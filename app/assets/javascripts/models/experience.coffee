@@ -1,24 +1,24 @@
 App.Experience  = DS.Model.extend
-  firstName:    DS.attr('string')
-  lastName:     DS.attr('string')
+  fromDate:    DS.attr('string')
+  toDate:     DS.attr('string')
   email:        DS.attr('string')
   notes:        DS.attr('string')
   phoneNumbers: DS.hasMany('App.PhoneNumber')
 
   fullName: (->
-    firstName = @get('firstName')
-    lastName = @get('lastName')
+    fromDate = @get('fromDate')
+    toDate = @get('toDate')
 
-    if (!firstName && !lastName)
+    if (!fromDate && !toDate)
       if (Ember.isNone(@get('id')))
         return '(New Experience)'
       else
         return '(No Name)'
-    firstName = "" if firstName is undefined
-    lastName = "" if lastName is undefined
+    fromDate = "" if fromDate is undefined
+    toDate = "" if toDate is undefined
 
-    firstName + ' ' + lastName
-  ).property('firstName', 'lastName')
+    fromDate + ' ' + toDate
+  ).property('fromDate', 'toDate')
 
   gravatar:  (->
     email = @get('email')
