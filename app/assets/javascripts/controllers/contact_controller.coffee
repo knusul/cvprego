@@ -1,6 +1,4 @@
 App.ContactController = Em.ObjectController.extend
-  needs: ['contact']
-
   startEditing:  ->
     contact = @get('content')
     transaction = contact.get('store').transaction()
@@ -10,7 +8,6 @@ App.ContactController = Em.ObjectController.extend
     @transaction = transaction
 
   stopEditing: ->
-    console.log "stop"
     transaction = @transaction
     if (transaction)
       transaction.rollback()
