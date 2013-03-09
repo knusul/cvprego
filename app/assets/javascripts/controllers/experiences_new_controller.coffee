@@ -1,8 +1,8 @@
-App.ContactsNewController = Em.ObjectController.extend
+App.ExperiencesNewController = Em.ObjectController.extend
   startEditing:  ->
     # create a new record on a local transaction
     @transaction = @get('store').transaction()
-    @set('content', @transaction.createRecord(App.Contact, {}))
+    @set('content', @transaction.createRecord(App.Experience, {}))
 
   stopEditing:  ->
     # rollback the local transaction if it hasn't already been cleared
@@ -19,12 +19,12 @@ App.ContactsNewController = Em.ObjectController.extend
     # when creating new records, it's necessary to wait for the record to be assigned
     # an id before we can transition to its route (which depends on its id)
     if (@get('content.id'))
-      @transitionToRoute('contacts')
+      @transitionToRoute('experiences')
   ).observes('content.id')
 
   cancel:  ->
     @stopEditing()
-    @transitionToRoute('contacts.index')
+    @transitionToRoute('experiences.index')
 
   addPhoneNumber:  ->
     @get('content.phoneNumbers').createRecord()

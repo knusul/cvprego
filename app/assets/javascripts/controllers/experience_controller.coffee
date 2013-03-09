@@ -1,9 +1,9 @@
-App.ContactController = Em.ObjectController.extend
+App.ExperienceController = Em.ObjectController.extend
   startEditing:  ->
-    contact = @get('content')
-    transaction = contact.get('store').transaction()
-    transaction.add(contact)
-    contact.get('phoneNumbers').forEach (phoneNumber)->
+    experience = @get('content')
+    transaction = experience.get('store').transaction()
+    transaction.add(experience)
+    experience.get('phoneNumbers').forEach (phoneNumber)->
       transaction.add(phoneNumber)
     @transaction = transaction
 
@@ -12,7 +12,7 @@ App.ContactController = Em.ObjectController.extend
     if (transaction)
       transaction.rollback()
       @transaction = undefined
-    @transitionToRoute('contacts')
+    @transitionToRoute('experiences')
 
   save:  ->
     @transaction.commit()
@@ -29,7 +29,7 @@ App.ContactController = Em.ObjectController.extend
     phoneNumber.deleteRecord()
 
   destroyRecord:  ->
-    if (window.confirm("Are you sure you want to delete @contact?"))
+    if (window.confirm("Are you sure you want to delete @experience?"))
       @get('content').deleteRecord()
       @get('store').commit()
-      @get('target.router').transitionTo('contacts.index')
+      @get('target.router').transitionTo('experiences.index')

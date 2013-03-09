@@ -1,4 +1,4 @@
-class ContactSerializer < ActiveModel::Serializer
+class ExperienceSerializer < ActiveModel::Serializer
   attributes :id,
              :first_name,
              :last_name,

@@ -1,5 +1,5 @@
 class PhoneNumber < ActiveRecord::Base
-  belongs_to :contact
-  attr_accessible :number, :contact_id
-  validates :contact_id, :presence => true
+  belongs_to :experience
+  attr_accessible :number, :experience_id
+  validates :experience_id, :presence => true
 end

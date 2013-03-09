@@ -1,8 +1,8 @@
 # use require to load any .js file available to the asset pipeline
 #
-describe "ContactController", ->
+describe "ExperienceController", ->
   beforeEach ->
-    @controller = App.ContactController.create()
+    @controller = App.ExperienceController.create()
 
   describe "#destroyRecord", ->
     it "popups confirmation box", ->
@@ -19,7 +19,7 @@ describe "ContactController", ->
       store = {}
       store.commit = sinon.stub.returns(true)
       router = {}
-      router.transitionTo = sinon.stub().withArgs('contacts.index').returns(true)
+      router.transitionTo = sinon.stub().withArgs('experiences.index').returns(true)
       target = {}
       @controller.set("content", model)
       @controller.set("store", store)

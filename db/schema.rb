@@ -13,7 +13,13 @@
 
 ActiveRecord::Schema.define(:version => 20130216162740) do
 
-  create_table "contacts", :force => true do |t|
+  create_table "cvs", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "experiences", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.datetime "created_at", :null => false
@@ -22,17 +28,11 @@ ActiveRecord::Schema.define(:version => 20130216162740) do
     t.text     "notes"
   end
 
-  create_table "cvs", :force => true do |t|
-    t.string   "title"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "phone_numbers", :force => true do |t|
     t.string   "number"
-    t.integer  "contact_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "experience_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
 end

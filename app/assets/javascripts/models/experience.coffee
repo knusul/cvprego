@@ -1,4 +1,4 @@
-App.Contact  = DS.Model.extend
+App.Experience  = DS.Model.extend
   firstName:    DS.attr('string')
   lastName:     DS.attr('string')
   email:        DS.attr('string')
@@ -11,7 +11,7 @@ App.Contact  = DS.Model.extend
 
     if (!firstName && !lastName)
       if (Ember.isNone(@get('id')))
-        return '(New Contact)'
+        return '(New Experience)'
       else
         return '(No Name)'
     firstName = "" if firstName is undefined

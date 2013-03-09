@@ -1,6 +1,6 @@
-class CreateContacts < ActiveRecord::Migration
+class CreateExperiences < ActiveRecord::Migration
   def change
-    create_table :contacts do |t|
+    create_table :experiences do |t|
       t.string :first_name
       t.string :last_name
 

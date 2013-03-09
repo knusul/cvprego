@@ -1,3 +1,3 @@
 App.IndexRoute = Ember.Route.extend
   redirect: ->
-    @transitionTo('contacts')
+    @transitionTo('experiences')
