@@ -19,12 +19,12 @@ App.ExperiencesNewController = Em.ObjectController.extend
     # when creating new records, it's necessary to wait for the record to be assigned
     # an id before we can transition to its route (which depends on its id)
     if (@get('content.id'))
-      @transitionToRoute('experiences')
+      @transitionToRoute('index')
   ).observes('content.id')
 
   cancel:  ->
     @stopEditing()
-    @transitionToRoute('experiences.index')
+    @transitionToRoute('index')
 
   addPhoneNumber:  ->
     @get('content.phoneNumbers').createRecord()

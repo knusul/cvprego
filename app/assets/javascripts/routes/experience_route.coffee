@@ -3,10 +3,10 @@ App.ExperienceRoute = Ember.Route.extend
     controller.startEditing()
 
 # highlight this experience as active
-    @controllerFor('experiences').set('activeExperienceId', model.get('id'));
+    @controllerFor('experiences').set('activeExperienceId', model.get('id'))
 
   deactivate: ->
-    controller = this.controllerFor('experience');
+    controller = this.controllerFor('experience')
 
 # reset editing state
     if (controller.get('isEditing'))

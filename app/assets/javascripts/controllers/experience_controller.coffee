@@ -12,7 +12,7 @@ App.ExperienceController = Em.ObjectController.extend
     if (transaction)
       transaction.rollback()
       @transaction = undefined
-    @transitionToRoute('experiences')
+    @transitionToRoute('index')
 
   save:  ->
     @transaction.commit()
@@ -31,5 +31,6 @@ App.ExperienceController = Em.ObjectController.extend
   destroyRecord:  ->
     if (window.confirm("Are you sure you want to delete @experience?"))
       @get('content').deleteRecord()
+      @transaction.commit()
       @get('store').commit()
-      @get('target.router').transitionTo('experiences.index')
+      @get('target.router').transitionTo('index')

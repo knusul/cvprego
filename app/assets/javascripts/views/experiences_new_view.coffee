@@ -4,7 +4,7 @@ App.ExperiencesNewView = Ember.View.extend
     this.$('input:first').focus()
     @$().modal 'show'
     @$().on 'hidden', =>
-      @get('controller.target.router').transitionTo('experiences.index')
+      @get('controller.target.router').transitionTo('index')
 
   willDestroyElement: ->
     @$().modal 'hide'

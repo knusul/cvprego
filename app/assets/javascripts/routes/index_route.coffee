@@ -1,3 +1,9 @@
 App.IndexRoute = Ember.Route.extend
-  redirect: ->
-    @transitionTo('experiences')
+  renderTemplate: ->
+    @render()
+    @render "experiences",
+      controller: 'experiences'
+      outlet: 'experiences'
+
+  setupController: ->
+    @controllerFor('experiences').set 'model', App.Experience.find()
