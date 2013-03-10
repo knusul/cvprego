@@ -1,4 +1,4 @@
-App.ExperiencesNewController = Em.ObjectController.extend
+App.NewExperienceController = Em.ObjectController.extend
   startEditing:  ->
     # create a new record on a local transaction
     @transaction = @get('store').transaction()
@@ -26,8 +26,8 @@ App.ExperiencesNewController = Em.ObjectController.extend
     @stopEditing()
     @transitionToRoute('index')
 
-  addPhoneNumber:  ->
-    @get('content.phoneNumbers').createRecord()
+  addContactType:  ->
+    @get('content.contactTypes').createRecord()
 
-  removePhoneNumber: (phoneNumber)->
-    phoneNumber.deleteRecord()
+  removeContactType: (contactType)->
+    contactType.deleteRecord()

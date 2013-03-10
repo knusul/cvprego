@@ -3,7 +3,7 @@ App.Experience  = DS.Model.extend
   toDate:     DS.attr('string')
   email:        DS.attr('string')
   notes:        DS.attr('string')
-  phoneNumbers: DS.hasMany('App.PhoneNumber')
+  contactTypes: DS.hasMany('App.ContactType')
 
   fullName: (->
     fromDate = @get('fromDate')

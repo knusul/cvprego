@@ -1,21 +1,15 @@
-DETAILS
+{{#view App.FocusView }}
 <div class="span12">
-  <form {{action save on="submit"}} class="form-horizontal">
-    <legend>Details</legend>
-
-    <div class="control-group">
-      <label class="control-label" for="firstName">First Name</label>
-      <div class="controls">
-        {{view Ember.TextField valueBinding="firstName" id="firstName" placeholder="First Name" required="true"}}
-      </div>
-    </div>
-    <div class="control-group">
-      <label class="control-label" for="lastName">Last Name</label>
-      <div class="controls">
-        {{view Ember.TextField valueBinding="lastName" id="lastName" placeholder="Last Name" required="true"}}
-      </div>
-    </div>
-
-  </form>
+  <div class="well sidebar-nav">
+    <ul class="nav nav-list">
+      <li class="nav-header">Details</li>
+      <li>First Name: {{firstName}} </li>
+      <li>Last Name: {{lastName}} </li>
+      <li>Email: {{email}} </li>
+      {{#each contactTypes}}
+        <li>Contact Type: {{this}} </li>
+      {{/each}}
+    </ul>
+  </div>
 </div>
-
+{{/view}}

@@ -3,8 +3,8 @@ App.ExperienceController = Em.ObjectController.extend
     experience = @get('content')
     transaction = experience.get('store').transaction()
     transaction.add(experience)
-    experience.get('phoneNumbers').forEach (phoneNumber)->
-      transaction.add(phoneNumber)
+    experience.get('contactTypes').forEach (contactType)->
+      transaction.add(contactType)
     @transaction = transaction
 
   stopEditing: ->
@@ -22,11 +22,11 @@ App.ExperienceController = Em.ObjectController.extend
   cancel:  ->
     @stopEditing()
 
-  addPhoneNumber:  ->
-    @get('content.phoneNumbers').createRecord()
+  addContactType:  ->
+    @get('content.contactTypes').createRecord()
 
-  removePhoneNumber: (phoneNumber)->
-    phoneNumber.deleteRecord()
+  removeContactType: (contactType)->
+    contactType.deleteRecord()
 
   destroyRecord:  ->
     if (window.confirm("Are you sure you want to delete @experience?"))

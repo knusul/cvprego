@@ -1,0 +1,52 @@
+<div class="modal-header">
+  <div class="button close btn-dismiss" {{action cancel content}}>x</div>
+  <h2 class="app-icon-large">Post</h2>
+</div>
+<div class="modal-body">
+<div class="span12">
+  <form {{action save on="submit"}} class="form-horizontal">
+    <legend>Details</legend>
+
+    <div class="control-group">
+      <label class="control-label" for="firstName">First Name</label>
+      <div class="controls">
+        {{view Ember.TextField valueBinding="firstName" id="firstName" placeholder="First Name" required="true"}}
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="lastName">Last Name</label>
+      <div class="controls">
+        {{view Ember.TextField valueBinding="lastName" id="lastName" placeholder="Last Name" required="true"}}
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="email">Email</label>
+      <div class="controls">
+        {{view Ember.TextField valueBinding="email" id="email" type="email" placeholder="Email address"}}
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="notes">Contact Type</label>
+      <div class="controls">
+        {{#each contactTypes}}
+          <div class="controls">
+            {{view Ember.TextField valueBinding="contactType" placeholder="phone: (+49)123456 "}}
+            <a class="btn" {{action removeContactType this}}><i class="icon-minus-sign"></i> Remove</a>
+          </div>
+        {{/each}}
+        <a class="btn" {{action addContactType}}><i class="icon-plus-sign"></i> Add a contact type</a>
+      </div>
+    </div>
+
+    <button class="btn btn-success" type="submit" {{action save content}}>Save</button>
+  </form>
+</div>
+
+</div>
+<div class="modal-footer">
+  <a class="btn btn-dark" href="javascript;:" {{action cancel content}}>Cancel</a>
+  <button class="btn btn-success" type="submit" {{action save content}}>Save</button>
+  <a class="btn btn-danger" {{action destroyRecord}}>Remove</a>
+</div>

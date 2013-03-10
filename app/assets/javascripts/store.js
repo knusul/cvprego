@@ -3,7 +3,12 @@ App.Adapter = DS.RESTAdapter.extend({
 });
 
 App.Adapter.map('App.Experience', {
-  phoneNumbers: {embedded: 'always'}
+  contactTypes: {embedded: 'always'}
+});
+
+App.Adapter.map('App.Details')
+DS.RESTAdapter.configure("plurals", {
+  details: "details"
 });
 
 App.Store = DS.Store.extend({

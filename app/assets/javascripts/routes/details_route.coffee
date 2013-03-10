@@ -1,12 +1,16 @@
-App.NewExperienceRoute = Ember.Route.extend
+App.DetailsRoute = Ember.Route.extend
+  setupController: (controller) ->
+    console.log "setup details"
+    super
+
+App.DetailsEditRoute = Ember.Route.extend
   model: ->
 # Because we are maintaining a transaction locally in the controller for editing,
 # the new record needs to be created in the controller.
     null
 
   setupController: (controller)->
-    console.log "setup new exp contro"
     controller.startEditing()
 
   deactivate: ()->
-    @controllerFor('new_experience').stopEditing()
+    @controllerFor('details-edit').stopEditing()

@@ -1,6 +1,6 @@
-class CreatePhoneNumbers < ActiveRecord::Migration
+class CreateContactTypes < ActiveRecord::Migration
   def change
-    create_table :phone_numbers do |t|
+    create_table :contact_types do |t|
       t.string     :number
       t.references :experience
       

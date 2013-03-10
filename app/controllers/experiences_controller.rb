@@ -44,14 +44,14 @@ private
                                     :to_date,
                                     :email,
                                     :notes,
-                                    :phone_numbers)
+                                    :contact_types)
   end
 
   def update_experience(experience)
     experience_params = permitted_params
-    phone_numbers_param = experience_params.extract!(:phone_numbers)
-    phone_numbers_param = phone_numbers_param[:phone_numbers]
-    phone_numbers_param ||= []
+    contact_types_param = experience_params.extract!(:contact_types)
+    contact_types_param = contact_types_param[:contact_types]
+    contact_types_param ||= []
 
     # Because updates to the experience and its associations should be atomic,
     # wrap them in a transaction.
@@ -61,18 +61,18 @@ private
       experience.save!
 
       # Update the experience's phone numbers, creating/destroying as appropriate.
-      specified_phone_numbers = []
-      phone_numbers_param.each do |phone_number_params|
-        if phone_number_params[:id]
-          pn = experience.phone_numbers.find(phone_number_params[:id])
-          pn.update_attributes(phone_number_params)
+      specified_contact_types = []
+      contact_types_param.each do |contact_type_params|
+        if contact_type_params[:id]
+          pn = experience.contact_types.find(contact_type_params[:id])
+          pn.update_attributes(contact_type_params)
         else
-          pn = experience.phone_numbers.create(phone_number_params)
+          pn = experience.contact_types.create(contact_type_params)
         end
-        specified_phone_numbers << pn
+        specified_contact_types << pn
       end
-      experience.phone_numbers.each do |pn|
-        pn.destroy unless specified_phone_numbers.include?(pn)
+      experience.contact_types.each do |pn|
+        pn.destroy unless specified_contact_types.include?(pn)
       end
     end
 
