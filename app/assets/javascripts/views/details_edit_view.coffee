@@ -1,4 +1,4 @@
-App.DetailsEditView = Em.View.extend
+App.CardEditView = Em.View.extend
   classNames: 'modal fade in form-custom-field-modal'.w()
 
   didInsertElement: ->

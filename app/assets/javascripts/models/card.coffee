@@ -1,4 +1,4 @@
-App.Details  = DS.Model.extend
+App.Card  = DS.Model.extend
   firstName:    DS.attr('string')
   lastName:     DS.attr('string')
   email:        DS.attr('string')
@@ -10,7 +10,7 @@ App.Details  = DS.Model.extend
 
     if (!firstName && !lastName)
       if (Ember.isNone(@get('id')))
-        return '(New Details)'
+        return '(New Cards)'
       else
         return '(No Name)'
     firstName = "" if fromDate is undefined

@@ -6,10 +6,7 @@ App.Adapter.map('App.Experience', {
   contactTypes: {embedded: 'always'}
 });
 
-App.Adapter.map('App.Details')
-DS.RESTAdapter.configure("plurals", {
-  details: "details"
-});
+App.Adapter.map('App.Card')
 
 App.Store = DS.Store.extend({
   revision: 11,

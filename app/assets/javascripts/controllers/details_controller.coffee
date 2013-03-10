@@ -1,16 +1,17 @@
-App.DetailsController = Em.ObjectController.extend
+App.CardController = Em.ObjectController.extend
   focus: ->
-    @transitionToRoute('details-edit')
+    @transitionToRoute('card-edit')
 
 
-App.DetailsEditController = Em.ObjectController.extend
+App.CardEditController = Em.ObjectController.extend
   save: ->
+    console.log "save"
   # commit and then clear the local transaction
     @transaction.commit()
     @transaction = null
-    console.log "save"
 
   transitionAfterSave: (->
+    console.log "aftersave"
     # when creating new records, it's necessary to wait for the record to be assigned
     # an id before we can transition to its route (which depends on its id)
     if (@get('content.id'))
@@ -20,7 +21,7 @@ App.DetailsEditController = Em.ObjectController.extend
   startEditing:  ->
     # create a new record on a local transaction
     @transaction = @get('store').transaction()
-    @set('content', @transaction.add(App.Details.find(1)))
+    @set('content', App.Card.find(1))
 
   stopEditing:  ->
     # rollback the local transaction if it hasn't already been cleared

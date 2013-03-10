@@ -1,9 +1,8 @@
-App.DetailsRoute = Ember.Route.extend
+App.CardRoute = Ember.Route.extend
   setupController: (controller) ->
-    console.log "setup details"
     super
 
-App.DetailsEditRoute = Ember.Route.extend
+App.CardEditRoute = Ember.Route.extend
   model: ->
 # Because we are maintaining a transaction locally in the controller for editing,
 # the new record needs to be created in the controller.
@@ -13,4 +12,4 @@ App.DetailsEditRoute = Ember.Route.extend
     controller.startEditing()
 
   deactivate: ()->
-    @controllerFor('details-edit').stopEditing()
+    @controllerFor('card-edit').stopEditing()
