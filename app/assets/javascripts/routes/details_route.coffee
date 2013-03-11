@@ -4,9 +4,7 @@ App.CardRoute = Ember.Route.extend
 
 App.CardEditRoute = Ember.Route.extend
   model: ->
-# Because we are maintaining a transaction locally in the controller for editing,
-# the new record needs to be created in the controller.
-    null
+    App.Card.find(1)
 
   setupController: (controller)->
     controller.startEditing()

@@ -32,4 +32,12 @@ class CardsController < ApplicationController
     card.destroy
     render json: nil, status: :ok
   end
+  def permitted_params
+    params.require(:card).permit(:first_name, :last_name, :email)
+  end
+
+  def update_card(card)
+    card_paras = permitted_params
+    card.attributes = permitted_params
+  end
 end

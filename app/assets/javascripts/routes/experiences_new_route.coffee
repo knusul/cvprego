@@ -5,7 +5,6 @@ App.NewExperienceRoute = Ember.Route.extend
     null
 
   setupController: (controller)->
-    console.log "setup new exp contro"
     controller.startEditing()
 
   deactivate: ()->
