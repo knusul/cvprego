@@ -1,7 +1,3 @@
-App.CardRoute = Ember.Route.extend
-  setupController: (controller) ->
-    super
-
 App.CardEditRoute = Ember.Route.extend
   model: ->
     App.Card.find(1)

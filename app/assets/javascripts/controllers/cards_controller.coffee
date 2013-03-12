@@ -1,7 +1,3 @@
-App.CardController = Em.ObjectController.extend
-  focus: ->
-    @transitionToRoute('card-edit')
-
 App.CardEditController = Em.ObjectController.extend
   save: ->
   # commit and then clear the local transaction
