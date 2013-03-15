@@ -5,7 +5,6 @@ App.ExperienceView = Em.View.extend
     @$().modal 'show'
     @$().on 'hidden', =>
       @get('controller').stopEditing()
-      @get('controller.target.router').transitionTo('index')
 
   willDestroyElement: ->
     @$().modal 'hide'

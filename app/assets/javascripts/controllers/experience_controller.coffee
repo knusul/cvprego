@@ -1,14 +1,12 @@
 App.ExperienceController = Em.ObjectController.extend
   startEditing:  ->
     experience = @get('content')
-    transaction = experience.get('store').transaction()
-    transaction.add(experience)
-    @transaction = transaction
+    @transaction = experience.get('store').transaction()
+    @transaction.add(experience)
 
   stopEditing: ->
-    transaction = @transaction
-    if (transaction)
-      transaction.rollback()
+    if (@transaction)
+      @transaction.rollback()
       @transaction = undefined
     @transitionToRoute('index')
 
