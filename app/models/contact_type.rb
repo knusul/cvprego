@@ -1,5 +1,5 @@
 class ContactType < ActiveRecord::Base
-  belongs_to :experience
-  attr_accessible :number, :experience_id
-  validates :experience_id, :presence => true
+  belongs_to :card
+  attr_accessible :number, :card_id
+  validates :card_id, :presence => true
 end

@@ -32,7 +32,7 @@
       <div class="controls">
         {{#each contactTypes}}
           <div class="controls">
-            {{view Ember.TextField valueBinding="contactType" placeholder="phone: (+49)123456 "}}
+            {{view Ember.TextField valueBinding="number" placeholder="phone: (+49)123456 "}}
             <a class="btn" {{action removeContactType this}}><i class="icon-minus-sign"></i> Remove</a>
           </div>
         {{/each}}
@@ -40,7 +40,6 @@
       </div>
     </div>
 
-    <button class="btn btn-success" type="submit" {{action save content}}>Save</button>
   </form>
 </div>
 
@@ -48,5 +47,4 @@
 <div class="modal-footer">
   <a class="btn btn-dark" href="javascript;:" {{action cancel content}}>Cancel</a>
   <button class="btn btn-success" type="submit" {{action save content}}>Save</button>
-  <a class="btn btn-danger" {{action destroyRecord}}>Remove</a>
 </div>

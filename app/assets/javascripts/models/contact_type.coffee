@@ -1,3 +1,3 @@
 App.ContactType = DS.Model.extend
   number:  DS.attr('string')
-  experience: DS.belongsTo('App.Experience')
+  card: DS.belongsTo('App.Card')

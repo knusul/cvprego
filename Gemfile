@@ -24,6 +24,8 @@ end
 gem 'jquery-rails'
 gem 'pry'
 gem 'pry-rails'
+gem 'pry-nav'
+gem 'pry-remote'
 gem 'strong_parameters'
 
 gem "therubyracer"

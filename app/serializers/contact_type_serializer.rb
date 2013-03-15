@@ -1,3 +1,3 @@
 class ContactTypeSerializer < ActiveModel::Serializer
-  attributes :id, :number, :experience_id
+  attributes :id, :number, :card_id
 end

@@ -4,4 +4,5 @@ class CardSerializer < ActiveModel::Serializer
              :last_name,
              :email
 
+  has_many :contact_types, embed: :objects
 end

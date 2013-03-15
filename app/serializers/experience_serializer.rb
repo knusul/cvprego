@@ -5,5 +5,4 @@ class ExperienceSerializer < ActiveModel::Serializer
              :email,
              :notes
 
-  has_many :contact_types, embed: :objects
 end
