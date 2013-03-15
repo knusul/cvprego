@@ -1,4 +1,5 @@
 //= require_self
+//= require_tree ./vendor
 //= require ./store
 //= require_tree ./models
 //= require_tree ./controllers

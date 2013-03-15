@@ -9,6 +9,7 @@ App.NewExperienceController = Em.ObjectController.extend
       @transaction = null
 
   save: ->
+    console.log "tr"
     @transaction.commit()
     @transaction = null
 
