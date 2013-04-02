@@ -2,12 +2,12 @@
 <div class="span12">
   <div class="well sidebar-nav">
     <ul class="nav nav-list">
-      <li class="nav-header">Cards</li>
+      <li class="nav-header">Personal Information</li>
       <li>First Name: {{firstName}} </li>
       <li>Last Name: {{lastName}} </li>
       <li>Email: {{email}} </li>
       {{#each contactTypes}}
-        <li>Contact Type: {{number}} </li>
+      <li>{{ name }}: {{number}} </li>
       {{/each}}
     </ul>
   </div>

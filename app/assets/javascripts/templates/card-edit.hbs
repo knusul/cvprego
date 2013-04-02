@@ -3,7 +3,7 @@
   <h2 class="app-icon-large">Post</h2>
 </div>
 <div class="modal-body">
-<div class="span12">
+<div class="span7">
   <form {{action save on="submit"}} class="form-horizontal">
     <legend>Cards</legend>
 
@@ -31,12 +31,11 @@
       <label class="control-label" for="notes">Contact Type</label>
       <div class="controls">
         {{#each contactTypes}}
-          <div class="controls">
-            {{view Ember.TextField valueBinding="number" placeholder="phone: (+49)123456 "}}
+            {{view Ember.TextField valueBinding="name" placeholder="phone"}}
+            {{view Ember.TextField valueBinding="number" placeholder="(+49)123456 "}}
             <a class="btn" {{action removeContactType this}}><i class="icon-minus-sign"></i> Remove</a>
-          </div>
         {{/each}}
-        <a class="btn" {{action addContactType}}><i class="icon-plus-sign"></i> Add a contact type</a>
+        <a class="btn" {{action addContactType}}><i class="icon-plus-sign"></i> Add a contact type </a>
       </div>
     </div>
 

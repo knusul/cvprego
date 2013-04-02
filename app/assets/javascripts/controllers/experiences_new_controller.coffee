@@ -1,5 +1,6 @@
 App.NewExperienceController = Em.ObjectController.extend
   startEditing:  ->
+    console.log "SE"
     @transaction = @get('store').transaction()
     @set('content', @transaction.createRecord(App.Experience, {}))
 
@@ -12,11 +13,7 @@ App.NewExperienceController = Em.ObjectController.extend
     console.log "tr"
     @transaction.commit()
     @transaction = null
-
-  transitionAfterSave: (->
-    if (@get('content.id'))
-      @transitionToRoute('index')
-  ).observes('content.id')
+    @transitionToRoute('index')
 
   cancel:  ->
     @stopEditing()
