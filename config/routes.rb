@@ -1,6 +1,5 @@
 Opencv::Application.routes.draw do
-  resources :cvs
-
+  devise_for :users, :controllers => {:registrations => "users/registrations", :passwords => "users/passwords"}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -59,6 +58,6 @@ Opencv::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
   resources :experiences
   resources :cards
-  root :to => 'application#index'
+  root :to => 'home#index'
   match '/*path' => 'application#index'
 end

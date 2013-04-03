@@ -6,6 +6,8 @@ gem 'rails', '3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'devise'
+gem "letter_opener", :group => :development
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
 
