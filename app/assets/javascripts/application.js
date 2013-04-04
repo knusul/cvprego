@@ -21,3 +21,4 @@
 //= require_tree ./vendor
 //= require md5
 //= require jquery_ujs
+//= reqiure home
