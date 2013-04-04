@@ -1,15 +1,5 @@
 <div class="container-fluid" id="main">
   <div class="row-fluid">
-    <div>
-      <h1 id='foo'>
-        {{#if controllers.currentUser.isSignedIn}}
-        Hi, {{controllers.currentUser.email}}
-        {{else}}
-        Hi, Guest
-        {{/if}}
-      </h1>
-    </div>
-
     {{render 'card'}}
     {{render 'experiences'}}
     {{ outlet }}
