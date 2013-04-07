@@ -1,6 +1,5 @@
 App.NewExperienceController = Em.ObjectController.extend
   startEditing:  ->
-    console.log "SE"
     @transaction = @get('store').transaction()
     @set('content', @transaction.createRecord(App.Experience, {}))
 

@@ -1,7 +1,7 @@
 class CardsController < ApplicationController
   # GET /cards/1.json
   def show
-    card = Card.find(params[:id])
+    card = current_user.card
     render json: card
   end
 

@@ -7,6 +7,7 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3'
 gem 'devise'
+gem 'simple_form'
 gem "letter_opener", :group => :development
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
