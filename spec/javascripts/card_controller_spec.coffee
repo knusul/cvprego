@@ -4,4 +4,4 @@ describe "CardController", ->
 
   describe "focus", ->
     it "makes transistion to card-edit state", ->
-      @controller.focus()
+      @controller

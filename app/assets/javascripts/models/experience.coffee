@@ -7,6 +7,7 @@ App.Experience  = DS.Model.extend
   fullName: (->
     fromDate = @get('fromDate')
     toDate = @get('toDate')
+    notes = @get('notes')
 
     if (!fromDate && !toDate)
       if (Ember.isNone(@get('id')))
@@ -15,8 +16,8 @@ App.Experience  = DS.Model.extend
         return '(No Name)'
     fromDate = "" if fromDate is undefined
     toDate = "" if toDate is undefined
-
-    fromDate + ' ' + toDate
+    notes = "" if notes is undefined
+    notes + ": " +fromDate + ' ' + toDate
   ).property('fromDate', 'toDate')
 
   gravatar:  (->

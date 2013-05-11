@@ -1,3 +1,1 @@
-App.CardRoute = Ember.Route.extend
-  setupController: (controller) ->
-    super
+App.CardRoute = Ember.Route.extend()

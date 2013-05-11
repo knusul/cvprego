@@ -3,8 +3,7 @@ App.CardEditRoute = Ember.Route.extend
     App.Card.find(1)
 
   setupController: (controller)->
-    console.log "Fo"
     controller.startEditing()
 
-  deactivate: ()->
-    @controllerFor('card-edit').stopEditing()
+#  deactivate: ()->
+#    @controllerFor('card-edit').stopEditing()

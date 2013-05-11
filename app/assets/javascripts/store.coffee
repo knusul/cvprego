@@ -17,6 +17,6 @@ App.Store = DS.Store.extend({
   adapter: App.Adapter.create()
 })
 
-App.Cart.reopenClass
-  find: ->
-    this._super("singleton")
+#App.Cart.reopenClass
+#  find: ->
+#    this._super("singleton")

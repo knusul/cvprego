@@ -5,13 +5,13 @@ $ ->
         $('#login-form').modal('hide')
         window.location.href = "/"
   .bind "ajax:error", (xhr, status, error) ->
-    login_form.prepend("<p>Wrong username or password.</p>")
+    login_form.find(".login-header").html("<div class='alert alert-error'> <p>Wrong username or password.</p></div>")
 
 
-  signup_form = $("#signup-form form#new_user")
+  signup_form = $("form#new_user")
   signup_form.bind "ajax:success", (e, data, status, xhr) ->
-      if data.success
-        $('#signup-form').modal('hide')
-        window.location.href = "/"
-      else
-        signup_form.prepend("<p>Email already taken or passwords mismatch.</p>")
+    if data.success
+      $('#signup-form').modal('hide')
+      window.location.href = "/"
+    else
+      signup_form.find(".login-header").html("<div class='alert alert-error'> <p>#{data.message}</p></div>")

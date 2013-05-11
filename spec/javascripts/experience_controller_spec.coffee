@@ -25,5 +25,4 @@ describe "ExperienceController", ->
       @controller.set("store", store)
       @controller.set("target", target)
       @controller.set("target.router", router)
-      @controller.destroyRecord()
 

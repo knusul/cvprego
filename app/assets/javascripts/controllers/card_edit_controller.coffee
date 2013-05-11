@@ -5,6 +5,7 @@ App.CardEditController = Em.ObjectController.extend
     @transitionToRoute('index')
 
   startEditing:  ->
+    console.log "StartEditing"
     card = @get('content')
     @transaction = card.get('store').transaction()
     @transaction.add(card)
@@ -12,6 +13,7 @@ App.CardEditController = Em.ObjectController.extend
       @transaction.add(contactType)
 
   stopEditing:  ->
+    console.log "EndEditing"
     if (@transaction)
       @transaction.rollback()
       @transaction = null
