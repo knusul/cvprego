@@ -5,7 +5,6 @@ App.CardEditController = Em.ObjectController.extend
     @transitionToRoute('index')
 
   startEditing:  ->
-    console.log "StartEditing"
     card = @get('content')
     @transaction = card.get('store').transaction()
     @transaction.add(card)
@@ -13,7 +12,6 @@ App.CardEditController = Em.ObjectController.extend
       @transaction.add(contactType)
 
   stopEditing:  ->
-    console.log "EndEditing"
     if (@transaction)
       @transaction.rollback()
       @transaction = null
@@ -28,3 +26,7 @@ App.CardEditController = Em.ObjectController.extend
   removeContactType: (contactType)->
     contactType.deleteRecord()
 
+  submitPhotoUpload: (event) ->
+    event.preventDefault()
+    person = PersonApp.Person.createRecord({ username: 'heyo', attachment: this.get('controller').get('logo'), other: this.get('controller').get('other') });
+    this.get('controller.target').get('store').commit()
