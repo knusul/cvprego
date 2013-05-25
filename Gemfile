@@ -13,6 +13,7 @@ gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
 gem 'rmagick'
 gem 'carrierwave'
+gem 'quiet_assets', :group => :development
 
 # Gems used only for assets and not required
 # in production environments by default.

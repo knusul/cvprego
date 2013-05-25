@@ -64,5 +64,7 @@ Opencv::Application.routes.draw do
   end
   root :to => redirect('/landing')
   match '/landing' => "home#landing"
+  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
+  match '/show' => "home#show"
   match '/*path' => 'application#index'
 end

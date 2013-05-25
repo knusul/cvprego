@@ -21,7 +21,8 @@ App.CardEditController = Em.ObjectController.extend
     @stopEditing()
 
   addContactType:  ->
-    @get('content.contactTypes').createRecord()
+    record = @get('content.contactTypes').createRecord()
+    @transaction.add(record)
 
   removeContactType: (contactType)->
     contactType.deleteRecord()
