@@ -11,5 +11,4 @@ describe "Card", ->
 
   it "sends PUT to server with dedependent contactTypes", ->
     expect(jQuery.ajax.calledOnce)
-    debugger
     expect(jQuery.ajax.getCall(0).args[0]['data']).toMatch /contactTypeName/
