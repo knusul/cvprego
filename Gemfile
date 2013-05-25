@@ -11,9 +11,6 @@ gem 'simple_form'
 gem "letter_opener", :group => :development
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
-gem 'rmagick'
-gem 'carrierwave'
-gem 'quiet_assets', :group => :development
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -39,19 +36,8 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 gem "ember-rails", :git => "https://github.com/emberjs/ember-rails.git"
 group :development, :test do
-  gem 'rb-inotify'
   gem 'guard-jasmine'
-  gem 'guard-rspec'
   gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
-  gem 'rspec-rails'
-end
-group :test do
-  gem 'database_cleaner'
-  gem 'capybara'
-  gem 'phantomjs'
-  gem 'capybara-webkit', :git => 'git@github.com:thoughtbot/capybara-webkit.git'
-  gem 'selenium-webdriver'
-  gem 'factory_girl_rails'
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
