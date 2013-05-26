@@ -45,7 +45,7 @@ private
                                     :email,
                                     :description,
                                     :role,
-                                    :tittle,
+                                    :company_name,
                                     )
   end
 

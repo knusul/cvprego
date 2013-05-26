@@ -1,6 +1,6 @@
 App.CardEditRoute = Ember.Route.extend
   model: ->
-    App.Card.find(1)
+    App.Card.find(App.currentUser.card_id)
 
   setupController: (controller)->
     controller.startEditing()

@@ -13,8 +13,8 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 Capybara.javascript_driver = :webkit
 
 RSpec.configure do |config|
+  config.include DeviseMacros
   # ## Mock Framework
-  #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
   #
   # config.mock_with :mocha

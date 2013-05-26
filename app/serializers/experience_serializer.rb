@@ -5,5 +5,5 @@ class ExperienceSerializer < ActiveModel::Serializer
              :email,
              :description,
              :role,
-             :tittle
+             :company_name
 end
