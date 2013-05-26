@@ -1,5 +1,6 @@
 <div class="span8">
   <div class="thumbnail span3">
+  <%= gravatar_tag @user.email %>
   </div>
   <div class= "span4">
     <h1> <%= @card.first_name %> <%= @card.last_name %> </h1>
@@ -12,6 +13,8 @@
   <h2> Contact Details </h2>
   <div class="page-header">
     <%= render @card.contact_types %>
-
   </div>
+  <div class='clearfix'></div>
+  <%= render 'experiences/index', experiences: @user.experiences %>
+
 </div>

@@ -1,0 +1,10 @@
+<% unless @user.experiences.empty? %>
+  <section class="row-fluid experience" id="experience">
+  <aside class="span3 aside_el">
+  <h2>Experience</h2>
+  </aside>
+  <div class="span9">
+    <%= render @user.experiences %>
+  </div>
+  </section>
+<% end %>

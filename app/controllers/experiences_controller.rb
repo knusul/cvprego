@@ -1,18 +1,18 @@
 class ExperiencesController < ApplicationController
   # GET /experiences.json
   def index
-    render json: Experience.all
+    render json: current_user.experiences
   end
 
   # GET /experiences/1.json
   def show
-    experience = Experience.find(params[:id])
+    experience = current_user.experiences.find(params[:id])
     render json: experience
   end
 
   # POST /experiences.json
   def create
-    experience = Experience.new
+    experience = current_user.experiences.build
     if update_experience(experience)
       render json: experience, status: :created
     else
@@ -22,7 +22,7 @@ class ExperiencesController < ApplicationController
 
   # PUT /experiences/1.json
   def update
-    experience = Experience.find(params[:id])
+    experience = current_user.experiences.find(params[:id])
     if update_experience(experience)
       render json: experience, status: :ok
     else
@@ -32,7 +32,7 @@ class ExperiencesController < ApplicationController
 
   # DELETE /experiences/1.json
   def destroy
-    experience = Experience.find(params[:id])
+    experience = current_user.experiences.find(params[:id])
     experience.destroy
     render json: nil, status: :ok
   end

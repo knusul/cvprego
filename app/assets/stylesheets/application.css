@@ -36,3 +36,9 @@
 .marketing p + h4 {
   margin-top: 28px;
 }
+.borderleft {
+  border-left: 1px solid black;
+}
+.padding_left_small {
+  padding-left: 30px;
+}
