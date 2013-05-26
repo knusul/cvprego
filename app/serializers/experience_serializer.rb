@@ -3,6 +3,7 @@ class ExperienceSerializer < ActiveModel::Serializer
              :from_date,
              :to_date,
              :email,
-             :notes
-
+             :description,
+             :role,
+             :tittle
 end

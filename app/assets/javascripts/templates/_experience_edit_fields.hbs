@@ -1,4 +1,16 @@
 <div class="control-group">
+  <label class="control-label" for="tittle">Tittle</label>
+  <div class="controls">
+    {{view Ember.TextArea valueBinding="tittle" id="tittle" placeholder="Company name"}}
+  </div>
+</div>
+<div class="control-group">
+  <label class="control-label" for="role">Role</label>
+  <div class="controls">
+    {{view Ember.TextArea valueBinding="role" id="role" placeholder="Artist?"}}
+  </div>
+</div>
+<div class="control-group">
   <label class="control-label" for="fromDate">From date</label>
   <div class="controls">
     {{view Ember.TextField valueBinding="fromDate" id="fromDate" placeholder="From date" required="true"}}
@@ -11,8 +23,8 @@
   </div>
 </div>
 <div class="control-group">
-  <label class="control-label" for="notes">Notes</label>
+  <label class="control-label" for="description">Notes</label>
   <div class="controls">
-    {{view Ember.TextArea valueBinding="notes" id="notes" placeholder="Notes"}}
+    {{view Ember.TextArea valueBinding="description" id="description" placeholder="Notes"}}
   </div>
 </div>

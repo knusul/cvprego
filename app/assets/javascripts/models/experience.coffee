@@ -2,12 +2,16 @@ App.Experience  = DS.Model.extend
   fromDate:    DS.attr('string')
   toDate:     DS.attr('string')
   email:        DS.attr('string')
-  notes:        DS.attr('string')
+  description:        DS.attr('string')
+  tittle:        DS.attr('string')
+  role:        DS.attr('string')
 
   fullName: (->
     fromDate = @get('fromDate')
     toDate = @get('toDate')
-    notes = @get('notes')
+    description = @get('description')
+    role = @get('role')
+    tittle = @get('tittle')
 
     if (!fromDate && !toDate)
       if (Ember.isNone(@get('id')))
@@ -16,8 +20,10 @@ App.Experience  = DS.Model.extend
         return '(No Name)'
     fromDate = "" if fromDate is undefined
     toDate = "" if toDate is undefined
-    notes = "" if notes is undefined
-    notes + ": " +fromDate + ' ' + toDate
+    description = "" if description is undefined
+    tittle = "" if tittle is undefined
+    role = "" if role is undefined
+    "#{tittle}: #{role}"
   ).property('fromDate', 'toDate')
 
   gravatar:  (->

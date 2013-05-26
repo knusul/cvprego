@@ -1,12 +1,14 @@
 <div class="row-fluid">
   <article class="span12  borderleft padding_left_small in_spacing">
-  <span class="period"><%= "#{experience.from_date} - #{experience.to_date}" %></span>
-    <div class="bigspacing">
-      <header>
-      <h2><%= experience.tittle %></h2>
-      <h3><%= experiente.role %></h3>
-      </header>
-      <p><%= experience.description %></p>
-    </div>
+  <span class="period span4"><%= "#{experience.from_date} - #{experience.to_date}" %></span>
+  <div class='span8'>
+  <div class="bigspacing">
+    <header>
+    <h2><%= experience.tittle %></h2>
+    <h3><%= experience.role %></h3>
+    </header>
+    <p><%= experience.description %></p>
+  </div>
+</div>
   </article>
 </div>

@@ -43,13 +43,14 @@ private
     params.require(:experience).permit(:from_date,
                                     :to_date,
                                     :email,
-                                    :notes,
-                                    :contact_types)
+                                    :description,
+                                    :role,
+                                    :tittle,
+                                    )
   end
 
   def update_experience(experience)
     experience_params = permitted_params
-
     experience.attributes = experience_params
     experience.save
   end
