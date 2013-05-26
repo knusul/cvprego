@@ -36,8 +36,21 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 gem "ember-rails", :git => "https://github.com/emberjs/ember-rails.git"
 group :development, :test do
+  gem 'poltergeist'
   gem 'guard-jasmine'
+  gem 'guard-rspec'
+  gem 'rspec-rails'
+  gem 'rb-inotify'
   gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'phantomjs'
+  gem 'capybara-webkit', :git => 'git@github.com:thoughtbot/capybara-webkit.git'
+  gem 'selenium-webdriver'
+  gem 'factory_girl_rails'
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

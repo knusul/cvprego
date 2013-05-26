@@ -6,6 +6,12 @@
     <h2>tittle</h2>
     <p> Address: Pustki 5a, 44-290 Jejkowice, Poland</p>
   </div>
-  <%= @card.contact_types %>
-  <%= render @card.contact_types %>
+
+
+  <div class='clearfix'></div>
+  <h2> Contact Details </h2>
+  <div class="page-header">
+    <%= render @card.contact_types %>
+
+  </div>
 </div>
