@@ -1,0 +1,17 @@
+<div class="span12">
+  <div class="btn-group pull-right">
+    {{#linkTo "new-education" class="btn"}}<i class="icon-plus-sign"></i> Add education{{/linkTo}}
+  </div>
+  <div class="well sidebar-nav">
+    <ul class="nav nav-list">
+      <li class="nav-header">All educations</li>
+      {{#each education in controller}}
+        {{view App.educationInListView contentBinding="education"}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+<div class="span9">
+  {{outlet}}
+</div>
+
