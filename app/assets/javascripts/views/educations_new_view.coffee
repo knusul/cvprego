@@ -1,4 +1,4 @@
-App.NewExperienceView = Ember.View.extend
+App.NewEducationView = Ember.View.extend
   classNames: 'modal fade in form-custom-field-modal'.w()
   didInsertElement: ->
     this.$('input:first').focus()

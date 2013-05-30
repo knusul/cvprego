@@ -1,4 +1,4 @@
-App.ExperienceView = Em.View.extend
+App.EducationView = Em.View.extend
   classNames: 'modal fade in form-custom-field-modal'.w()
   didInsertElement: ->
     this.$('input:first').focus()

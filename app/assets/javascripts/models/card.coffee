@@ -2,6 +2,7 @@ App.Card  = DS.Model.extend
   firstName:    DS.attr('string')
   lastName:     DS.attr('string')
   email:        DS.attr('string')
+  photoUrl:        DS.attr('string')
   contactTypes: DS.hasMany('App.ContactType')
 
   fullName: (->

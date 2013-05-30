@@ -22,3 +22,6 @@
 //= require md5
 //= require jquery_ujs
 //= reqiure home
+//= require jquery.ui.widget.js
+//= require jquery.iframe-transport.js
+//= require jquery.fileupload.js

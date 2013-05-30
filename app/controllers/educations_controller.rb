@@ -1,4 +1,5 @@
 class EducationsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /educations.json
   def index
     render json: current_user.educations
@@ -40,7 +41,7 @@ class EducationsController < ApplicationController
 private
 
   def permitted_params
-    params.require(:educations).permit(:from_date,
+    params.require(:education).permit(:from_date,
                                     :to_date,
                                     :name,
                                     )

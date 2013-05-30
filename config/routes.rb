@@ -57,6 +57,7 @@ Opencv::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   resources :experiences
+  resources :educations
   resources :cards
 
   authenticated :user do
@@ -66,5 +67,5 @@ Opencv::Application.routes.draw do
   match '/landing' => "home#landing"
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   match '/show' => "home#show"
-  match '/*path' => 'application#index'
+  match '/uploads' => 'uploads#create', only: [:post]
 end
