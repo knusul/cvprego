@@ -11,7 +11,12 @@ gem 'rmagick'
 gem 'sqlite3'
 gem 'devise'
 gem 'simple_form'
-gem "letter_opener", :group => :development
+group :development do
+  gem "letter_opener"
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'rvm-capistrano'
+end
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
 
