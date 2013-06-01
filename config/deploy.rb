@@ -29,7 +29,7 @@ require 'bundler/capistrano'
 
 ssh_options[:forward_agent] = true
 set :deploy_via, :remote_cache
-set :use_sudo, true
+set :use_sudo, false
 set :user, "opencv"
 set :deploy_to, "/home/opencv"
 set :rails_env, "production"
@@ -44,6 +44,7 @@ namespace :deploy do
   desc "Symlink shared/* files"
   task :symlink_shared, :roles => :app do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/log #{release_path}/log"
   end
 end
 
