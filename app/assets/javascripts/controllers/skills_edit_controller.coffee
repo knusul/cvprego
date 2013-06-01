@@ -6,15 +6,17 @@ App.SkillsEditController = Em.ArrayController.extend
 
   startEditing:  ->
     @transaction = @get('store').transaction()
+    @forEach (skill) =>
+      @transaction.add(skill)
 
   stopEditing:  ->
     if (@transaction)
       @transaction.rollback()
       @transaction = null
-    @transitionToRoute('index')
 
   cancel: ->
     @stopEditing()
+    @transitionToRoute('index')
 
   addSkill:  ->
     @transaction.createRecord(App.Skill, {name: ""})
