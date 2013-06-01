@@ -52,6 +52,10 @@ group :development, :test do
   gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
 end
 
+group :development, :production do
+  gem "mysql2"
+end
+
 group :test do
   gem 'database_cleaner'
   gem 'capybara'

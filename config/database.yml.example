@@ -1,0 +1,15 @@
+defaults: &defaults
+  username: root
+  password:
+  adapter: mysql2
+  encoding: utf8
+
+development:
+  <<: *defaults
+  database: autohaus24_development
+
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
