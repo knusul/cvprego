@@ -15,10 +15,10 @@ App.CardEditController = Em.ObjectController.extend
     if (@transaction)
       @transaction.rollback()
       @transaction = null
-    @transitionToRoute('index')
 
   cancel: ->
     @stopEditing()
+    @transitionToRoute('index')
 
   addContactType:  ->
     record = @get('content.contactTypes').createRecord()
@@ -30,4 +30,4 @@ App.CardEditController = Em.ObjectController.extend
   submitPhotoUpload: (event) ->
     event.preventDefault()
     person = PersonApp.Person.createRecord({ username: 'heyo', attachment: this.get('controller').get('logo'), other: this.get('controller').get('other') });
-    this.get('controller.target').get('store').commit()
+    @get('controller.target').get('store').commit()

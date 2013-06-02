@@ -60,6 +60,7 @@ Opencv::Application.routes.draw do
   resources :skills
   resources :educations
   resources :cards
+  resources :languages
 
   authenticated :user do
     root :to => 'home#index'

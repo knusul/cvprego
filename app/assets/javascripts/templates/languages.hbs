@@ -1,0 +1,12 @@
+{{#view App.FocusView }}
+<div class="span12">
+  <div class="well sidebar-nav">
+    <ul class="nav nav-list">
+      <li class="nav-header">Languages</li>
+      {{#each controller}}
+      <li>{{ name }} {{level}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+{{/view}}

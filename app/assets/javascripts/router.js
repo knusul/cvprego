@@ -1,5 +1,6 @@
 App.Router.map(function() {
   this.route('card-edit');
+  this.route('languages-edit');
   this.route('skills-edit');
   this.route('new-experience');
   this.route('new-education');

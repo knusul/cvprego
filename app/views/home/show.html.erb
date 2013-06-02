@@ -4,17 +4,14 @@
   </div>
   <div class= "span4">
     <h1> <%= @card.first_name %> <%= @card.last_name %> </h1>
-    <h2>company_name</h2>
-    <p> Address: Pustki 5a, 44-290 Jejkowice, Poland</p>
+    <ul><li>
+    email: <%= @card.email %>
+  </li>
+      <%= render @card.contact_types %>
+    </ul>
   </div>
 
-
-  <div class='clearfix'></div>
-  <h2> Contact Details </h2>
-  <div class="page-header">
-    <%= render @card.contact_types %>
-  </div>
-  <div class='clearfix'></div>
-  <%= render 'experiences/index', experiences: @user.experiences %>
-
+</div>
+<div class='span8'>
+<%= render 'experiences/index', experiences: @user.experiences %>
 </div>
