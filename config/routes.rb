@@ -63,11 +63,11 @@ Opencv::Application.routes.draw do
   resources :languages
 
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'home#index', as: "authenticated_root"
   end
   root :to => redirect('/landing')
-  match '/landing' => "home#landing"
+  get '/landing' => "home#landing"
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  match '/show' => "home#show"
-  match '/uploads' => 'uploads#create', only: [:post]
+  get '/show' => "home#show"
+  get '/uploads' => 'uploads#create', only: [:post]
 end

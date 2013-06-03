@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem "rails", "4.0.0.rc1"
 gem 'pdfkit'
 gem 'carrierwave'
 gem 'rmagick'
@@ -9,8 +9,8 @@ gem 'rmagick'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'devise'
-gem 'simple_form'
+gem 'devise', git: "git://github.com/plataformatec/devise.git", branch: "rails4"
+gem 'simple_form', git: "git://github.com/plataformatec/simple_form.git"
 group :development do
   gem "letter_opener"
   gem 'capistrano'
@@ -23,8 +23,8 @@ gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails',   git: "git://github.com/rails/sass-rails.git"
+  gem 'coffee-rails', git: "git://github.com/rails/coffee-rails.git"
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -37,13 +37,14 @@ gem 'pry'
 gem 'pry-rails'
 gem 'pry-nav'
 gem 'pry-remote'
-gem 'strong_parameters'
 
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
+gem 'handlebars-source', '1.0.0.rc4'
 gem "ember-rails", :git => "https://github.com/emberjs/ember-rails.git"
 group :development, :test do
+  gem "better_errors"
   gem 'poltergeist'
   gem 'guard-jasmine'
   gem 'guard-rspec'
