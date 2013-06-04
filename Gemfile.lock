@@ -172,7 +172,7 @@ GEM
     hike (1.2.2)
     http_parser.rb (0.5.3)
     i18n (0.6.4)
-    jquery-rails (3.0.0)
+    jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.0)
@@ -330,7 +330,7 @@ DEPENDENCIES
   guard-rspec
   handlebars-source (= 1.0.0.rc4)
   jasminerice!
-  jquery-rails
+  jquery-rails (= 2.2.1)
   less-rails
   letter_opener
   mysql2
