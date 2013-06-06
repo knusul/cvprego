@@ -5,9 +5,6 @@ App.Adapter = DS.RESTAdapter.extend({
     }
 })
 
-App.Adapter.map('App.Card', {
-  contactTypes: {embedded: 'always'}
-})
 
 App.Adapter.map('App.Experience')
 
