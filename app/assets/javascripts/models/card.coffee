@@ -1,4 +1,10 @@
-App.Card  = DS.Model.extend
+App.Card  = DS.Model.extend Ember.Validations,
+  validations:
+    firstName:
+      presence: true
+      length:
+        minimum: 5
+
   firstName:    DS.attr('string')
   lastName:     DS.attr('string')
   email:        DS.attr('string')

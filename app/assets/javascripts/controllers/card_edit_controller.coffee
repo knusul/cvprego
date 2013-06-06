@@ -1,8 +1,12 @@
 App.CardEditController = Em.ObjectController.extend
   save: ->
-    @transaction.commit()
-    @transaction = null
-    @transitionToRoute('index')
+    card = @get('content')
+    if card.validate()
+      @transaction.commit()
+      @transaction = null
+      @transitionToRoute('index')
+    else
+      alert(card.get('validationErrors'))
 
   startEditing:  ->
     card = @get('content')
