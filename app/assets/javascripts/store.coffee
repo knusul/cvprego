@@ -1,6 +1,5 @@
 App.Adapter = DS.LSAdapter.extend()
 App.Adapter = DS.RESTAdapter.extend({
-  bulkCommit: false
   plurals: {
       'card': 'card'
     }

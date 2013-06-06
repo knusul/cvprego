@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: git://github.com/rails-api/active_model_serializers.git
-  revision: 1d7cb2da75f9f89e88cf6860d20572aa0ae4648c
+  revision: edb673eea3ad23414a3ad4989bd85a5a34d28a09
   specs:
     active_model_serializers (0.8.1)
       activemodel (>= 3.2)
@@ -58,7 +58,7 @@ GIT
 
 GIT
   remote: https://github.com/emberjs/ember-rails.git
-  revision: f606dbda5f2aa36d8cc3f142bad2c582b4478b97
+  revision: 1752d886cf54f95db4b3bc4835be4e29bd70f77d
   specs:
     ember-rails (0.12.0)
       active_model_serializers
@@ -135,7 +135,7 @@ GEM
     commonjs (0.2.6)
     database_cleaner (1.0.1)
     diff-lcs (1.2.4)
-    ember-data-source (0.0.5)
+    ember-data-source (0.13)
       ember-source
     ember-source (0.0.9)
       handlebars-source (= 1.0.0.rc4)
@@ -197,7 +197,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     minitest (4.7.4)
-    multi_json (1.7.5)
+    multi_json (1.7.6)
     mysql2 (0.3.11)
     net-scp (1.1.1)
       net-ssh (>= 2.6.5)

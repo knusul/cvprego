@@ -59,6 +59,7 @@ Opencv::Application.routes.draw do
   resources :experiences
   resources :skills
   resources :educations
+  resources :contact_types
   resources :cards
   resources :languages
 
