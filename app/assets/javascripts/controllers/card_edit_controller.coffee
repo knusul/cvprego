@@ -6,7 +6,11 @@ App.CardEditController = Em.ObjectController.extend
       @transaction = null
       @transitionToRoute('index')
     else
-      alert(card.get('validationErrors'))
+      messages = card.get('validationErrors.allMessages')
+      $(".card-errors").html(messages.map (message) ->
+        message.join(": ")
+      .join("</br>"))
+
 
   startEditing:  ->
     card = @get('content')
