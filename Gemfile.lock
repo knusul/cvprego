@@ -327,7 +327,6 @@ DEPENDENCIES
   factory_girl_rails
   guard-jasmine
   guard-rspec
-  handlebars-source (= 1.0.0.rc4)
   jasminerice!
   jquery-rails (= 2.2.1)
   less-rails

@@ -14,6 +14,7 @@ App.CardEditController = Em.ObjectController.extend
 
   startEditing:  ->
     card = @get('content')
+    card = App.Card.find(App.currentUser.card_id)
     @transaction = card.get('store').transaction()
     @transaction.add(card)
     card.get('contactTypes').forEach (contactType) =>

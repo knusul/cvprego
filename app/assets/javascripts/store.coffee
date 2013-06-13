@@ -6,12 +6,14 @@ App.Adapter = DS.RESTAdapter.extend({
 })
 
 
-App.Adapter.map('App.Experience')
+App.Adapter.map 'App.Card',
+  contact_types:
+    embedded: "always"
 
-App.Store = DS.Store.extend({
+App.Store = DS.Store.extend(
   revision: 11,
   adapter: App.Adapter.create()
-})
+)
 
 #App.Cart.reopenClass
 #  find: ->
