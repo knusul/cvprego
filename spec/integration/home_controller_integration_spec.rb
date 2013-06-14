@@ -6,7 +6,7 @@ feature "HomeController", js: true do
 
   it "have currentUser set" do
     login_user @user
-    sleep(0.5)
-    page.evaluate_script("App.currentUser").should == @user.attributes.slice("id", "email").merge('card_id' => "")
+    page.should have_content "Add Experience"
+    page.evaluate_script("App.currentUser").should == @user.attributes.slice("id", "email").merge('card_id' => @user.card.id)
   end
 end

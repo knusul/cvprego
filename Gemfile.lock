@@ -340,7 +340,6 @@ DEPENDENCIES
   pry-rails
   quiet_assets (~> 1.0.1)
   rails (= 4.0.0.rc1)
-  rb-inotify
   rmagick
   rspec-rails
   rvm-capistrano

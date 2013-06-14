@@ -41,7 +41,6 @@ group :test, :development do
   gem 'guard-jasmine'
   gem 'guard-rspec'
   gem 'rspec-rails'
-  gem 'rb-inotify'
   gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
 end
 

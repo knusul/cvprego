@@ -1,18 +1,9 @@
 class CardsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /cards/1.json
   def show
     card = current_user.card
     render json: card
-  end
-
-  # POST /cards.json
-  def create
-    card = Card.new
-    if update_card(card)
-      render json: card, status: :created
-    else
-      render json: card.errors, status: :unprocessable_entity
-    end
   end
 
   # PUT /cards/1.json
@@ -57,9 +48,6 @@ class CardsController < ApplicationController
         ct.destroy unless specified_contact_types.include? ct
       end
     end
-
-    # Important! Reload the contact to ensure that changes to its associations
-    # (i.e. phone numbers) will be serialized correctly.
     card.reload
 
     return true
