@@ -1,5 +1,6 @@
 App.ExperienceRoute = Ember.Route.extend
   setupController: (controller, model)->
+    controller.set 'model', model
     controller.startEditing()
 
     @controllerFor('experiences').set('activeExperienceId', model.get('id'))

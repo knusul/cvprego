@@ -4,18 +4,13 @@
 </div>
 <div class="modal-body">
   <div class="row text-right">
-    <img {{bindAttr src='gravatar'}} />
-
+    {{!--  <img {{bindAttr src='gravatar'}} /> --}}
   </div>
+</div>
 <div class="span7">
   <form {{action save on="submit"}} class="form-horizontal">
     <legend>Cards</legend>
     <div class='card-errors'>
-    </div>
-
-    <div class='control-group'>
-      <img {{bindAttr src='photoUrl' }} />
-      {{view App.UploadPhotoView cardBinding='this' }}
     </div>
 
     <div class="control-group">

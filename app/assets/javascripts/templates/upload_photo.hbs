@@ -1,9 +1,12 @@
-
 <span class="btn btn-success fileinput-button">
   <i class="icon-plus icon-white"></i>
-  <span>Select files...</span>
+  {{#if photoUrl }}
+  <span>Change image</span>
+  {{ else }}
+  <span>Select image</span>
+  {{/if }}
   <!-- The file input field used as target for the file upload widget -->
-  <input id="fileupload" type="file" name="files[]" data-url="uploads"  multiple="">
+  <input id="fileupload" type="file" name="files[]" data-url="uploads"  multiple="" style="opacity: 0">
 </span>
 <div id="progress" class="progress progress-success progress-striped">
   <div class="bar"></div>
