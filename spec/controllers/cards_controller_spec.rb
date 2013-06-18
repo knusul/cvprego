@@ -14,12 +14,11 @@ describe CardsController do
   end
 
   describe 'update' do
-    it "accepts nested attributes for contact_type" do
-
-      WIP
+    it "success with valid params" do
       user = FactoryGirl.create :user
-      log_in user
-      get :show, id: card, 
+      sign_in user
+      put :update, id: user.card.id, card: {first_name: "Jakub"}
+      response.should be_success
     end
   end
 end
