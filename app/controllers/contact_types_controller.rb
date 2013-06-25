@@ -1,16 +1,15 @@
 class ContactTypesController < ApplicationController
-  # GET /contact_types.json
+  before_filter :authenticate_user!
+
   def index
     render json: current_user.contact_types
   end
 
-  # GET /contact_types/1.json
   def show
     contact_type = current_user.card.contact_types.find(params[:id])
     render json: contact_type
   end
 
-  # POST /contact_types.json
   def create
     contact_type = current_user.card.contact_types.build
     if update_contact_type(contact_type)
@@ -20,9 +19,8 @@ class ContactTypesController < ApplicationController
     end
   end
 
-  # PUT /contact_types/1.json
   def update
-    contact_type = current_user.contact_types.find(params[:id])
+    contact_type = current_user.card.contact_types.find(params[:id])
     if update_contact_type(contact_type)
       render json: contact_type, status: :ok
     else

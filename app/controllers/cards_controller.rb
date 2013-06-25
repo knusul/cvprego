@@ -1,12 +1,11 @@
 class CardsController < ApplicationController
   before_filter :authenticate_user!
-  # GET /cards/1.json
+
   def show
     card = current_user.card
     render json: card
   end
 
-  # PUT /cards/1.json
   def update
     card = Card.find(params[:id])
     if update_card(card)
@@ -16,7 +15,6 @@ class CardsController < ApplicationController
     end
   end
 
-  # DELETE /cards/1.json
   def destroy
     card = Card.find(params[:id])
     card.destroy

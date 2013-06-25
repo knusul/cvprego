@@ -1,7 +1,7 @@
 FactoryGirl.define do
-  factory :card do
-    first_name "Johny"
-    last_name "Bravo"
-    email "johny.bravo@gmail.com"
+  factory :contact_type do
+    name "Johny"
+    number "5433424343"
+    association :card
   end
 end

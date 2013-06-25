@@ -17,7 +17,7 @@ describe CardsController do
     it "success with valid params" do
       user = FactoryGirl.create :user
       sign_in user
-      put :update, id: user.card.id, card: {first_name: "Jakub"}
+      put :update, id: user.card.id, card: {first_name: "jakub"}
       response.should be_success
     end
   end
