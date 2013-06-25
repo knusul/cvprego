@@ -7,18 +7,12 @@ class CardsController < ApplicationController
   end
 
   def update
-    card = Card.find(params[:id])
+    card = current_user.card
     if update_card(card)
       render json: card, status: :ok
     else
       render json: card.errors, status: :unprocessable_entity
     end
-  end
-
-  def destroy
-    card = Card.find(params[:id])
-    card.destroy
-    render json: nil, status: :ok
   end
 
   def permitted_params

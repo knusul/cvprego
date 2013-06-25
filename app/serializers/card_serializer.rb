@@ -8,4 +8,7 @@ class CardSerializer < ActiveModel::Serializer
              :contact_type_ids
 
   has_many :contact_types
+  def id
+      "singleton"
+  end
 end

@@ -16,9 +16,11 @@ describe CardsController do
   describe 'update' do
     it "success with valid params" do
       user = FactoryGirl.create :user
+      card = user.card
       sign_in user
-      put :update, id: user.card.id, card: {first_name: "jakub"}
+      put :update, format: :json, id: card.id, card: {  first_name: "jakub"}
       response.should be_success
+      card.reload.first_name.should eq "jakub"
     end
   end
 end
