@@ -5,6 +5,8 @@ gem 'jquery-rails', "2.2.1"
 gem "mysql2"
 gem 'carrierwave'
 gem "therubyracer"
+gem 'inherited_resources', git: "git://github.com/josevalim/inherited_resources.git"
+gem 'has_scope', git: "git://github.com/plataformatec/has_scope.git"
 gem 'devise', git: "git://github.com/plataformatec/devise.git", branch: "rails4"
 gem 'simple_form', git: "git://github.com/plataformatec/simple_form.git"
 

@@ -8,8 +8,8 @@ describe ContactTypesController do
   describe "show" do
     it "requires authentication" do
       contact_type = FactoryGirl.create :contact_type
-      get :show, id: contact_type
-      response.should redirect_to "/users/sign_in"
+      get :show, format: :json, id: contact_type
+      response.should redirect_to "/users/sign_in.json"
     end
   end
 
@@ -17,7 +17,7 @@ describe ContactTypesController do
     it "success with valid params" do
       user = FactoryGirl.create :user
       sign_in user
-      post :create, id: user.card.id, contact_type: {name: "jakub"}
+      post :create, format: :json, id: user.card.id, contact_type: {name: "jakub"}
       response.should be_success
     end
   end
