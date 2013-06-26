@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 20130602103924) do
     t.string   "to_date"
     t.string   "name"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "experiences", force: true do |t|

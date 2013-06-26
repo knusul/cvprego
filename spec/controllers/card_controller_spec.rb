@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CardsController do
+describe CardController do
   before :each do
     @request.env["devise.mapping"] = Devise.mappings[:user]
   end
@@ -8,7 +8,7 @@ describe CardsController do
   describe "show" do
     it "requires authentication" do
       card = FactoryGirl.create :card
-      get :show, id: card
+      get :show, :ignored => 'current'
       response.should redirect_to "/users/sign_in"
     end
   end
@@ -18,7 +18,7 @@ describe CardsController do
       user = FactoryGirl.create :user
       card = user.card
       sign_in user
-      put :update, format: :json, id: card.id, card: {  first_name: "jakub"}
+      put :update, format: :json, ignored: 'current', card: {  first_name: "jakub"}
       response.should be_success
       card.reload.first_name.should eq "jakub"
     end

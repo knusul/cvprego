@@ -60,8 +60,8 @@ Opencv::Application.routes.draw do
   resources :skills
   resources :educations
   resources :contact_types
-  get "card/:ignored" => "cards#show"
-  put "card/:ignored" => "cards#update"
+  get "card/:ignored" => "card#show"
+  put "card/:ignored" => "card#update"
   resources :languages
 
   authenticated :user do

@@ -1,4 +1,4 @@
-class CardsController < ApplicationController
+class CardController < ApplicationController
   before_filter :authenticate_user!
 
   def show
