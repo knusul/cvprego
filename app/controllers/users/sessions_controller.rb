@@ -10,6 +10,7 @@ class Users::SessionsController < Devise::SessionsController
     sign_in(scope, resource) unless warden.user(scope) == resource
     return render :json => {:success => true}
   end
+
   def failure
     return render :json => {:success => false, :errors => ["Login failed."]}
   end

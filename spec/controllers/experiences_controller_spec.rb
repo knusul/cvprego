@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe EducationsController do
+describe ExperiencesController do
   before :each do
     @request.env["devise.mapping"] = Devise.mappings[:user]
   end
@@ -12,12 +12,12 @@ describe EducationsController do
 
     end
 
-    it "should create education" do
+    it "should create experience" do
       user = FactoryGirl.create :user
       sign_in user
       expect{
-        post :create, education: {from_date: "from", to_date: "to", name: "name"}, format: :json
-      }.to change{Education.count}.by(1)
+        post :create, experience: {from_date: "from", to_date: "to", description: "desc"}, format: :json
+      }.to change{Experience.count}.by(1)
       response.should be_success
     end
   end
