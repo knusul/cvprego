@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "rails", "4.0.0.rc1"
+gem "rails", "4.0.0"
 gem 'jquery-rails', "2.2.1"
 gem "mysql2"
 gem 'carrierwave'
