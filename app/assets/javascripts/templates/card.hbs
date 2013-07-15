@@ -1,19 +1,18 @@
-<div class='control-group'>
-  <img {{bindAttr src='photoUrl' }} />
-  {{view App.UploadPhotoView cardBinding='this' }}
-</div>
-{{#view App.FocusView }}
-<div class="span12">
-  <div class="well sidebar-nav">
+<div class="span12 well sidebar-nav ">
+  <div class="span8">
+    {{#view App.FocusView }}
     <ul>
-    <li class="nav-header">Personal Information2</li>
-    <li>First Name: {{firstName}} </li>
-    <li>Last Name: {{lastName}} </li>
-    <li>Email: {{email}} </li>
-    {{#each contactTypes}}
-    <li>{{ name }}: {{number}} </li>
-    {{/each}}
-  </ul>
+      <li class="nav-header">Personal Information2</li>
+      <li>First Name: {{firstName}} </li>
+      <li>Last Name: {{lastName}} </li>
+      <li>Email: {{email}} </li>
+      {{#each contactTypes}}
+      <li>{{ name }}: {{number}} </li>
+      {{/each}}
+    </ul>
+    {{/view}}
+  </div>
+  <div class='span4 pull-right'>
+    {{view App.UploadPhotoView cardBinding='this' }}
+  </div>
 </div>
-</div>
-{{/view}}
