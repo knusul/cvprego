@@ -1,25 +1,25 @@
 <div class="modal-header">
-  <div class="button close btn-dismiss" {{action cancel content}}>x</div>
-  <h2 class="app-icon-large">Post</h2>
+  <div class="button close btn-dismiss" {{action ok}}>x</div>
+  <h3 class="app-icon-large">Edit your key skills</h3>
 </div>
 <div class="modal-body">
-<div class="span7">
-
-  {{view Ember.TextField id="new-todo" placeholder="What needs to be done?"
-         valueBinding="newName" action="createTodo"}}
-         <a class="btn" {{action createTodo}}><i class="icon-plus-sign"></i> Add a contact type </a>
-
+<div class="span12">
   <form {{action save on="submit"}} class="form-horizontal">
-    <legend>Key Skills</legend>
 
     <div class="control-group">
       <label class="control-label" for="description">Add new skill</label>
       <div class="controls">
+
+        <div class="control-group">
+      {{view Ember.TextField id="new-todo" placeholder="What needs to be done?"
+             valueBinding="newName" action="createSkill"}}
+             <a class="btn" {{action createSkill}}><i class="icon-plus-sign"></i> Add a contact type </a>
+           </div>
+
         {{#each controller}}
             {{view Ember.TextField valueBinding="name" placeholder="diving, driving ect"}}
-            <a class="btn" {{action removeSkill this}}><i class="icon-minus-sign"></i> Remove</a>
+            <a  {{action removeSkill this}}><i class="icon-remove icon-red"></i></a>
         {{/each}}
-        <a class="btn" {{action addSkill}}><i class="icon-plus-sign"></i> Add a contact type </a>
       </div>
     </div>
 
@@ -28,6 +28,5 @@
 
 </div>
 <div class="modal-footer">
-  <a class="btn btn-dark" href="javascript;:" {{action cancel content}}>Cancel</a>
-  <button class="btn btn-success" type="submit" {{action save content}}>Save</button>
+  <button class="btn btn-success" type="submit" {{action ok}}>OK</button>
 </div>

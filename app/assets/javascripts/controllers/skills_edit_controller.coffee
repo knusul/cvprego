@@ -1,17 +1,12 @@
 App.SkillsEditController = Em.ArrayController.extend
-  save: ->
-    @transitionToRoute('index')
-
-  startEditing:  ->
-
-  stopEditing:  ->
-
-  cancel: ->
-    @stopEditing()
+  ok: ->
     @transitionToRoute('index')
 
   removeSkill: (skill)->
+    store = skill.get('store')
+    store.transaction()
     skill.deleteRecord()
+    store.commit()
 
   createSkill: ->
     name = @get('newName')

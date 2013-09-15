@@ -17,24 +17,24 @@ ActiveRecord::Schema.define(version: 20130602103924) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.string   "photo"
   end
 
   create_table "contact_types", force: true do |t|
     t.string   "number"
-    t.integer  "card_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "name"
+    t.integer  "card_id"
   end
 
   create_table "cvs", force: true do |t|
     t.string   "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "educations", force: true do |t|
@@ -42,15 +42,15 @@ ActiveRecord::Schema.define(version: 20130602103924) do
     t.string   "to_date"
     t.string   "name"
     t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "experiences", force: true do |t|
     t.string   "from_date"
     t.string   "to_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "email"
     t.text     "description"
     t.integer  "user_id"
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(version: 20130602103924) do
   end
 
   create_table "languages", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.string   "level"
     t.string   "name"
@@ -68,8 +68,8 @@ ActiveRecord::Schema.define(version: 20130602103924) do
 
   create_table "skills", force: true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "user_id"
   end
 
@@ -84,8 +84,8 @@ ActiveRecord::Schema.define(version: 20130602103924) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
