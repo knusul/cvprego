@@ -1,16 +1,12 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   after_create :create_card
-  # attr_accessible :title, :body
-  has_one :card
-  has_many :experiences
-  has_many :educations
-  has_many :skills
-  has_many :languages
-  has_many :hobbies
+  has_one :card, :dependent => :destroy
+  has_many :experiences, :dependent => :destroy 
+  has_many :educations, :dependent => :destroy
+  has_many :skills, :dependent => :destroy
+  has_many :languages, :dependent => :destroy
+  has_many :hobbies, :dependent => :destroy
 end

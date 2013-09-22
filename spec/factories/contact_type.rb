@@ -4,4 +4,11 @@ FactoryGirl.define do
     last_name "Bravo"
     email "johny.bravo@gmail.com"
   end
+  factory :skill do
+    name "superskill"
+  end
+
+  factory :hobby do
+    "lowienie ryb"
+  end
 end
