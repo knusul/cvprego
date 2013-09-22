@@ -1,6 +1,6 @@
 <div class="modal-header">
   <div class="button close btn-dismiss" {{action ok}}>x</div>
-  <h3 class="app-icon-large">Edit your key hobbys</h3>
+  <h3 class="app-icon-large">Edit your key hobbies</h3>
 </div>
 <div class="modal-body">
 <div class="span12">
@@ -11,7 +11,7 @@
       <div class="controls">
 
         <div class="control-group">
-      {{view Ember.TextField id="new-todo" placeholder="What needs to be done?"
+      {{view Ember.TextField id="new-todo" placeholder="Enter your hobbies."
              valueBinding="newName" action="createHobby"}}
              <a class="btn" {{action createHobby}}><i class="icon-plus-sign"></i> Add a contact type </a>
            </div>

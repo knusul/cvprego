@@ -12,5 +12,5 @@ class User < ActiveRecord::Base
   has_many :educations
   has_many :skills
   has_many :languages
-  has_many :hobbys
+  has_many :hobbies
 end

@@ -1,3 +1,3 @@
-App.HobbysController = Em.ArrayController.extend
+App.HobbiesController = Em.ArrayController.extend
   focus: ->
-    @transitionToRoute('hobbys-edit')
+    @transitionToRoute('hobbies-edit')

@@ -1,4 +1,4 @@
-App.HobbysEditView = Em.View.extend
+App.HobbiesEditView = Em.View.extend
   classNames: 'modal fade in form-custom-field-modal'.w()
 
   didInsertElement: ->

@@ -1,4 +1,4 @@
-App.HobbysEditRoute = Ember.Route.extend
+App.HobbiesEditRoute = Ember.Route.extend
 
   setupController: (controller)->
     controller.set 'model', App.Hobby.find()

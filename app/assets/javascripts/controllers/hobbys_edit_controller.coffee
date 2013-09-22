@@ -1,4 +1,4 @@
-App.HobbysEditController = Em.ArrayController.extend
+App.HobbiesEditController = Em.ArrayController.extend
   ok: ->
     @transitionToRoute('index')
 

@@ -1,4 +1,4 @@
-class HobbysController< InheritedResources::Base
+class HobbiesController < InheritedResources::Base
   before_filter :authenticate_user!
   respond_to :json
 
