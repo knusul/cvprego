@@ -1,0 +1,10 @@
+<% unless @user.languages.empty? %>
+  <section class="row-fluid experience" id="experience">
+  <aside class="span3 aside_el">
+  <h2>Language</h2>
+  </aside>
+  <div class="span9">
+    <%= render @user.languages %>
+  </div>
+  </section>
+<% end %>

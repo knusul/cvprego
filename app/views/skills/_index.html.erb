@@ -1,0 +1,10 @@
+<% unless @user.skills.empty? %>
+  <section class="row-fluid skill" id="skill">
+  <aside class="span3 aside_el">
+  <h2>Skills</h2>
+  </aside>
+  <div class="span9">
+    <%= render @user.skills %>
+  </div>
+  </section>
+<% end %>

@@ -1,17 +1,31 @@
-<div class="span8">
-  <div class="thumbnail span3">
-  <%= gravatar_tag @user.email %>
-  </div>
-  <div class= "span4">
-    <h1> <%= @card.first_name %> <%= @card.last_name %> </h1>
-    <ul><li>
-    email: <%= @card.email %>
-  </li>
+<%= javascript_include_tag 'show_to_pdf' %>
+<div id="printable">
+  <div class="span8">
+    <div class="thumbnail span3">
+      <%= gravatar_tag @user.email %>
+    </div>
+    <div class= "span4">
+      <h1> <%= @card.first_name %> <%= @card.last_name %> </h1>
+      <ul><li>
+          email: <%= @card.email %>
+      </li>
       <%= render @card.contact_types %>
     </ul>
   </div>
 
 </div>
 <div class='span8'>
-<%= render 'experiences/index', experiences: @user.experiences %>
+  <%= render "skills/index" %>
 </div>
+<div class='span8'>
+  <%= render 'experiences/index' %>
+</div>
+<div class='span8'>
+  <%= render 'educations/index' %>
+</div>
+<div class='span8'>
+  <%= render 'languages/index' %>
+</div>
+
+</div>
+<input class="btn btn-primary download" value="DOWNLOAD as PDF">
