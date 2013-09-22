@@ -58,6 +58,7 @@ Opencv::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
   resources :experiences
   resources :skills
+  resources :hobbys
   resources :educations
   resources :contact_types
   get "card/:ignored" => "card#show"
