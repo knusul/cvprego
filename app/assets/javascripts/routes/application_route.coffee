@@ -5,3 +5,4 @@ App.ApplicationRoute = Ember.Route.extend
     @controllerFor('card').set 'model', App.Card.find()
     @controllerFor('skills').set 'model', App.Skill.find()
     @controllerFor('languages').set 'model', App.Language.find()
+    @controllerFor('hobbys').set 'model', App.Hobby.find()
