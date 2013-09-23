@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem "rails", "4.0.0"
 gem 'jquery-rails', "2.2.1"
-gem "mysql2"
+gem "sqlite3"
 gem 'carrierwave'
 gem "therubyracer"
 gem 'inherited_resources', git: "git://github.com/josevalim/inherited_resources.git"
