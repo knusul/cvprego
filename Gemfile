@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem "rails", "4.0.0"
 gem 'jquery-rails', "2.2.1"
-gem "sqlite3"
 gem 'carrierwave'
 gem "therubyracer"
 gem 'inherited_resources', git: "git://github.com/josevalim/inherited_resources.git"
@@ -35,6 +34,7 @@ end
 
 
 group :test, :development do
+  gem "sqlite3"
   gem 'pry'
   gem 'pry-rails'
   gem 'pry-nav'
@@ -54,4 +54,7 @@ group :test do
   gem 'capybara-webkit', :git => 'git@github.com:thoughtbot/capybara-webkit.git'
   gem 'selenium-webdriver'
   gem 'factory_girl_rails'
+end
+group :production do
+  gem 'mysql2'
 end
