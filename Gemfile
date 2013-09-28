@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'sqlite3'
+gem 'pg'
 gem "rails", "4.0.0"
 gem 'jquery-rails', "2.2.1"
 gem 'carrierwave'
