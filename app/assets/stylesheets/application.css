@@ -53,3 +53,9 @@
 article.in_spacing{
   border-bottom:1px dashed black;
 }
+#photo {
+  background-image: url('no-photo.png');
+  width: 200px;
+  height: 150px;
+  display: block;
+}
