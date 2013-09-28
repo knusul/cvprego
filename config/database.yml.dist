@@ -1,0 +1,19 @@
+
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: opencv_development
+  pool: 5
+  username: root
+  password: r00t
+
+
+
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: opencv_test
+  pool: 5
+  username: root
+  password: r00t
+

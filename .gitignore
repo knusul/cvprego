@@ -15,3 +15,4 @@
 /tmp
 node_modules
 public/uploads
+config/database.yml
