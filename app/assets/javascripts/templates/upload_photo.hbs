@@ -1,9 +1,8 @@
-  {{#if photoUrl }}
-  <img  onclick="document.getElementById('fileupload').click();" {{bindAttr src='photoUrl' }} />
-  {{ else }}
-  <div id='photo' onclick="document.getElementById('fileupload').click();" >
-  </div>
-  {{/if }}
+{{#if photoUrl }}
+  <img  onclick="document.getElementById('fileupload').click();" {{bindAttr src='photoUrl' }} class = 'img-thumbnail' />
+{{ else }}
+  <img  onclick="document.getElementById('fileupload').click();" src='no-photo.png' class = 'img-thumbnail' />
+{{/if }}
 <input id="fileupload" type="file" name="files[]" data-url="uploads"  multiple="" style="opacity: 0; display: none;">
 <div id="progress" class="progress progress-success progress-striped">
   <div class="bar"></div>
