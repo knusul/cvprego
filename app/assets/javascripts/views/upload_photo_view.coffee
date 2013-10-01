@@ -7,6 +7,7 @@ App.UploadPhotoView = Ember.View.extend
       url: '/uploads'
       dataType: 'json',
       done: (e, data) ->
+        $(this).parent().find('#progress').remove()
         if(data.result['errors'])
           html = $.parseHTML("<div class='alert alert-error'>#{data.result['errors'][0]} </div>")
           $(@).closest('.ember-view').prepend(html)
@@ -20,3 +21,5 @@ App.UploadPhotoView = Ember.View.extend
               'width',
               progress + '%'
           )
+      send: (e, data) ->
+        $(this).parent().append("<div id='progress' class='progress progress-success progress-striped'><div class='bar'></div></div>")

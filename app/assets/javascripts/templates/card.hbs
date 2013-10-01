@@ -1,15 +1,13 @@
-<div class="span12 well sidebar-nav ">
+<div class="span12 border-bottom personal_profile">
   <div class="span8">
     {{#view App.FocusView }}
-    <ul>
-      <li class="nav-header">Personal Information2</li>
-      <li>First Name: {{firstName}} </li>
-      <li>Last Name: {{lastName}} </li>
-      <li>Email: {{email}} </li>
+    <div class='span6'>
+      <h1>{{firstName}} {{lastName}} </h1>
+      <h3>Email: {{email}} </h3>
       {{#each contactTypes}}
-      <li>{{ name }}: {{number}} </li>
+      <h3>{{ name }}: {{number}} </h3>
       {{/each}}
-    </ul>
+  </div>
     {{/view}}
   </div>
   <div class='span4 pull-right'>

@@ -1,4 +1,7 @@
 App.ApplicationRoute = Ember.Route.extend
+  isEditable: ->
+    true
+
   setupController: ->
     @controllerFor('experiences').set 'model', App.Experience.find()
     @controllerFor('educations').set 'model', App.Education.find()
