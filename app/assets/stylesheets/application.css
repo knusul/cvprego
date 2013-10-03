@@ -59,3 +59,15 @@ article.in_spacing{
   height: 150px;
   display: block;
 }
+.border-bottom {
+  border-bottom: 1px solid #dfdfdf;
+}
+div.clickable:hover{
+  float: left;
+  width: 100%;
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+#personal_profile{
+  margin-left: 0;
+}
