@@ -1,6 +1,5 @@
 App.ApplicationRoute = Ember.Route.extend
-  isEditable: ->
-    true
+  editable: true
 
   setupController: ->
     @controllerFor('experiences').set 'model', App.Experience.find()
@@ -9,3 +8,6 @@ App.ApplicationRoute = Ember.Route.extend
     @controllerFor('skills').set 'model', App.Skill.find()
     @controllerFor('languages').set 'model', App.Language.find()
     @controllerFor('hobbies').set 'model', App.Hobby.find()
+
+    for controller in ['experiences', 'educations', 'card', 'skills', 'languages', 'hobbies']
+      @controllerFor(controller).set 'clickable', true

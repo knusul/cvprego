@@ -7,4 +7,5 @@ App.Router.map(function() {
   this.route('new-education');
   this.resource('experience', {path: ':experience_id'});
   this.resource('education', {path: ':education_id'});
+  this.route('show', {path: ':emai'});
 });
