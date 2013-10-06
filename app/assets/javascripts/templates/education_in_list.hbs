@@ -1,1 +1,5 @@
-{{#linkTo "education" education}}{{education.fullName}}{{/linkTo}}
+{{#if controllers.application.clickable }}
+  {{#linkTo "education" education}}{{education.fullName}}{{/linkTo}}
+{{else}}
+  {{education.fullnName}}
+{{/if}}

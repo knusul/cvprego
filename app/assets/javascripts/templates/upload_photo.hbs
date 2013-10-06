@@ -3,5 +3,7 @@
 {{ else }}
   <img  onclick="document.getElementById('fileupload').click();" src='assets/no-photo.png' class = 'img-thumbnail' />
 {{/if }}
-<input id="fileupload" type="file" name="files[]" data-url="uploads"  multiple="" style="opacity: 0; display: none;">
+{{#if controllers.application.clickable }}
+  <input id="fileupload" type="file" name="files[]" data-url="uploads"  multiple="" style="opacity: 0; display: none;">
+{{/if}}
 <div id="files"></div>

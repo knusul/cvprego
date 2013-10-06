@@ -1,4 +1,5 @@
 App.LanguagesEditController = Em.ArrayController.extend
+  needs: ['application']
   save: ->
     @transaction.commit()
     @transaction = null

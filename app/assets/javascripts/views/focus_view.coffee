@@ -3,11 +3,11 @@ App.FocusView = Em.View.extend
   classNameBindings: ['clickable']
 
   clickable: (->
-    if @get('controller').get('clickable')
+    if @get('controller.controllers.application').get('clickable')
       "clickable"
-  ).property("debugger; @get(controller)")
+  ).property("controller.controllers.application.clickable")
 
   click: ->
     controller = @get('controller')
-    if controller.get('clickable')
+    if controller.get('controllers.application').get('clickable')
       controller.focus()

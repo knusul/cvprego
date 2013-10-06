@@ -1,4 +1,5 @@
 App.ShowRoute = App.ApplicationRoute.extend
   setupController: ->
-    for controller in ['experiences', 'educations', 'card', 'skills', 'languages', 'hobbies']
-      @controllerFor(controller).set 'clickable', false
+    # for controller in ['experiences', 'educations', 'card', 'skills', 'languages', 'hobbies']
+    #  @controllerFor(controller).set 'clickable', false
+    @controllerFor('application').set 'clickable', false
