@@ -1,2 +1,1 @@
-App.ShowController = Em.ObjectController.extend
- needs: ['application']
+App.ShowController = Em.ObjectController.extend()
