@@ -3,7 +3,7 @@ App.Education  = DS.Model.extend
   toDate:     DS.attr('string')
   name:        DS.attr('string')
 
-
   fullName: (->
-    @get('name') or "unknown"
+    toDate = @get('toDate') or 'now'
+    "#{@get('fromDate')}-#{toDate}: #{@get('name')}"
   ).property('fromDate', 'toDate', 'name')

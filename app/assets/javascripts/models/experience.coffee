@@ -23,7 +23,7 @@ App.Experience  = DS.Model.extend
     description = "" if description is undefined
     company_name = "" if company_name is undefined
     role = "" if role is undefined
-    "#{company_name}: #{role}"
+    "#{fromDate}-#{toDate}: #{company_name}: #{role}"
   ).property('fromDate', 'toDate')
 
   gravatar:  (->

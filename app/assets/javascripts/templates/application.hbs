@@ -5,8 +5,11 @@
       <button class="btn btn-success" type="submit" {{action ok}}>Show my CV!</button>
       {{else}}
       <button class="btn btn-success" type="submit" {{action edit}}>Back to edit</button>
+      <button class="btn btn-success" type="submit" {{action savePDF}}>Save as PDF</button>
       {{/if}}
+    {{else}}
+    <button class="btn btn-success" type="submit" {{action savePDF}}>Save as PDF</button>
     {{/if}}
-    {{ outlet }}
+    <div id='content'>{{ outlet }}</div>
   </div>
 </div>
