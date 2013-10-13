@@ -1,8 +1,13 @@
 class CardController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [:show]
 
   def show
-    card = current_user.card
+    if(params[:email])
+      user = User.find_by_email(params[:email])
+    else
+      user = current_user
+    end
+    card = user.card
     render json: card
   end
 

@@ -63,12 +63,10 @@ Opencv::Application.routes.draw do
   resources :contact_types
   get "card/:ignored" => "card#show"
   put "card/:ignored" => "card#update"
+  get 'card' => 'card#show'
   resources :languages
 
-  authenticated :user do
-    root :to => 'home#index', as: "authenticated_root"
-  end
-  root :to => redirect('/landing')
+  root :to => 'home#index', as: "authenticated_root"
   get '/landing' => "home#landing"
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   get '/show' => "home#show"

@@ -1,17 +1,12 @@
 <div class="container-fluid" id="main">
   <div class="row-fluid">
-
-    {{#if clickable }}
-    <button class="btn btn-success" type="submit" {{action ok}}>Show my CV!</button>
-    {{else}}
-    <button class="btn btn-success" type="submit" {{action edit}}>Back to edit</button>
+    {{#if App.currentUser }}
+      {{#if clickable }}
+      <button class="btn btn-success" type="submit" {{action ok}}>Show my CV!</button>
+      {{else}}
+      <button class="btn btn-success" type="submit" {{action edit}}>Back to edit</button>
+      {{/if}}
     {{/if}}
-    {{render 'card'}}
-    {{render 'skills'}}
-    {{render 'experiences'}}
-    {{render 'educations'}}
-    {{render 'languages'}}
-    {{render 'hobbies'}}
     {{ outlet }}
   </div>
 </div>

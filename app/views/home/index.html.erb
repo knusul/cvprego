@@ -1,6 +1,8 @@
 <%= javascript_include_tag "app" %>
 <div id="ember-app"/>
 
+<%- if current_user %>
 <script>
   App.currentUser = JSON.parse("<%= escape_javascript raw current_user.attributes.slice('email', 'id').merge(card_id: current_user.card.try(:id)).to_json %>")
 </script>
+<% end %>
