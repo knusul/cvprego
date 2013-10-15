@@ -3,18 +3,33 @@
   <p class="lead">create and download your cv in 5 minutes</p>
   <form accept-charset="UTF-8" action="/users" class="new_user" data-remote="true" id="new_user" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
     <div class= "login-header"></div>
+     <div class="control-group">
+       <div class="control-label">
+         <label>Email</label>
+       </div>
+       <div class="controls">
+     <div class="controls">
+      {{input value=email type="text"}}
+    </div>
+  </div>
 
-
-    <div><label for="user_email">Email</label><br />
-      <input autofocus="autofocus" id="user_email" name="user[email]" type="email" value="" /></div>
-
-    <div><label for="user_password">Password</label><br />
-      <input id="user_password" name="user[password]" type="password" /></div>
-
-    <div><label for="user_password_confirmation">Password confirmation</label><br />
-      <input id="user_password_confirmation" name="user[password_confirmation]" type="password" /></div>
-
-    <div><input class="btn btn-primary" name="commit" type="submit" value="Sign up" /></div>
+  <div class="control-group">
+    <div class="control-label">
+      <label>Password</label>
+    </div>
+    <div class="controls">
+      {{input value=password type="password"}}
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="control-label">
+      <label>Password Confirmation</label>
+    </div>
+    <div class="controls">
+      {{input value=password_confirmation type="password"}}
+    </div>
+  </div>
+    <button class="btn btn-primary" type="submit" {{action signup}}>Signup</button>
   </form>
 </div>
 <hr>

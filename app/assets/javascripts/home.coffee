@@ -12,7 +12,7 @@ $ ->
     login_form.find(".login-header").html("<div class='alert alert-error'> <p>Wrong username or password.</p></div>")
 
 
-  signup_form = $("form#new_user")
+  signup_form = $("form.new_user")
   signup_form.bind "ajax:success", (e, data, status, xhr) ->
     if data.success
       $('#signup-form').modal('hide')
