@@ -15,3 +15,7 @@ App.ApplicationController = Em.ObjectController.extend
       width: 170,
       elementHandlers: specialElementHandlers
     doc.save("JakubNieznalski.pdf")
+
+  href: (->
+    window.location.href
+  ).property()
