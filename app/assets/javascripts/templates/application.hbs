@@ -3,12 +3,6 @@
     {{#if App.currentUser }}
       {{#if clickable }}
       <button class="btn btn-success" type="submit" {{action ok}}>Show my CV!</button>
-      {{render 'card'}}
-      {{render 'skills'}}
-      {{render 'experiences'}}
-      {{render 'educations'}}
-      {{render 'languages'}}
-      {{render 'hobbies'}}
       {{else}}
       <div class="clone-url-box">
         <h4>Your CV address is:
@@ -17,6 +11,12 @@
       <button class="btn" type="submit" {{action edit}}>Back to edit</button>
       <button class="btn btn-success" type="submit" {{action savePDF}}>Download as PDF</button>
       {{/if}}
+      {{render 'card'}}
+      {{render 'skills'}}
+      {{render 'experiences'}}
+      {{render 'educations'}}
+      {{render 'languages'}}
+      {{render 'hobbies'}}
     {{else}}
       {{partial "landing"}}
     {{/if}}
