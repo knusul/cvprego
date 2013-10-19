@@ -1,10 +1,11 @@
 App.NewExperienceView = Ember.View.extend
   classNames: 'modal fade in form-custom-field-modal'.w()
   didInsertElement: ->
-    this.$('input:first').focus()
+    this.$('textarea:first').focus()
     @$().modal 'show'
     @$().on 'hidden', =>
-      @get('controller.target.router').transitionTo('index')
+      @get('controller').stopEditing()
+      @get('controller').rollback()
 
   willDestroyElement: ->
     @$().modal 'hide'

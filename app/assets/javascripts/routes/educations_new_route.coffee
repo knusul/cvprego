@@ -1,11 +1,6 @@
 App.NewEducationRoute = Ember.Route.extend
   model: ->
-# Because we are maintaining a transaction locally in the controller for editing,
-# the new record needs to be created in the controller.
-    null
-
-  setupController: (controller)->
-    controller.startEditing()
+    @store.createRecord('education')
 
   deactivate: ()->
     @controllerFor('new_education').stopEditing()

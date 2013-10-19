@@ -6,7 +6,7 @@ App.ShowRoute = App.ApplicationRoute.extend
       email: email
     @controllerFor('educations').set 'model', App.Education.find
       email: email
-    @controllerFor('card').set 'model', App.Card.find("singleton?email=#{email}")
+    @controllerFor('card').set 'model', @store.find('card', "singleton?=#{email}")
     @controllerFor('skills').set 'model', App.Skill.find
       email: email
     @controllerFor('languages').set 'model', App.Language.find

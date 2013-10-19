@@ -1,18 +1,14 @@
 App.NewExperienceController = Em.ObjectController.extend
-  startEditing:  ->
-    @transaction = @get('store').transaction()
-    @set('content', @transaction.createRecord(App.Experience, {}))
+  rollback: ->
+    @get('model').rollback()
 
-  stopEditing:  ->
-    if (@transaction)
-      @transaction.rollback()
-      @transaction = null
+  stopEditing: ->
+    @transitionToRoute('index')
 
   save: ->
-    @transaction.commit()
-    @transaction = null
-    @transitionToRoute('index')
+    @get('model').save()
+    @stopEditing()
 
   cancel:  ->
+    @rollback()
     @stopEditing()
-    @transitionToRoute('index')

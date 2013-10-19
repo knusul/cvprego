@@ -61,9 +61,9 @@ Opencv::Application.routes.draw do
   resources :hobbies
   resources :educations
   resources :contact_types
-  get "card/:ignored" => "card#show"
-  put "card/:ignored" => "card#update"
-  get 'card' => 'card#show'
+  get "cards/:ignored" => "card#show"
+  put "cards/:ignored" => "card#update"
+  get 'cards' => 'card#show'
   resources :languages
 
   root :to => 'home#index', as: "authenticated_root"

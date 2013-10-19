@@ -4,6 +4,7 @@ App.NewEducationView = Ember.View.extend
     this.$('input:first').focus()
     @$().modal 'show'
     @$().on 'hidden', =>
+      @get('controller').rollback()
       @get('controller.target.router').transitionTo('index')
 
   willDestroyElement: ->

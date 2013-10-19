@@ -4,15 +4,14 @@ App.SkillsEditController = Em.ArrayController.extend
 
   removeSkill: (skill)->
     store = skill.get('store')
-    store.transaction()
     skill.deleteRecord()
-    store.commit()
+    skill.save()
 
   createSkill: ->
     name = @get('newName')
     if (!name.trim())
       return
-    skill = App.Skill.createRecord
+    skill = @store.createRecord 'skill',
       name: name
     @set('newName', '')
     skill.save()

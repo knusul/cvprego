@@ -11,15 +11,6 @@ App.CardEditController = Em.ObjectController.extend
         message.join(": ")
       .join("</br>"))
 
-
-  startEditing:  ->
-    card = @get('content')
-    card = App.Card.find('singleton')
-    @transaction = card.get('store').transaction()
-    @transaction.add(card)
-    card.get('contactTypes').forEach (contactType) =>
-      @transaction.add(contactType)
-
   stopEditing:  ->
     if (@transaction)
       @transaction.rollback()
