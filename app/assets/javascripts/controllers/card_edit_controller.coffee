@@ -1,9 +1,10 @@
 App.CardEditController = Em.ObjectController.extend
+  contactTypes: []
   save: ->
     card = @get('content')
     if card.validate()
-      @transaction.commit()
-      @transaction = null
+      card.save()
+      @contactTypes.invoke('save')
       @transitionToRoute('index')
     else
       messages = card.get('validationErrors.allMessages')
@@ -22,7 +23,7 @@ App.CardEditController = Em.ObjectController.extend
 
   addContactType:  ->
     record = @get('content.contactTypes').createRecord()
-    @transaction.add(record)
+    @contactTypes.addObject(record)
 
   removeContactType: (contactType)->
     contactType.deleteRecord()

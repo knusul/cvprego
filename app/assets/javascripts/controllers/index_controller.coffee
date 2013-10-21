@@ -1,6 +1,5 @@
 App.IndexController = Em.Controller.extend
   signup: ->
-
     $.post("/users",
       user:
         email: @get("email"),
