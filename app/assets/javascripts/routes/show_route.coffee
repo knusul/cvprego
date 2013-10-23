@@ -1,16 +1,25 @@
-App.ShowRoute = App.ApplicationRoute.extend
+App.ShowRoute = Ember.Route.extend
   model: (params) ->
     params.email
+
   setupController: (controller, email) ->
-    @controllerFor('experiences').set 'model', App.Experience.find
+    @controllerFor('application').set 'clickable', false 
+    @controllerFor('card').set 'model', @store.find('card', "singleton?email=#{email}")
+    @controllerFor('experiences').set 'model', @store.find('experience',
       email: email
-    @controllerFor('educations').set 'model', App.Education.find
+    )
+    @controllerFor('experiences').set 'model', @store.find('experience',
       email: email
-    @controllerFor('card').set 'model', @store.find('card', "singleton?=#{email}")
-    @controllerFor('skills').set 'model', App.Skill.find
+    )
+    @controllerFor('educations').set 'model', @store.find('education',
       email: email
-    @controllerFor('languages').set 'model', App.Language.find
+    )
+    @controllerFor('skills').set 'model', @store.find('skill',
       email: email
-    @controllerFor('hobbies').set 'model', App.Hobby.find
+    )
+    @controllerFor('languages').set 'model', @store.find('language',
       email: email
-    @controllerFor('application').set 'clickable', false
+    )
+    @controllerFor('hobbies').set 'model', @store.find('hobby',
+      email: email
+    )
