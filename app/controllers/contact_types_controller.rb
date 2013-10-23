@@ -2,6 +2,7 @@ class ContactTypesController < InheritedResources::Base
   before_filter :authenticate_user!, :except => [:index]
   respond_to :json
 
+
   private
   def begin_of_association_chain
     current_user.card || User.find_by_email(params[:email])

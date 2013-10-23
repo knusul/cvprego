@@ -61,6 +61,7 @@ Opencv::Application.routes.draw do
   resources :hobbies
   resources :educations
   resources :contact_types
+  post 'contact_types/index' => 'contact_types#batch_create'
   get "cards/:ignored" => "card#show"
   put "cards/:ignored" => "card#update"
   get 'cards' => 'card#show'

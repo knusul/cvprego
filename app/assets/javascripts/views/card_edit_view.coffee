@@ -9,7 +9,6 @@ App.CardEditView = Em.View.extend
 
   willDestroyElement: ->
     @$().modal 'hide'
-    @get('controller').stopEditing()
 
   keyPress: (e) ->
    if  e.charCode is 13

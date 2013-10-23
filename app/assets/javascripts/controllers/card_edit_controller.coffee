@@ -1,10 +1,9 @@
 App.CardEditController = Em.ObjectController.extend
-  contactTypes: []
   save: ->
     card = @get('content')
     if card.validate()
-      card.save()
-      @contactTypes.invoke('save')
+      card.save().then ->
+        card.get('contactTypes').invoke('save')
       @transitionToRoute('index')
     else
       messages = card.get('validationErrors.allMessages')
@@ -12,21 +11,15 @@ App.CardEditController = Em.ObjectController.extend
         message.join(": ")
       .join("</br>"))
 
-  stopEditing:  ->
-    if (@transaction)
-      @transaction.rollback()
-      @transaction = null
-
   cancel: ->
-    @stopEditing()
     @transitionToRoute('index')
 
   addContactType:  ->
     record = @get('content.contactTypes').createRecord()
-    @contactTypes.addObject(record)
 
   removeContactType: (contactType)->
     contactType.deleteRecord()
+    contactType.save()
 
   submitPhotoUpload: (event) ->
     event.preventDefault()
