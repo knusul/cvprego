@@ -5,10 +5,11 @@ App.NewEducationController = Em.ObjectController.extend
   stopEditing: ->
     @transitionToRoute('index')
 
-  save: ->
-    @get('model').save()
-    @stopEditing()
+  actions:
+    save: ->
+      @get('model').save()
+      @stopEditing()
 
-  cancel:  ->
-    @rollback()
-    @stopEditing()
+    cancel:  ->
+      @rollback()
+      @stopEditing()

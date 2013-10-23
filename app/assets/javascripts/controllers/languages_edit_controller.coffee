@@ -1,26 +1,20 @@
 App.LanguagesEditController = Em.ArrayController.extend
   needs: ['application']
-  save: ->
-    @transaction.commit()
-    @transaction = null
-    @transitionToRoute('index')
-
-  startEditing:  ->
-    @transaction = @get('store').transaction()
-    @forEach (language) =>
-      @transaction.add(language)
 
   stopEditing:  ->
-    if (@transaction)
-      @transaction.rollback()
-      @transaction = null
+    @transitionToRoute('index')
 
   cancel: ->
     @stopEditing()
-    @transitionToRoute('index')
 
-  addLanguage:  ->
-    @transaction.createRecord(App.Language, {name: ""})
+  actions:
+    save: ->
+      @get('content').save()
+      @stopEditing()
 
-  removeLanguage: (language)->
-    language.deleteRecord()
+    addLanguage:  ->
+      @get('store').createRecord('language', {name: ""})
+
+    removeLanguage: (language)->
+      language.deleteRecord()
+      language.save()

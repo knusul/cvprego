@@ -5,10 +5,12 @@ App.NewExperienceController = Em.ObjectController.extend
   stopEditing: ->
     @transitionToRoute('index')
 
-  save: ->
-    @get('model').save()
-    @stopEditing()
+  actions:
 
-  cancel:  ->
-    @rollback()
-    @stopEditing()
+    save: ->
+      @get('model').save()
+      @stopEditing()
+
+    cancel:  ->
+      @rollback()
+      @stopEditing()

@@ -1,29 +1,20 @@
 App.EducationController = Em.ObjectController.extend
-  startEditing:  ->
-    education = @get('content')
-    @transaction = education.get('store').transaction()
-    @transaction.add(education)
-
   stopEditing: ->
-    if (@transaction)
-      @transaction.rollback()
-      @transaction = undefined
     @transitionToRoute('index')
 
-  save:  ->
-    @transaction.commit()
-    @transaction = undefined
-    @stopEditing()
+  actions:
 
-  cancel:  ->
-    @stopEditing()
+    save:  ->
+      record = @get('content')
+      record.save()
+      @stopEditing()
 
-  addContactType:  ->
-    @get('content.contactTypes').createRecord()
+    cancel:  ->
+      @stopEditing()
 
-  destroyRecord:  ->
-    if (window.confirm("Are you sure you want to delete @education?"))
-      @get('content').deleteRecord()
-      @transaction.commit()
-      @get('store').commit()
-      @get('target.router').transitionTo('index')
+    destroyRecord:  ->
+      if (window.confirm("Are you sure you want to delete this record?"))
+        record = @get('content')
+        record.deleteRecord()
+        record.save()
+        @stopEditing()
