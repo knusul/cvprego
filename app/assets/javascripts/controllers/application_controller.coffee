@@ -2,7 +2,7 @@ App.ApplicationController = Em.ObjectController.extend
   clickable: true
   ok: ->
     @set('clickable', false)
-    @transitionToRoute "show", @store.find('card', 'singleton')
+    @transitionToRoute "show", @store.find('card', 'singleton').get('email')
 
   edit: ->
     @set('clickable', true)
