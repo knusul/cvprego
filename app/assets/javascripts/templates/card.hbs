@@ -11,6 +11,10 @@
     {{/view}}
   </div>
   <div class='span4 pull-right'>
-    {{view App.UploadPhotoView cardBinding='this' }}
+    {{#if clickable}}
+      {{view App.UploadPhotoView cardBinding='this' }}
+    {{else}}
+      <img {{bindAttr src='photoUrl' }} class = 'img-polaroid' />
+    {{/if}}
   </div>
 </div>

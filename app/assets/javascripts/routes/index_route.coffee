@@ -9,4 +9,5 @@ App.IndexRoute = Ember.Route.extend
       @controllerFor('languages').set 'model', @store.find('language')
       @controllerFor('hobbies').set 'model', @store.find('hobby')
 
-    @controllerFor('application').set 'clickable', true
+      @controllerFor('application').set 'clickable', true
+      @controllerFor('card').set 'clickable', true

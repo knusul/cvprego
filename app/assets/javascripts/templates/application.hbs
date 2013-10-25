@@ -11,14 +11,16 @@
       <button class="btn" type="submit" {{action edit}}>Back to edit</button>
       <button class="btn btn-success" type="submit" {{action savePDF}}>Download as PDF</button>
       {{/if}}
-      {{render 'card'}}
-      {{render 'skills'}}
-      {{render 'experiences'}}
-      {{render 'educations'}}
-      {{render 'languages'}}
-      {{render 'hobbies'}}
+      <div id='content'>
+        {{render 'card'}}
+        {{render 'skills'}}
+        {{render 'experiences'}}
+        {{render 'educations'}}
+        {{render 'languages'}}
+        {{render 'hobbies'}}
+      </div>
     {{else}}
     {{/if}}
-    <div id='content'>{{ outlet }}</div>
+    {{ outlet }}
   </div>
 </div>

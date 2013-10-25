@@ -23,3 +23,4 @@ App.ShowRoute = Ember.Route.extend
     @controllerFor('hobbies').set 'model', @store.find('hobby',
       email: email
     )
+    @controllerFor('card').set 'clickable', false
