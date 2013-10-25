@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'pg'
-gem "rails", "4.0.0"
+gem "rails", "4.0.1rc3"
 gem 'jquery-rails', "2.2.1"
 gem 'carrierwave'
 gem "therubyracer"
