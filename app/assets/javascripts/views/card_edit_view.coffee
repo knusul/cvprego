@@ -1,5 +1,5 @@
 App.CardEditView = Em.View.extend
-  classNames: 'modal fade in form-custom-field-modal'.w()
+  classNames: 'modal hide fade in form-custom-field-modal'.w()
 
   didInsertElement: ->
     this.$('input:first').focus()
@@ -12,4 +12,7 @@ App.CardEditView = Em.View.extend
 
   keyPress: (e) ->
    if  e.charCode is 13
-     @$('form').submit()
+     if $("input:focus").parent().hasClass('new-el')
+       $(".new-el a").click()
+     else
+      @$('form').submit()

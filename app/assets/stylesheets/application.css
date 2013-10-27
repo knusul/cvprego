@@ -74,3 +74,14 @@ div.clickable:hover{
 #copy-to-clipboard{
 width: 320px;
 }
+.spacing{
+  margin-top: 15px;
+}
+i.red {
+  color: #900;
+}
+body.modal-open, 
+.modal-open .navbar-fixed-top, 
+.modal-open .navbar-fixed-bottom {
+  margin-right: 0;
+}
