@@ -21,14 +21,18 @@ class CardController < ApplicationController
   end
 
   def permitted_params
-    params.require(:card).permit(:first_name, :last_name, :email)
+    params.require(:card).permit(:first_name, :last_name, :email, :contact_types => [:number, :name])
   end
 
   def update_card(card)
-    card_params = permitted_params
+    card_params = permitted_params.except :contact_types
+    card_params[:contact_types_attributes] = permitted_params[:contact_types] if permitted_params[:contact_types]
+    if card_params
     Card.transaction do
+      card.contact_types.delete_all
       card.attributes = card_params
       card.save!
      end
+    end
   end
 end

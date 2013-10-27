@@ -1,11 +1,11 @@
 App.CardEditController = Em.ObjectController.extend
   actions:
     save: ->
-      card = @get('content')
+      card = @get('model')
       if card.validate()
-        card.save().then ->
-          card.get('contactTypes').invoke('save')
-        @transitionToRoute('index')
+        console.log card.get('contactTypes')
+        card.save()
+        @transitionTo('index')
       else
         messages = card.get('validationErrors.allMessages')
         $(".card-errors").html(messages.map (message) ->
@@ -16,9 +16,11 @@ App.CardEditController = Em.ObjectController.extend
       @transitionToRoute('index')
 
     addContactType:  ->
-      record = @get('content.contactTypes').createRecord()
+      record = @get('model')
+      record.get('contactTypes').pushObject @get('store').createRecord('contactType')
 
     removeContactType: (contactType)->
+      console.log @get('model.contactTypes').toArray()
       contactType.deleteRecord()
       contactType.save()
 

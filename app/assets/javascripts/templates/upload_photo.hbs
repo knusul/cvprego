@@ -1,9 +1,10 @@
 {{#if photoUrl }}
   <img  onclick="document.getElementById('fileupload').click();" {{bindAttr src='photoUrl' }} class = 'img-polaroid' id="preview" />
+  <canvas id="myCanvas" />
 {{ else }}
   <img  onclick="document.getElementById('fileupload').click();" src='assets/no-photo.png' class = 'img-polaroid' />
 {{/if }}
 {{#if controllers.application.clickable }}
-  <input id="fileupload" type="file" name="files[]" data-url="uploads"  multiple="" style="">
+  <input id="fileupload" type="file" name="files[]" data-url="uploads"  multiple="" style="opacity: 0; display: none;">
 {{/if}}
 <div id="files"></div>

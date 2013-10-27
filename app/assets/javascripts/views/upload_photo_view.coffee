@@ -2,9 +2,7 @@ App.UploadPhotoView = Ember.View.extend
   templateName: 'upload_photo'
 
   didInsertElement: ->
-    console.log "BANG BANG"
     card = @get('card')
-    console.log $("#fileupload")
     $('#fileupload').fileupload
       url: '/uploads'
       dataType: 'json',

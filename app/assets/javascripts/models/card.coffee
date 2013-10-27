@@ -9,7 +9,7 @@ App.Card  = DS.Model.extend Ember.Validations,
   lastName:     DS.attr('string')
   email:        DS.attr('string')
   photoUrl:     DS.attr('string')
-  contactTypes: DS.hasMany('contactType')
+  contactTypes: DS.hasMany('contactType', embedded: 'always')
 
   fullName: (->
     fromDate = @get('firstName')
