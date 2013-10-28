@@ -11,15 +11,15 @@
       <div class="controls">
 
         <div class="control-group">
-          {{view ember.textfield  placeholder="enter key skill?"
-             valuebinding="newname" action="createskill"}}
-             <a class="btn" {{action createskill}}><i class="icon-plus-sign"></i> add a contact type </a>
+          {{view Ember.TextField  placeholder="enter key skill?"
+             valueBinding="newName" action="createSkill"}}
+             <a class="btn" {{action createSkill}}><i class="icon-plus-sign"></i> add a contact type </a>
            </div>
 
         {{#each controller}}
             <div class='spacing'>
-            {{view ember.textfield valuebinding="name" placeholder="diving, driving ect"}}
-            <a  {{action removeskill this}}><i class="icon-remove icon-red"></i></a>
+            {{view Ember.TextField valueBinding="name" placeholder="diving, driving ect"}}
+            <a  {{action removeSkill this}}><i class="icon-remove icon-red"></i></a>
           </div>
         {{/each}}
       </div>
