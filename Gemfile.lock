@@ -58,6 +58,20 @@ GIT
       sprockets-rails (~> 2.0.0.rc4)
 
 GIT
+  remote: git@github.com:knusul/data.git
+  revision: c15b8f80a473f8c7c3183d7796a37b353265f50b
+  specs:
+    ember-data-source (1.0.0.beta.4.canary)
+      ember-source
+
+GIT
+  remote: git@github.com:knusul/ember.js.git
+  revision: e26c949b20be7d9addb147f2866d6256a7a1d02a
+  specs:
+    ember-source (1.3.0.beta.1.canary)
+      handlebars-source (= 1.0.12)
+
+GIT
   remote: git@github.com:thoughtbot/capybara-webkit.git
   revision: 9bbf4f6b5572f7c63485f6eca915b49c581b13b2
   specs:
@@ -84,18 +98,6 @@ GIT
       execjs (>= 1.2)
       handlebars-source
       railties (>= 3.1)
-
-PATH
-  remote: ../data
-  specs:
-    ember-data-source (1.0.0.beta.4.canary)
-      ember-source
-
-PATH
-  remote: ../ember.js
-  specs:
-    ember-source (1.3.0.beta.1.canary)
-      handlebars-source (= 1.0.12)
 
 GEM
   remote: https://rubygems.org/

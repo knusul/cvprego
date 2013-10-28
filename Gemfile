@@ -21,8 +21,8 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem 'non-stupid-digest-assets'
 gem "twitter-bootstrap-rails"
 gem "ember-rails", :git => "https://github.com/emberjs/ember-rails.git"
-gem "ember-source", :path => "../ember.js"
-gem "ember-data-source", :path => "../data"
+gem "ember-source", :git => "git@github.com:knusul/ember.js.git"
+gem "ember-data-source", :git => "git@github.com:knusul/data.git"
 
 
 
