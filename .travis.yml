@@ -1,0 +1,16 @@
+language: ruby
+cache: bundler
+rvm:
+  - 2.0.0
+
+services:
+  - postgresql
+
+before_script:
+  - cp config/database.yml.dist config/database.yml
+
+script:
+  - bundle exec rake db:schema:load
+  - bundle exec rake db:test:prepare
+  - bundle exec rake
+
