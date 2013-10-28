@@ -4,7 +4,7 @@ feature "HomeController", js: true do
     @user = FactoryGirl.create :user, :password => "FooBar12"
   end
 
-  it "have currentUser set" do
+  pending "have currentUser set" do
     login_user @user
     page.should have_content "Add Experience"
     page.evaluate_script("App.currentUser").should == @user.attributes.slice("id", "email").merge('card_id' => @user.card.id)
