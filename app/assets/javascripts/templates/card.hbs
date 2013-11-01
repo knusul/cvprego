@@ -14,7 +14,11 @@
     {{#if clickable}}
       {{view App.UploadPhotoView cardBinding='this' }}
     {{else}}
+      {{#if photourl }}
       <img {{bindAttr src='photoUrl' }} class = 'img-polaroid' />
+      {{else}}
+      <img  src='assets/no-photo.png' class = 'img-polaroid' />
+      {{/if}}
     {{/if}}
   </div>
 </div>
