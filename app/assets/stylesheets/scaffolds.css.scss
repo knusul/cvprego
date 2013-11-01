@@ -67,3 +67,6 @@ div {
 p{
   margin: 10px 0;
 }
+.row-fluid [class*="span"].no-margin{
+  margin-left: 0;
+}

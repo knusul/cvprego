@@ -1,12 +1,14 @@
-{{#view App.FocusView }}
-<div {{bindAttr class=":span12 :border-bottom isEditable:editable:noneditable"}}>
-  <div class='span4'>Key Skills</div>
-  <div class='span8'>
-    <ul class="nav nav-list">
-      {{#each controller}}
-      <li>{{ name }}</li>
-      {{/each}}
-    </ul>
+{{#if controller.displayable }}
+  {{#view App.FocusView }}
+  <div {{bindAttr class=":span12 :border-bottom"}}>
+    <div class='span4'>Key Skills</div>
+    <div class='span8'>
+      <ul class="nav nav-list">
+        {{#each controller}}
+        <li>{{ name }}</li>
+        {{/each}}
+      </ul>
+    </div>
   </div>
-</div>
-{{/view}}
+  {{/view}}
+{{/if}}

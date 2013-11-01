@@ -8,14 +8,13 @@
     <legend>Languages</legend>
 
     <div class="control-group">
-      <label class="control-label" for="description">Add new language</label>
       <div class="controls">
         {{#each controller}}
             {{view Ember.TextField valueBinding="name" placeholder="english, german"}}
             {{view Ember.TextField valueBinding="level" placeholder="intermediate"}}
             <a class="btn" {{action removeLanguage this}}><i class="icon-minus-sign"></i> Remove</a>
         {{/each}}
-        <a class="btn" {{action addLanguage}}><i class="icon-plus-sign"></i> Add a contact type </a>
+        <a class="btn" {{action addLanguage}}><i class="icon-plus-sign"></i> Add language </a>
       </div>
     </div>
 

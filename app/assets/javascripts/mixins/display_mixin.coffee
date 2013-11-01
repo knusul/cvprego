@@ -1,11 +1,4 @@
 App.DisplayableMixin = Em.Mixin.create
-  length: ->
-    @get('model.length')
-
-  clickable: ->
-    @get('controllers.application.clickable')
-
   displayable: (->
-    @length() or @clickable()
-  ).property('length', 'clickable')
-
+    @get('model.length') or @get('controllers.application.clickable')
+  ).property('model.length', 'controllers.application.clickable')

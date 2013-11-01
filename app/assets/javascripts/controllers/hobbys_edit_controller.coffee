@@ -1,6 +1,5 @@
 App.HobbiesEditController = Em.ArrayController.extend
   actions:
-
     createHobby: ->
       name = @get('newName')
       if (!name.trim())
