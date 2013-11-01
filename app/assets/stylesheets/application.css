@@ -10,7 +10,8 @@
  *
  *= require_self
  *= require jquery.fileupload-ui
- *= require_tree .
+ *= require bootstrap_and_overrides
+ *= require scaffolds
  */
 #main {margin-top: 50px;}
 .jumbotron {

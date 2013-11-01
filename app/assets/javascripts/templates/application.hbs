@@ -9,7 +9,6 @@
           {{view App.CopyToClipboard}}</h4>
       </div>
       <button class="btn" type="submit" {{action edit}}>Back to edit</button>
-      <button class="btn btn-success" type="submit" {{action savePDF}}>Download as PDF</button>
       {{/if}}
       <div id='content'>
         {{render 'card'}}
@@ -20,6 +19,14 @@
         {{render 'hobbies'}}
       </div>
     {{else}}
+    {{/if}}
+    {{#if App.currentUser}}
+      {{#unless clickable }}
+        <p>
+          <button class="btn" type="submit" {{action edit}}>Back to edit</button>
+          <button class="btn btn-success" type="submit" {{action savePDF}}>Download as PDF</button>
+        </p>
+      {{/unless}}
     {{/if}}
     {{ outlet }}
   </div>

@@ -10,7 +10,6 @@ App.ApplicationController = Em.ObjectController.extend
       @set('clickable', false)
       @transitionToRoute "show", App.currentUser.email
 
-  actions:
     savePDF: ->
       window.open "http://localhost:3000/show?email=knusul@gmail.com&format=pdf"
 
