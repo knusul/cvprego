@@ -12,7 +12,7 @@ App.ApplicationController = Em.ObjectController.extend
       @transitionToRoute "show", App.currentUser.email
 
     savePDF: ->
-      window.open "http://localhost:3000/show?email=#{@get("controllers.card.model.email")}&format=pdf"
+      window.open "/show?email=#{@get("controllers.card.model.email")}&format=pdf"
 
   href: (->
     window.location.href
