@@ -1,5 +1,8 @@
 {{#if controllers.application.clickable }}
-  {{#linkTo "experience" experience}}{{experience.fullName}}{{/linkTo}}
+{{#linkTo "experience" experience}}{{experience.fullName}}
+<br/>
+{{ experience.description }}
+{{/linkTo}}
 {{else}}
   {{experience.fullName}}
 {{/if}}
