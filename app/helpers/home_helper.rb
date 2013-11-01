@@ -20,4 +20,8 @@ module HomeHelper
       img
     end
   end
+
+   def image_tag(arg)
+     super("#{request.protocol}#{request.host_with_port}#{arg}").html_safe
+   end
 end
