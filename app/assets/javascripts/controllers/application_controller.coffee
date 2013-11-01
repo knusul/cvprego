@@ -10,14 +10,9 @@ App.ApplicationController = Em.ObjectController.extend
       @set('clickable', false)
       @transitionToRoute "show", App.currentUser.email
 
-  savePDF: ->
-    doc = new jsPDF()
-    specialElementHandlers = "#editor": (element, renderer) ->
-        true
-    doc.fromHTML $("#content").get(0), 15, 15,
-      width: 170,
-      elementHandlers: specialElementHandlers
-    doc.save("JakubNieznalski.pdf")
+  actions:
+    savePDF: ->
+      window.open "http://localhost:3000/show?email=knusul@gmail.com&format=pdf"
 
   href: (->
     window.location.href

@@ -1,0 +1,6 @@
+- unless @user.languages.empty?
+  %section#experience.row-fluid.experience
+    %aside.span3.aside_el
+      %h2 Language
+    .span9
+      = render @user.languages

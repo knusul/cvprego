@@ -1,0 +1,22 @@
+.span3
+  .thumbnail.pull-left
+    = image_tag "#{@user.card.photo}"
+.span5
+  .row
+    %h1
+      = @card.first_name
+      = @card.last_name
+    %div
+      %ul.unstyled
+        %li
+          %h2
+            email: #{@card.email}
+        = render @card.contact_types
+.span9.row
+  = render "skills/index"
+.span9.row
+  = render 'experiences/index'
+-# .span9
+-#   = render 'educations/index'
+-# .span9
+-#   = render 'languages/index'

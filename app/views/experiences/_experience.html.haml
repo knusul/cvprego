@@ -1,0 +1,10 @@
+%article.span6.borderleft.padding_left_small
+  .period.span9.row
+    %h3
+      = "#{experience.from_date} - #{experience.to_date}: "
+      = experience.company_name
+  .span9.row
+    .bigspacing
+      %header
+        %h3= experience.role
+      %p= experience.description

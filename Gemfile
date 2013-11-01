@@ -11,6 +11,7 @@ gem 'devise', git: "git://github.com/plataformatec/devise.git"
 gem 'simple_form', git: "git://github.com/plataformatec/simple_form.git"
 
 gem 'pdfkit'
+gem 'haml'
 gem 'rmagick'
 
 gem 'sass-rails',   git: "git://github.com/rails/sass-rails.git"
