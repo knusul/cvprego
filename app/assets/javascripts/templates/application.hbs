@@ -20,6 +20,7 @@
       </div>
     {{else}}
     {{/if}}
+    {{ outlet }}
     {{#if App.currentUser}}
       {{#unless clickable }}
         <p>
@@ -27,7 +28,8 @@
           <button class="btn btn-success" type="submit" {{action savePDF}}>Download as PDF</button>
         </p>
       {{/unless}}
+    {{else}}
+        <button class="btn btn-success" type="submit" {{action savePDF}}>Download as PDF</button>
     {{/if}}
-    {{ outlet }}
   </div>
 </div>
