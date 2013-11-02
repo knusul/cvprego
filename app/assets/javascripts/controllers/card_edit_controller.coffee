@@ -23,7 +23,9 @@ App.CardEditController = Em.ObjectController.extend
   addContactType:  ->
     name = @get('newName')
     number = @get('newNumber')
-    if (!name.trim() or !number.trim())
+    number = "" if number is undefined
+    name = "" if name is undefined
+    if (!name.trim() and !number.trim())
       return
     contactType =  @get('store').createRecord('contactType',
       name: name
