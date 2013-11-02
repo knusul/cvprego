@@ -1,6 +1,14 @@
 require 'spec_helper'
 
 describe SkillsController do
+
+  describe "index" do
+    it "denys access when unathenticated and use does not exist" do
+      expect{
+        post :index
+      }.to raise_error ActiveRecord::RecordNotFound
+    end
+  end
   describe "create" do
     it "requires authentication" do
       post :create
