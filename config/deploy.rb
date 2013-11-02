@@ -1,3 +1,7 @@
+set :stages, %w(production staging)
+set :default_stage, "staging"
+require 'capistrano/ext/multistage'
+
 set :application, "opencv"
 set :repository,  "git@bitbucket.org:jakubn/opencv.git"
 
@@ -31,8 +35,8 @@ ssh_options[:forward_agent] = true
 set :deploy_via, :remote_cache
 set :use_sudo, false
 set :user, "opencv"
-set :deploy_to, "/home/opencv"
 set :rails_env, "production"
+
 set :rvm_type, :system
 set :default_shell, "/bin/bash -l"
 default_run_options[:pty] = true
