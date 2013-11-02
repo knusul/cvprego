@@ -362,7 +362,7 @@ Bootstrap.ProgressBar = Ember.View.extend({
 (function() {
 var Bootstrap = window.Bootstrap;
 Bootstrap.Badge = Ember.View.extend(Bootstrap.TypeSupport, {
-  tagName: "span",
+  tagName: "col-md-",
   classNames: "badge",
   baseClassName: "badge",
   template: Ember.Handlebars.compile("{{view.content}}")
@@ -376,7 +376,7 @@ Bootstrap.Badge = Ember.View.extend(Bootstrap.TypeSupport, {
 var Bootstrap = window.Bootstrap;
 
 Bootstrap.Label = Ember.View.extend(Bootstrap.TypeSupport, {
-  tagName: "span",
+  tagName: "col-md-",
   classNames: "label",
   baseClassName: "label",
   template: Ember.Handlebars.compile("{{view.content}}")
@@ -489,7 +489,7 @@ Bootstrap.Breadcrumb = Ember.CollectionView.extend(Bootstrap.FirstLastViewSuppor
   classNames: "breadcrumb",
   divider: "/",
   itemViewClass: Ember.View.extend(Bootstrap.ItemViewTitleSupport, {
-    template: Ember.Handlebars.compile('<a href="#">{{title}}</a><span class="divider">{{view.parentView.divider}}</span>')
+    template: Ember.Handlebars.compile('<a href="#">{{title}}</a><col-md- class="divider">{{view.parentView.divider}}</col-md->')
   }),
   lastItemViewClass: Ember.View.extend(Bootstrap.ItemViewTitleSupport, {
     classNames: "active",
@@ -729,7 +729,7 @@ var Bootstrap = window.Bootstrap;
 Bootstrap.Forms.UneditableInput = Bootstrap.Forms.Field.extend({
 
   inputField: Ember.View.extend({
-    tagName: 'span',
+    tagName: 'col-md-',
     classNames: ['uneditable-input'],
     attributeBindings: ['name'],
     template: Ember.Handlebars.compile('{{view.value}}'),

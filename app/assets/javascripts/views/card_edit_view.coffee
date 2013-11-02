@@ -1,5 +1,5 @@
 App.CardEditView = Em.View.extend
-  classNames: 'modal hide fade in form-custom-field-modal'.w()
+  classNames: 'modal'.w()
 
   didInsertElement: ->
     this.$('input:first').focus()

@@ -1,7 +1,7 @@
 {{#if controller.displayable }}
-  <div class="span12 border-bottom no-margin">
-    <div class='span4'>Education</div>
-    <div class='span8'>
+  <div class="col-md-12 border-bottom no-margin">
+    <div class='col-md-4'>Education</div>
+    <div class='col-md-8'>
       <ul class="nav nav-list">
         {{#each education in controller}}
         {{view App.EducationInListView contentBinding="education"}}
@@ -14,7 +14,7 @@
       </div>
     {{/if}}
   </div>
-  <div class="span9">
+  <div class="col-md-9">
     {{outlet}}
   </div>
 {{/if}}

@@ -1,55 +1,47 @@
-<div class="modal-header">
-  <div class="button close btn-dismiss" {{action cancel content}}>x</div>
-  <h3 class="app-icon-large">Personal data</h3>
-</div>
-<div class="span12">
-  <div class="control-group">
+<div class='modal-dialog'>
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="button close btn-dismiss" {{action cancel content}}>x</div>
+      <h3 class="app-icon-large">Personal data</h3>
+    </div>
+    <div class="modal-body">
+      <form {{action save on="submit"}} class="form-horizontal">
+        <div class='card-errors'> </div>
+        <div class=" form-group">
+          <h4><label class="control-label col-sm-4" for="email">Email</label></h4>
+          {{view Ember.TextField class='form-control' valueBinding="email" disabled='disabled' id="email" type="email" placeholder="Email address"}}
+        </div>
+
+        <div class=" form-group">
+          <h4><label class="col-md-4 control-label" for="firstName">First Name</label></h4>
+          {{view Ember.TextField class='form-control' valueBinding="firstName" id="firstName" placeholder="First Name" required="true"}}
+        </div>
+        <div class=" form-group">
+          <h4><label class="col-md-4 control-label" for="lastName">Last Name</label></h4>
+          {{view Ember.TextField class='form-control' valueBinding="lastName" id="lastName" placeholder="Last Name" required="true"}}
+        </div>
+
+        {{#each contactTypes }}
+        <div class = "spacing">
+        </div>
+        <div class="form-group">
+          {{view Ember.TextField class='form-control col-md-4 new-item' valueBinding="name" }}
+          {{view Ember.TextField class='form-control col-md-4' valueBinding="number" }}
+          <a  {{action removeContactType this}}><i class="icon-remove red icon-large btn-link"></i></a>
+        </div>
+        {{/each}}
+        <div class="form-group">
+          <h4><label class='spacing control-label new-item'>Add more contact types</label></h4>
+          {{view Ember.TextField class="col-md-4 form-control new-item" placeholder="e.g. skype" valueBinding="newName" }}
+          {{view Ember.TextField class="col-md-4 form-control"  placeholder="123456" valueBinding="newNumber" }}
+          <a class="btn" {{action addContactType}}><i class="icon-plus-sign"></i> add a contact type </a>
+        </div>
+      </form>
+    </div>
+
+    <div class="modal-footer">
+      <a class="btn btn-dark" href="javascript;:" {{action cancel content}}>Cancel</a>
+      <button class="btn btn-success" type="submit" {{action save content}}>Save</button>
+    </div>
   </div>
-  <form {{action save on="submit"}} class="form-horizontal">
-    <div class='card-errors'> </div>
-
-    <div class="control-group">
-      <label class="control-label" for="email">Email</label>
-      <div class="controls">
-        {{view Ember.TextField valueBinding="email" disabled='disabled' id="email" type="email" placeholder="Email address"}}
-      </div>
-    </div>
-
-    <div class="control-group">
-      <label class="control-label" for="firstName">First Name</label>
-      <div class="controls">
-        {{view Ember.TextField valueBinding="firstName" id="firstName" placeholder="First Name" required="true"}}
-      </div>
-    </div>
-    <div class="control-group">
-      <label class="control-label" for="lastName">Last Name</label>
-      <div class="controls">
-        {{view Ember.TextField valueBinding="lastName" id="lastName" placeholder="Last Name" required="true"}}
-      </div>
-    </div>
-
-    <div class="controls">
-      {{#each contactTypes }}
-      <div class = "spacing">
-        {{view Ember.TextField valueBinding="name" }}
-        {{view Ember.TextField valueBinding="number" }}
-        <a  {{action removeContactType this}}><i class="icon-remove red btn-link"></i></a>
-      </div>
-      {{/each}}
-      <label class='spacing'>Add more contact types</label>
-      <div class="control-group new-el">
-        {{view Ember.TextField  placeholder="e.g. skype"
-           valueBinding="newName" class="primary" }}
-        {{view Ember.TextField  placeholder="123456"
-          valueBinding="newNumber" }}
-           <a class="btn" {{action addContactType}}><i class="icon-plus-sign"></i> add a contact type </a>
-         </div>
-
-    </div>
-  </form>
-</div>
-
-<div class="modal-footer">
-  <a class="btn btn-dark" href="javascript;:" {{action cancel content}}>Cancel</a>
-  <button class="btn btn-success" type="submit" {{action save content}}>Save</button>
 </div>

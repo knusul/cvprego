@@ -70,3 +70,21 @@ p{
 .row-fluid [class*="span"].no-margin{
   margin-left: 0;
 }
+form .form-group input, form .form-group select{
+  width: 220px;
+}
+form .form-group input.new-item, form .form-group select-new-item{
+  margin-left: 20px;
+  width: 150px;
+  text-align: right;
+  margin-right: 10px;
+  margin-left: 30px;
+}
+.container .form-group.new-item, .container .control-label.new-item{
+  margin-left: 20px;
+}
+i.icon-large{
+  display:block;
+  margin-top: 5px;
+  font-size: medium;
+}

@@ -19,7 +19,7 @@ gem 'coffee-rails', git: "git://github.com/rails/coffee-rails.git"
 gem 'uglifier', '>= 1.0.3'
 
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
+gem "twitter-bootstrap-rails", :git => "https://github.com/seyhunak/twitter-bootstrap-rails", :branch => 'bootstrap3'
 gem "ember-rails", :git => "https://github.com/emberjs/ember-rails.git"
 gem "ember-source", :git => "git@github.com:knusul/ember.js.git"
 gem "ember-data-source", :git => "git@github.com:knusul/data.git"
