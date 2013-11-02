@@ -7,6 +7,7 @@ class CardController < ApplicationController
     else
       user = current_user
     end
+    raise ActiveRecord::RecordNotFound unless user
     card = user.card
     render json: card
   end

@@ -1,9 +1,12 @@
 App.ShowRoute = Ember.Route.extend
   model: (params) ->
-    params.email
+    @store.find('card', "singleton?email=#{params.email}").then (card)=>
+      params.email
+    , =>
+      @transitionTo "404", params.email
 
   setupController: (controller, email) ->
-    @controllerFor('application').set 'clickable', false 
+    @controllerFor('application').set 'clickable', false
     @controllerFor('card').set 'model', @store.find('card', "singleton?email=#{email}")
     @controllerFor('experiences').set 'model', @store.find('experience',
       email: email
