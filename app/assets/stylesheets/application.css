@@ -64,8 +64,6 @@ article.in_spacing{
   border-bottom: 1px solid #dfdfdf;
 }
 div.clickable:hover{
-  float: left;
-  width: 100%;
   text-decoration: none;
   background-color: #eeeeee;
 }

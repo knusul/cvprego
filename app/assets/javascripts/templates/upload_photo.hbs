@@ -1,6 +1,5 @@
 {{#if photoUrl }}
   <img  onclick="document.getElementById('fileupload').click();" {{bindAttr src='photoUrl' }} class = 'img-polaroid' id="preview" />
-  <canvas id="myCanvas" />
 {{ else }}
   <img  onclick="document.getElementById('fileupload').click();" src='assets/no-photo.png' class = 'img-polaroid' />
 {{/if }}
