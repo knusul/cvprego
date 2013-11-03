@@ -4,11 +4,12 @@ App.LanguagesEditController = Em.ArrayController.extend
   stopEditing:  ->
     @transitionToRoute('index')
 
-  cancel: ->
-    @stopEditing()
+  cancel: (language) ->
+    $(".modal.in").modal('hide')
 
   actions:
     save: ->
+      @get('model').invoke('save')
       $(".modal.in").modal('hide')
 
     removeLanguage: (language)->
@@ -16,4 +17,4 @@ App.LanguagesEditController = Em.ArrayController.extend
       language.save()
 
   addLanguage:  ->
-    @get('store').createRecord('language', {name: ""})
+     @get('store').createRecord('language', {name: ""})

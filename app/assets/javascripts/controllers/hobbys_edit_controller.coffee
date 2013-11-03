@@ -1,6 +1,6 @@
 App.HobbiesEditController = Em.ArrayController.extend
   createHobby: ->
-    name = @get('newName')
+    name = @get('newName') or ""
     if (!name.trim())
       return
     hobby = @get('store').createRecord('hobby', {name: name})

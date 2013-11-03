@@ -8,8 +8,7 @@ App.LanguagesEditView = Em.View.extend
       @get('controller.target.router').transitionTo('index')
 
   willDestroyElement: ->
-    @$().modal 'hide'
-    @get('controller').stopEditing()
+    @$().modal('hide')
 
 
   keyPress: (e) ->

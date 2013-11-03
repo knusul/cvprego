@@ -10,7 +10,7 @@ App.SkillsEditController = Em.ArrayController.extend
       skill.save()
 
   createSkill: ->
-    name = @get('newName')
+    name = @get('newName') or ""
     if (!name.trim())
       return
     skill = @store.createRecord 'skill',
