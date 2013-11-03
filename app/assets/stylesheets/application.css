@@ -48,6 +48,9 @@
 
 .bigspacing {
 }
+.content{
+  min-height: 600px;
+}
 #experience article span.period  {
   margin: 3em 0 3em 0;
   font: 1.1em 'Droid Sans', sans-serif; /* 16px/10 */
