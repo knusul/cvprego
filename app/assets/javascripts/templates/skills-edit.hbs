@@ -1,34 +1,29 @@
-<div class="modal-header">
-  <div class="button close btn-dismiss" {{action ok}}>x</div>
-  <h3 class="app-icon-large">Edit your key skills</h3>
-</div>
-<div class="modal-body">
-<div class="col-md-12">
-  <form {{action save on="submit"}} class="form-horizontal">
-
-    <div class="control-group">
-      <label class="control-label" for="description">Add new skill</label>
-      <div class="controls">
-
-        <div class="control-group">
-          {{view Ember.TextField  placeholder="enter key skill?"
-             valueBinding="newName" action="createSkill"}}
-             <a class="btn" {{action createSkill}}><i class="icon-plus-sign"></i> add a contact type </a>
-           </div>
-
-        {{#each controller}}
-            <div class='spacing'>
-            {{view Ember.TextField valueBinding="name" placeholder="diving, driving ect"}}
-            <a  {{action removeSkill this}}><i class="icon-remove icon-red"></i></a>
-          </div>
-        {{/each}}
-      </div>
+<div class='modal-dialog'>
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="button close btn-dismiss" {{action ok}}>x</div>
+      <h3 class="app-icon-large">Skills</h3>
     </div>
+    <div class="modal-body">
+      <form {{action save on="submit"}} class="form-horizontal col-md-offset-4">
+        {{#each controller}}
+        <div class='spacing'></div>
+        <div class="form-group">
+          {{view Ember.TextField class="col-md-4 form-control" valueBinding="name" placeholder="diving, driving ect"}}
+          <a  {{action removeSkill this}}><i class="icon-remove red icon-large"></i></a>
+        </div>
+        {{/each}}
 
-  </form>
-</div>
-
-</div>
-<div class="modal-footer">
-  <button class="btn btn-success" type="submit" {{action ok}}>OK</button>
+        <div class="form-group">
+          <h4> <label class="control-label new-item" for="description">Add new skill</label></h4>
+          {{view Ember.TextField  class="col-md-4 form-control" placeholder="enter key skill?"
+          valueBinding="newName" action="createSkill"}}
+          <a class="btn" {{action createSkill}}><i class="icon-plus-sign"></i> add</a>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-success" type="submit" {{action ok}}>OK</button>
+    </div>
+  </div>
 </div>

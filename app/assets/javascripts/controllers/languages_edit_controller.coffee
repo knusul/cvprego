@@ -9,12 +9,11 @@ App.LanguagesEditController = Em.ArrayController.extend
 
   actions:
     save: ->
-      @get('content').save()
-      @stopEditing()
-
-    addLanguage:  ->
-      @get('store').createRecord('language', {name: ""})
+      $(".modal.in").modal('hide')
 
     removeLanguage: (language)->
       language.deleteRecord()
       language.save()
+
+  addLanguage:  ->
+    @get('store').createRecord('language', {name: ""})

@@ -1,28 +1,28 @@
-<div class="modal-header">
-  <div class="button close btn-dismiss" {{action cancel content}}>x</div>
-  <h2 class="app-icon-large">Languages</h2>
-</div>
-<div class="modal-body">
-<div class="col-md-7">
-  <form {{action save on="submit"}} class="form-horizontal">
-    <legend>Languages</legend>
-
-    <div class="control-group">
-      <div class="controls">
-        {{#each controller}}
-            {{view Ember.TextField valueBinding="name" placeholder="english, german"}}
-            {{view Ember.TextField valueBinding="level" placeholder="intermediate"}}
-            <a class="btn" {{action removeLanguage this}}><i class="icon-minus-sign"></i> Remove</a>
-        {{/each}}
-        <a class="btn" {{action addLanguage}}><i class="icon-plus-sign"></i> Add language </a>
-      </div>
+<div class='modal-dialog'>
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="button close btn-dismiss" {{action cancel content}}>x</div>
+      <h2 class="app-icon-large">Languages</h2>
     </div>
+    <div class="modal-body">
+      <form {{action save on="submit"}} class="form-horizontal">
+        <div class="form-group">
+          <div class="controls">
+            {{#each controller}}
+            <div class='spacing'></div>
+            {{view Ember.TextField class='col-md-4 form-control' valueBinding="name" placeholder="english, german"}}
+            {{view Ember.TextField class='col-md-4 form-control' valueBinding="level" placeholder="intermediate"}}
+            <a class="btn" {{action removeLanguage this}}><i class="icon-minus-sign red"></i> Remove</a>
+            {{/each}}
+            <a class="btn" {{action addLanguage}}><i class="icon-plus-sign"></i> Add language </a>
+          </div>
+        </div>
 
-  </form>
-</div>
-
-</div>
-<div class="modal-footer">
-  <a class="btn btn-dark" href="javascript;:" {{action cancel content}}>Cancel</a>
-  <button class="btn btn-success" type="submit" {{action save content}}>Save</button>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-dark" href="javascript;:" {{action cancel content}}>Cancel</a>
+      <button class="btn btn-success" type="submit" {{action save content}}>Save</button>
+    </div>
+  </div>
 </div>

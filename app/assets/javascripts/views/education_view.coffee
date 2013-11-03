@@ -3,8 +3,8 @@ App.EducationView = Em.View.extend
   didInsertElement: ->
     this.$('input:first').focus()
     @$().modal 'show'
-    @$().on 'hidden', =>
-      @get('controller').stopEditing()
+    @$().on 'hidden.bs.modal', =>
+      @get('controller.target.router').transitionTo('index')
 
   willDestroyElement: ->
     @$().modal 'hide'

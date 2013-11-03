@@ -69,6 +69,7 @@ div.clickable:hover{
 }
 #personal_profile{
   margin-left: 0;
+  padding-left: 0;
 }
 #copy-to-clipboard{
 width: 320px;

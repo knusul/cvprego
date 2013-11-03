@@ -1,8 +1,7 @@
 <div class="container" id="main">
-  <div class="row">
     {{#if App.currentUser }}
       {{#if clickable }}
-      <button class="btn btn-success" type="submit" {{action ok}}>Show my CV!</button>
+      <div class='col-md-8'><button class="btn btn-success" type="submit" {{action ok}}>Show my CV!</button></div>
       {{else}}
       <div class="clone-url-box">
         <h4>Your CV address is:
@@ -29,5 +28,4 @@
         </p>
       {{/unless}}
     {{/if}}
-  </div>
 </div>

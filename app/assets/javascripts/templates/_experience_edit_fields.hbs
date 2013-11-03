@@ -1,30 +1,20 @@
-<div class="control-group">
-  <label class="control-label" for="company_name">Company name</label>
-  <div class="controls">
-    {{view Ember.TextArea valueBinding="company_name" id="company_name" placeholder="Company name"}}
-  </div>
+<div class="form-group col-md-12">
+  <label class="control-label col-md-4" for="fromDate">From date</label>
+    {{view Ember.TextField class = "col-md-4 form-control" valueBinding="fromDate" id="fromDate" placeholder="From date" required="true"}}
 </div>
-<div class="control-group">
+<div class="form-group col-md-12">
+  <label class="control-label col-md-4" for="toDate">To date</label>
+    {{view Ember.TextField class="col-md-4 form-control" valueBinding="toDate" id="toDate" placeholder="To date" required="true"}}
+</div>
+<div class="form-group col-md-12 ">
+  <label class="control-label col-md-4" for="company_name">Company name</label>
+    {{view Ember.TextField class="col-md-6 form-control" valueBinding="company_name" id="company_name" placeholder="Company name"}}
+</div>
+<div class="form-group col-md-12">
   <label class="control-label" for="role">Role</label>
-  <div class="controls">
-    {{view Ember.TextArea valueBinding="role" id="role" placeholder="Artist?"}}
-  </div>
+    {{view Ember.TextArea class="col-md-4 form-control" valueBinding="role" id="role" placeholder="Artist?"}}
 </div>
-<div class="control-group">
-  <label class="control-label" for="fromDate">From date</label>
-  <div class="controls">
-    {{view Ember.TextField valueBinding="fromDate" id="fromDate" placeholder="From date" required="true"}}
-  </div>
-</div>
-<div class="control-group">
-  <label class="control-label" for="toDate">To date</label>
-  <div class="controls">
-    {{view Ember.TextField valueBinding="toDate" id="toDate" placeholder="To date" required="true"}}
-  </div>
-</div>
-<div class="control-group">
+<div class="form-group col-md-12">
   <label class="control-label" for="description">Notes</label>
-  <div class="controls">
-    {{view Ember.TextArea valueBinding="description" id="description" placeholder="Notes"}}
-  </div>
+    {{view Ember.TextArea class="col-md-4 form-control" valueBinding="description" id="description" placeholder="Notes"}}
 </div>

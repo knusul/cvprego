@@ -1,9 +1,8 @@
 App.ExperienceController = Em.ObjectController.extend
   stopEditing: ->
-    @transitionToRoute('index')
+    $(".modal.in").modal('hide')
 
   actions:
-
     save:  ->
       record = @get('content')
       record.save()

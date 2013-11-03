@@ -1,6 +1,6 @@
 App.EducationController = Em.ObjectController.extend
   stopEditing: ->
-    @transitionToRoute('index')
+    $(".modal.in").modal('hide')
 
   actions:
 

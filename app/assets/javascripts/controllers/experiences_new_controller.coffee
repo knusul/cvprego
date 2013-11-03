@@ -3,7 +3,7 @@ App.NewExperienceController = Em.ObjectController.extend
     @get('model').rollback()
 
   stopEditing: ->
-    @transitionToRoute('index')
+    $(".modal.in").modal('hide')
 
   actions:
 

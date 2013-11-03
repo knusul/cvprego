@@ -3,7 +3,7 @@ App.NewEducationView = Ember.View.extend
   didInsertElement: ->
     this.$('input:first').focus()
     @$().modal 'show'
-    @$().on 'hidden', =>
+    @$().on 'hidden.bs.modal', =>
       @get('controller').rollback()
       @get('controller.target.router').transitionTo('index')
 

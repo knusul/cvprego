@@ -3,8 +3,8 @@ App.NewExperienceView = Ember.View.extend
   didInsertElement: ->
     this.$('textarea:first').focus()
     @$().modal 'show'
-    @$().on 'hidden', =>
-      @get('controller').stopEditing()
+    @$().on 'hidden.bs.modal', =>
+      @get("controller.target.router").transitionTo('index')
       @get('controller').rollback()
 
   willDestroyElement: ->
