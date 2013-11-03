@@ -15,5 +15,5 @@ App.ApplicationController = Em.ObjectController.extend
       window.open "/show?email=#{@get("controllers.card.model.email")}&format=pdf"
 
   href: (->
-    window.location.href
+    "http://#{window.location.host}/#/#{@get('controllers.card.model.email')}"
   ).property()

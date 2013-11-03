@@ -10,7 +10,7 @@ class HomeController < ApplicationController
         html = render_to_string(:layout => "pdf" , :action => "show.html.haml")
         kit = PDFKit.new(html)
         kit.stylesheets << "#{Rails.root}/app/assets/stylesheets/pdf.css"
-        send_data(kit.to_pdf, :filename => "some_name.pdf", :type => 'application/pdf')
+        send_data(kit.to_pdf, :filename => "#{@user.card.first_name}_#{@user.card.last_name}.pdf", :type => 'application/pdf')
         return
       }
     end
