@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Opencv
+    %title cvPrego
     - if user_signed_in?
       %meta{:content => UserSerializer.new(current_user).to_json(root: false), :name => "current-user"}/
     = stylesheet_link_tag    "application", :media => "all"
