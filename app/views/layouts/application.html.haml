@@ -8,6 +8,7 @@
     = javascript_include_tag "application"
     = javascript_include_tag params[:controller]
     = csrf_meta_tags
+    =render 'google_analytics'
   %body
     .container
       = render 'navigation'
