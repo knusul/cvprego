@@ -15,6 +15,7 @@ gem 'haml'
 gem 'rmagick'
 
 gem 'sass-rails',   git: "git://github.com/rails/sass-rails.git"
+gem "rails_config"
 gem 'coffee-rails', git: "git://github.com/rails/coffee-rails.git"
 gem 'uglifier', '>= 1.0.3'
 

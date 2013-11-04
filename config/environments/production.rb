@@ -52,6 +52,16 @@ Opencv::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
+  ActionMailer::Base.smtp_settings = {
+  :address              => "smtp.gmail.com",
+  :port                 => 587,
+  :domain               => "cvprego.com",
+  :user_name            => "jakub.nieznalski@cvprego.com",
+  :password             => Settings.smtp.password,
+  :authentication       => "plain",
+  :enable_starttls_auto => true
+}
+
   config.action_mailer.default_url_options = {:host => "cvprego.com"}
 
   # Enable threaded mode
