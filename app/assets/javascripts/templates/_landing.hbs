@@ -1,39 +1,41 @@
 <div class="jumbotron">
   <h1>CVprego!</h1>
   <p class="lead">create and download your cv in 5 minutes</p>
-  <form accept-charset="UTF-8" action="/users" class="new_user" data-remote="true" id="new_user" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
-    <div class= "login-header"></div>
-     <div class="control-group">
-       <div class="control-label">
-         <label>Email</label>
-       </div>
-       <div class="controls">
-     <div class="controls">
-      {{input value=email type="text"}}
-    </div>
-  </div>
+  <div class='account-wall'>
+    <form accept-charset="UTF-8" action="/users" class="form_signin" data-remote="true" id="new_user" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+      <div class= "login-header"></div>
+      <div class="control-group">
+        <div class="control-label">
+          <label>Email</label>
+        </div>
+        <div class="controls">
+          <div class="controls">
+            {{input value=email type="text"}}
+          </div>
+        </div>
 
-  <div class="control-group">
-    <div class="control-label">
-      <label>Password</label>
-    </div>
-    <div class="controls">
-      {{input value=password type="password"}}
+        <div class="control-group">
+          <div class="control-label">
+            <label>Password</label>
+          </div>
+          <div class="controls">
+            {{input value=password type="password"}}
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="control-label">
+            <label>Password Confirmation</label>
+          </div>
+          <div class="controls">
+            {{input value=password_confirmation type="password"}}
+          </div>
+        </div>
+
+        <p><button class="btn btn-primary" type="submit" {{action signup}}>Signup</button></p>
+      </form>
     </div>
   </div>
-  <div class="control-group">
-    <div class="control-label">
-      <label>Password Confirmation</label>
-    </div>
-    <div class="controls">
-      {{input value=password_confirmation type="password"}}
-    </div>
-  </div>
-  
-    <p><button class="btn btn-primary" type="submit" {{action signup}}>Signup</button></p>
-  </form>
-</div>
-<hr>
+  <hr>
 
 <!-- example row of columns -->
 <div class="row">
