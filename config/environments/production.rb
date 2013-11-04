@@ -57,7 +57,7 @@ Opencv::Application.configure do
   :port                 => 587,
   :domain               => "cvprego.com",
   :user_name            => "jakub.nieznalski@cvprego.com",
-  :password             => Settings.smtp.password,
+  :password             => Settings.smtp.try(:password),
   :authentication       => "plain",
   :enable_starttls_auto => true
 }
