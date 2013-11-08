@@ -3,14 +3,23 @@ App.Education  = DS.Model.extend
   toDate:     DS.attr('string')
   name:        DS.attr('string')
 
-  fullName: (->
-    toDate = 'now' if @get('toDate') is null
+  dateRange: (->
     fromDate = @get('fromDate')
+    toDate = @get('toDate')
+    fromDate = "" if fromDate is null
+    if toDate is null
+      toDate = ""
+    else
+      toDate = "-#{toDate}"
     if fromDate is null
       fromDate = ""
     else
-      fromDate = "#{fromDate}-"
+      fromDate = "#{fromDate}"
+    "#{fromDate} #{toDate}"
+  ).property('fromDate', 'toDate')
+
+  fullName: (->
     name = @get('name')
     name = "" if name is null
-    "#{fromDate}#{toDate}: #{name}"
-  ).property('fromDate', 'toDate', 'name')
+    "#{name}"
+  ).property('name')

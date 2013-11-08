@@ -67,10 +67,11 @@ article.in_spacing{
 .border-bottom {
   border-bottom: 1px solid #dfdfdf;
 }
-div.clickable:hover{
+div.clickable:hover, li.clickable{
   text-decoration: none;
   background-color: #eeeeee;
 }
+
 #personal_profile{
   margin-left: 0;
   padding-left: 0;

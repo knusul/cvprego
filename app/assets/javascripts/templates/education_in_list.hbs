@@ -1,5 +1,15 @@
+
 {{#if controllers.application.clickable }}
-  {{#linkTo "education" education}}{{education.fullName}}{{/linkTo}}
-  {{else}}
+{{#linkTo "education" education}}
+<div class='row clickable'>
+  <div class='col-md-3'>
+    {{education.dateRange}}
+  </div>
+  <div class='col-md-9'>
+    {{education.fullName}}
+  </div>
+</div>
+{{/linkTo}}
+{{else}}
   {{education.fullName}}
 {{/if}}
