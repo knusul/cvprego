@@ -1,13 +1,19 @@
 {{#if controllers.application.clickable }}
 {{#linkTo "experience" experience}}
 <div class='col-md-3'>
-  {{experience.dateRange}}
+  {{experience.daterange}}
 </div>
 <div class='col-md-9'>
-  {{experience.fullName}}
+  {{experience.fullname}}
   <p>{{ experience.description }}</p>
 </div>
 {{/linkTo}}
 {{else}}
-  {{experience.fullName}}
+<div class='col-md-3'>
+  {{experience.daterange}}
+</div>
+<div class='col-md-9'>
+  {{experience.fullname}}
+  <p>{{ experience.description }}</p>
+</div>
 {{/if}}

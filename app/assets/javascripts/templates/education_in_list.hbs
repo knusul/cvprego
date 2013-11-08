@@ -1,4 +1,3 @@
-
 {{#if controllers.application.clickable }}
 {{#linkTo "education" education}}
 <div class='row clickable'>
@@ -11,5 +10,12 @@
 </div>
 {{/linkTo}}
 {{else}}
-  {{education.fullName}}
+<div class='row clickable'>
+  <div class='col-md-3'>
+    {{education.dateRange}}
+  </div>
+  <div class='col-md-9'>
+    {{education.fullName}}
+  </div>
+</div>
 {{/if}}
