@@ -1,6 +1,6 @@
 App.ExperienceInListView = Em.View.extend
   templateName: 'experience_in_list'
-  tagName: 'li'
+  tagName: 'li clickable'
   classNameBindings: 'isActive:active'
 
   isActive: (->
