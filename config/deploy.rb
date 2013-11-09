@@ -50,6 +50,7 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/database.yml #{latest_release}/config/database.yml"
     run "ln -nfs #{shared_path}/config/settings/production.yml #{latest_release}/config/settings/production.yml"
     run "ln -nfs #{shared_path}/log #{latest_release}/log"
+    run "ln -nfs #{shared_path}/uploads #{latest_release}/public/uploads"
   end
 end
 
