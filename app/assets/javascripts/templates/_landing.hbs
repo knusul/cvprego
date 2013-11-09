@@ -1,16 +1,15 @@
 <div class="jumbotron">
-  <h1>CVprego!</h1>
-  <p class="lead">create and download your cv in 5 minutes</p>
+  <h1>CVPrego!</h1>
+  <p class="lead">Create and download your professional CV in 5 minutes</p>
   <div class='account-wall'>
-    <form accept-charset="UTF-8" action="/users" class="form_signin" data-remote="true" id="new_user" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
-      <div class= "login-header"></div>
+    <form accept-charset="UTF-8" action="/users" class="form_signin" data-remote="true" id="main_login" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
       <div class="control-group">
         <div class="control-label">
           <label>Email</label>
         </div>
         <div class="controls">
           <div class="controls">
-            {{input value=email type="text"}}
+            {{input class='form-control' value=email type="text"}}
           </div>
         </div>
 
@@ -19,7 +18,7 @@
             <label>Password</label>
           </div>
           <div class="controls">
-            {{input value=password type="password"}}
+            {{input class='form-control' value=password type="password"}}
           </div>
         </div>
         <div class="control-group">
@@ -27,7 +26,7 @@
             <label>Password Confirmation</label>
           </div>
           <div class="controls">
-            {{input value=password_confirmation type="password"}}
+            {{input class='form-control' value=password_confirmation type="password"}}
           </div>
         </div>
 
@@ -45,7 +44,7 @@
   </div>
   <div class="col-md-4">
     <h3>download as pdf</h3>
-    <p>cvPrego gives possibility to download CV in pdf format </p>
+    <p>CVPrego gives possibility to download CV in pdf format </p>
   </div>
   <div class="col-md-4">
     <h3>change cv on the fly</h3>

@@ -72,4 +72,5 @@ Opencv::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   get '/show' => "home#show"
   post '/uploads' => 'uploads#create'
+  get 'about'
 end
