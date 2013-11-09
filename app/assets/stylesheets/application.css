@@ -76,6 +76,9 @@ div.clickable:hover, li.clickable{
   margin-left: 0;
   padding-left: 0;
 }
+#progress{
+  width: 200px;
+}
 #copy-to-clipboard{
 width: 400px;
 }

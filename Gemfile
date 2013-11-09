@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'pg'
 gem "rails", "4.0.1rc3"
 gem 'jquery-rails', "2.2.1"
+gem "jquery-fileupload-rails"
 gem 'carrierwave'
 gem "therubyracer"
 gem 'inherited_resources', git: "git://github.com/josevalim/inherited_resources.git"

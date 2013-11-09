@@ -23,7 +23,6 @@
 //= require jquery_ujs
 //= reqiure home
 //= require jquery.ui.widget.js
-//= require jquery.iframe-transport.js
-//= require jquery.fileupload.js
+//= require jquery-fileupload/basic
 //= require ember-validations-0.2.1.js
 //= require jspdf.min.js

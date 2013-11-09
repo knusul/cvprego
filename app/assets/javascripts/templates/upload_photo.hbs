@@ -5,5 +5,9 @@
 {{/if }}
 {{#if controllers.application.clickable }}
   <input id="fileupload" type="file" name="files[]" data-url="uploads"  multiple="" style="opacity: 0; display: none;">
+  <div id="progress" class="progress">
+        <div class="progress-bar progress-bar-success">
+        </div>
+    </div>
 {{/if}}
 <div id="files"></div>

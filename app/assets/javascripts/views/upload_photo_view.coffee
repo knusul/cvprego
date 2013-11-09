@@ -17,8 +17,7 @@ App.UploadPhotoView = Ember.View.extend
         $("#progress").html("")
       progressall: (e, data) ->
         progress = parseInt(data.loaded / data.total * 100, 10)
-        console.log "fo"
-        $('#progress .bar').css(
+        $('#progress .progress-bar').css(
             'width',
             progress + '%'
         )
