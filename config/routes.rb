@@ -1,4 +1,7 @@
 Opencv::Application.routes.draw do
+  PagesController.action_methods.each do |action|
+    get "/#{action}", to: "pages##{action}", as: "#{action}_page"
+  end
   devise_for :users, :controllers => {:registrations => "users/registrations", :sessions => 'users/sessions', :passwords => "users/passwords"}
 
   # The priority is based upon order of creation:
@@ -72,5 +75,4 @@ Opencv::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   get '/show' => "home#show"
   post '/uploads' => 'uploads#create'
-  get 'about'
 end
