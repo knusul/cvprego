@@ -1,0 +1,6 @@
+- unless @user.hobbies.empty?
+  %section#hobbies.row-fluid.experience
+    %aside.span3.aside_el
+      %h2 Hobbies
+    .span9
+      = render @user.hobbies
