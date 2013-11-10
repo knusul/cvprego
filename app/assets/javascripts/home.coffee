@@ -1,8 +1,4 @@
 $ ->
-  links = $("ul.nav")
-  links.bind 'click', (e)->
-    $($(e.target).attr('href')).on 'shown', ->
-      $(this).find("[autofocus]:first").focus()
   login_form = $("#login-form form#new_user")
   login_form.bind "ajax:success", (e, data, status, xhr) ->
       if data.success

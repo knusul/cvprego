@@ -17,7 +17,7 @@
             = link_to 'Sign-in', "#login-form",  :'data-toggle' => :modal
           %li
             = link_to 'Sign-up', "#signup-form", 'data-toggle' => "modal"
-#login-form.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "Sign-in", :role => "dialog", :tabindex => "-1"}
+#login-form.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "Sign-in", :role => "dialog"}
   .modal-dialog
     .modal-content
       .modal-header
@@ -27,7 +27,7 @@
         = render :file => 'devise/sessions/new'
       .modal-footer
         %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Close
-#signup-form.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "Sign-up", :role => "dialog", :tabindex => "-1"}
+#signup-form.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "Sign-up", :role => "dialog"}
   .modal-dialog
     .modal-content
       .modal-header
