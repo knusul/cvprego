@@ -10,4 +10,4 @@ App.FocusView = Em.View.extend
   click: ->
     controller = @get('controller')
     if controller.get('controllers.application').get('clickable')
-      controller.focus()
+      controller.focus(@object)

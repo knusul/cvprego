@@ -1,19 +1,26 @@
 {{#if controllers.application.clickable }}
-{{#linkTo "experience" experience}}
-<div class='col-md-3'>
+{{#view App.FocusView object=experience }}
+<div class='col-md-4 clickable'>
+  <p>
   {{ experience.dateRange }}
+  </p>
 </div>
-<div class='col-md-9'>
+<div class='col-md-8'>
   {{experience.fullname}}
-  <p>{{ experience.description }}</p>
+  {{#if experience.role}}
+    <p>
+      {{ experience.role }}
+    </p>
+  {{/if}}
+  {{ experience.description }}
 </div>
-{{/linkTo}}
+{{/view}}
 {{else}}
-<div class='col-md-3'>
+<div class='col-md-4'>
   {{experience.dateRange}}
 </div>
-<div class='col-md-9'>
+<div class='col-md-8'>
   {{experience.fullname}}
-  <p>{{ experience.description }}</p>
+  {{ experience.description }}
 </div>
 {{/if}}

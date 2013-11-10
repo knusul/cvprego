@@ -1,20 +1,22 @@
 {{#if controllers.application.clickable }}
-{{#linkTo "education" education}}
-<div class='row clickable'>
-  <div class='col-md-3'>
+{{#view App.FocusView object=education }}
+  <div class='col-md-4'>
+    <p>
     {{education.dateRange}}
+    </p>
   </div>
-  <div class='col-md-9'>
+  <div class='col-md-8'>
+    <p>
     {{education.fullName}}
+    </p>
   </div>
-</div>
-{{/linkTo}}
+{{/view}}
 {{else}}
 <div class='row clickable'>
-  <div class='col-md-3'>
+  <div class='col-md-4'>
     {{education.dateRange}}
   </div>
-  <div class='col-md-9'>
+  <div class='col-md-8'>
     {{education.fullName}}
   </div>
 </div>
