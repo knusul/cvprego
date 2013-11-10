@@ -76,6 +76,12 @@ p{
 form .form-group input, form .form-group select{
   width: 220px;
 }
+form .form-group input[type="checkbox"]{
+width: 20px;
+}
+form.new-user-form{
+  width: 360px;
+}
 form .form-group input.new-item, form .form-group select-new-item{
   margin-left: 20px;
   width: 150px;
