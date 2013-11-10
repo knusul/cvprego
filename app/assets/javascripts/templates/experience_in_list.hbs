@@ -7,6 +7,11 @@
 </div>
 <div class='col-md-8'>
   {{experience.fullname}}
+  {{#if experience.companyName}}
+    <p>
+      {{ experience.companyName }}
+    </p>
+  {{/if}}
   {{#if experience.role}}
     <p>
       {{ experience.role }}
@@ -21,6 +26,16 @@
 </div>
 <div class='col-md-8'>
   {{experience.fullname}}
+  {{#if experience.companyName}}
+    <p>
+      {{ experience.companyName }}
+    </p>
+  {{/if}}
+  {{#if experience.role}}
+    <p>
+      {{ experience.role }}
+    </p>
+  {{/if}}
   {{ experience.description }}
 </div>
 {{/if}}
