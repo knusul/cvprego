@@ -26,3 +26,4 @@
 //= require jquery-fileupload/basic
 //= require ember-validations-0.2.1.js
 //= require jspdf.min.js
+//= require date.js

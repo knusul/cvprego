@@ -1,6 +1,6 @@
 App.ExperiencesController = Em.ArrayController.extend App.DisplayableMixin,
   needs: ['application']
-  sortProperties: ["toDate", "fromDate"]
+  sortProperties: ["todaDateAsDate", "fromDateAsDate"]
   sortAscending: false
 
   focus: (experience)->

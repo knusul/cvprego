@@ -18,6 +18,15 @@ App.Education  = DS.Model.extend
     "#{fromDate} #{toDate}"
   ).property('fromDate', 'toDate')
 
+  fromDateAsDate: (->
+    Date.parse(@get('fromDate'))
+  ).property('fromDate')
+
+  toDateAsDate: (->
+    console.log Date.parse(@get('toDate'))
+    Date.parse(@get('toDate'))
+  ).property('toDate')
+
   fullName: (->
     name = @get('name')
     name = "" if name is null

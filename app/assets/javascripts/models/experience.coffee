@@ -20,6 +20,15 @@ App.Experience  = DS.Model.extend
     "#{fromDate} #{toDate}"
   ).property('fromDate', 'toDate')
 
+  fromDateAsDate: (->
+    Date.parse(@get('fromDate'))
+  ).property('fromDate')
+
+  toDateAsDate: (->
+    console.log Date.parse(@get('toDate'))
+    Date.parse(@get('toDate'))
+  ).property('toDate')
+
   fullName: (->
     description = @get('description')
     role = @get('role')
