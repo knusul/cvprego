@@ -1,11 +1,11 @@
 {{#if controllers.application.clickable }}
 {{#view App.FocusView object=experience }}
-<div class='col-md-4 clickable'>
+<div class='col-md-3 clickable'>
   <p>
   {{ experience.dateRange }}
   </p>
 </div>
-<div class='col-md-8'>
+<div class='col-md-9'>
   {{experience.fullname}}
   {{#if experience.companyName}}
     <p>
@@ -21,10 +21,10 @@
 </div>
 {{/view}}
 {{else}}
-<div class='col-md-4'>
+<div class='col-md-3'>
   {{experience.dateRange}}
 </div>
-<div class='col-md-8'>
+<div class='col-md-9'>
   {{experience.fullname}}
   {{#if experience.companyName}}
     <p>

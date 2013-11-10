@@ -1,11 +1,11 @@
 {{#if controllers.application.clickable }}
 {{#view App.FocusView object=education }}
-  <div class='col-md-4'>
+  <div class='col-md-3'>
     <p>
     {{education.dateRange}}
     </p>
   </div>
-  <div class='col-md-8'>
+  <div class='col-md-9'>
     <p>
     {{education.fullName}}
     </p>
@@ -13,10 +13,10 @@
 {{/view}}
 {{else}}
 <div class='row clickable'>
-  <div class='col-md-4'>
+  <div class='col-md-3'>
     {{education.dateRange}}
   </div>
-  <div class='col-md-8'>
+  <div class='col-md-9'>
     {{education.fullName}}
   </div>
 </div>
