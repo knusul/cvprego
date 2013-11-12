@@ -1,6 +1,6 @@
 - unless @user.educations.empty?
-  %section#experience.row-fluid.experience
-    %aside.span3.aside_el
+  %section#experience.row-fluid
+    %aside.col-md-4.aside_el
       %h2 Education
-    .span9
+    .col-md-8
       = render @user.educations

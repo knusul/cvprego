@@ -1,6 +1,6 @@
 - unless @user.experiences.empty?
-  %section#experience.row-fluid.experience
+  %section#experience.row-fluid
     %aside.col-md-4.aside_el.row
       %h2 Experience
-    .row
+    .col-md-8
       = render @user.experiences

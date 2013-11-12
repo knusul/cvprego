@@ -1,7 +1,7 @@
-.col-sm-3
+.col-md-4
   .thumbnail.pull-left
     = image_tag "#{@user.card.photo}"
-.col-sm-5
+.col-md-12
   %h1
     = @card.first_name
     = @card.last_name
@@ -11,13 +11,13 @@
         %h2
           Email: #{@card.email}
       = render @card.contact_types
-.col-md-9.row
+.col-md-9
   = render "skills/index"
-.col-md-9.row
+.col-md-9
   = render 'experiences/index'
 .col-md-9
   = render 'educations/index'
 .col-md-9
   = render 'languages/index'
 .col-md-9
-  = render 'languages/index'
+  = render 'hobbies/index'
