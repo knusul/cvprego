@@ -5,11 +5,10 @@ class HomeController < ApplicationController
   def landing; end
   def show
     respond_to do |format|
-      format.html{}
       format.pdf {
         html = render_to_string(:layout => "pdf" , :action => "show.html.haml")
         kit = PDFKit.new(html)
-        kit.stylesheets << "#{Rails.root}/app/assets/stylesheets/application.css"
+        kit.stylesheets << "#{Rails.root}/app/assets/stylesheets/pdf.css"
         send_data(kit.to_pdf, :filename => "#{@user.card.first_name}_#{@user.card.last_name}.pdf", :type => 'application/pdf')
         return
       }

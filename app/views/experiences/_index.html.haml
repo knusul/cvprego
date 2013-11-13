@@ -3,4 +3,4 @@
     %aside.col-md-4.aside_el.row
       %h2 Experience
     .col-md-8
-      = render @user.experiences
+      = render @user.experiences.sort_by(&:parsed_to_date)
