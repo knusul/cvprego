@@ -147,3 +147,6 @@ background-color:#252528;
 textarea.ember-text-area.form-control{
   height: 300px;
 }
+input[readonly='readonly']{
+  background-color: #ebebe4
+}
