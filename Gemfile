@@ -10,6 +10,7 @@ gem 'inherited_resources', git: "git://github.com/josevalim/inherited_resources.
 gem 'has_scope', git: "git://github.com/plataformatec/has_scope.git"
 gem 'devise', git: "git://github.com/plataformatec/devise.git"
 gem 'simple_form', git: "git://github.com/plataformatec/simple_form.git"
+gem 'airbrake'
 
 gem 'pdfkit'
 gem 'haml'
