@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  before_filter :ensure_pdf_format, only: :show
   before_filter :find_user, only: :show
   def index;end
 
@@ -16,6 +17,10 @@ class HomeController < ApplicationController
   end
 
   private
+  def ensure_pdf_format
+    render :nothing => true, :status => 406 unless params[:format] == 'pdf'
+  end
+
   def find_user
     @user = User.find_by_email(params[:email])
     raise ActionController::RoutingError.new('Not Found') unless @user
