@@ -18,6 +18,7 @@ class HomeController < ApplicationController
   private
   def find_user
     @user = User.find_by_email(params[:email])
+    raise ActionController::RoutingError.new('Not Found') unless @user
     @card = @user.card
   end
 end
