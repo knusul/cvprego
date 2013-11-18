@@ -12,13 +12,14 @@
           %h2
             Email: #{@card.email}
         = render @card.contact_types
-.row
-  = render "skills/index"
-.row
-  = render 'experiences/index'
-.row
-  = render 'educations/index'
-.row
-  = render 'languages/index'
-.row
-  = render 'hobbies/index'
+.margin-left
+  .row
+    = render "skills/index"
+  .row
+    = render 'experiences/index'
+  .row
+    = render 'educations/index'
+  .row
+    = render 'languages/index'
+  .row
+    = render 'hobbies/index'
