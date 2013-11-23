@@ -1,9 +1,16 @@
-{{#unless App.currentUser }}
+<div class="col-md-offset-4 clone-url-box">
+  <h4>Your CV address is:
+    {{view App.CopyToClipboard}}
+  </h4>
+</div>
+
+<div class='col-md-12'>
+  <button class="btn" type="submit" {{action edit}}>Back to edit</button>
+</div>
   {{render 'card'}}
   {{render 'skills'}}
   {{render 'experiences'}}
   {{render 'educations'}}
   {{render 'languages'}}
   {{render 'hobbies'}}
-{{/unless}}
 <button class="btn btn-success" type="submit" {{action savePDF}}>Download as PDF</button>

@@ -9,4 +9,5 @@ App.Router.map(function() {
   this.resource('education', {path: 'education/:education_id'});
   this.route("404", { path: ":path"});
   this.route('show', {path: ':email'});
+  this.route('stats');
 });

@@ -1,3 +1,20 @@
+{{#if App.currentUser }}
+    <div class='col-md-12'>
+      <button class="btn btn-success" type="submit" {{action routeToShow}}>Show my CV!</button>
+      <button class="btn btn-success" type="submit" {{action routeToStats}}>Show statistics</button>
+    </div>
+
+<div class="container" id="main">
+  <div id='content col-md-12'>
+    {{render 'card'}}
+    {{render 'skills'}}
+    {{render 'experiences'}}
+    {{render 'educations'}}
+    {{render 'languages'}}
+    {{render 'hobbies'}}
+  </div>
+</div>
+{{/if}}
 {{#unless App.currentUser }}
     {{partial "landing"}}
 {{/unless}}

@@ -1,3 +1,7 @@
+App.Visit  = DS.Model.extend
+  count: DS.attr('number')
+  date: DS.attr('date')
+
 App.Card  = DS.Model.extend Ember.Validations,
   validations:
     firstName:
@@ -10,6 +14,11 @@ App.Card  = DS.Model.extend Ember.Validations,
   email:        DS.attr('string')
   photoUrl:     DS.attr('string')
   contactTypes: DS.hasMany('contactType', embedded: 'always')
+  visits: DS.hasMany('visit')
+
+  visit: ->
+    console.log @store.createRecord('visit').save()
+    console.log "visited"
 
   fullName: (->
     fromDate = @get('firstName')
