@@ -17,7 +17,6 @@
 //= require ember
 //= require ember-data
 //= require_self
-//= require ember
 //= require_tree ./vendor
 //= require md5
 //= require jquery_ujs
