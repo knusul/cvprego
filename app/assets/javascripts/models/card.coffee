@@ -1,4 +1,5 @@
 App.Visit  = DS.Model.extend
+  email: DS.attr('string')
   count: DS.attr('number')
   date: DS.attr('date')
 
@@ -17,8 +18,10 @@ App.Card  = DS.Model.extend Ember.Validations,
   visits: DS.hasMany('visit')
 
   visit: ->
-    console.log @store.createRecord('visit').save()
-    console.log "visited"
+    if App.currentUser is undefined or App.currentUser.email isnt @get('email')
+      visit = @store.createRecord('visit')
+      visit.set('email', @get('email'))
+      visit.save()
 
   fullName: (->
     fromDate = @get('firstName')
