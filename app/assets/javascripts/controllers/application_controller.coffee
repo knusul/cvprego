@@ -10,6 +10,3 @@ App.ApplicationController = Em.ObjectController.extend
       @set('clickable', false)
       @transitionToRoute "stats"
 
-    savePDF: ->
-      window.open "/show?email=#{@get("controllers.card.model.email")}&format=pdf"
-

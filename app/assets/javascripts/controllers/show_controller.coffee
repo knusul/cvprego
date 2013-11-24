@@ -7,7 +7,7 @@ App.ShowController = Em.ObjectController.extend
       @transitionToRoute "index"
 
     savePDF: ->
-      @get('controllers.application').send('savePDF')
+      window.open "/show?email=#{@get("controllers.card.model.email")}&format=pdf"
 
   href: (->
     "http://#{window.location.host}/#/#{@get('controllers.card.model.email')}"

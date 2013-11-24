@@ -1,12 +1,14 @@
+{{#if App.currentUser }}
 <div class="col-md-offset-4 clone-url-box">
   <h4>Your CV address is:
     {{view App.CopyToClipboard}}
   </h4>
 </div>
-
 <div class='col-md-12'>
   <button class="btn" type="submit" {{action edit}}>Back</button>
 </div>
+{{/if }}
+
   {{render 'card'}}
   {{render 'skills'}}
   {{render 'experiences'}}
