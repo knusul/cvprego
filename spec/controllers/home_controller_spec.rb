@@ -5,4 +5,9 @@ describe HomeController do
     expect{ get :show, :format => :pdf }.to raise_error
   end
 
+  it "render 406 on unknown format " do
+    get :show, :format => :html
+    response.code.should == "406"
+  end
+
 end
