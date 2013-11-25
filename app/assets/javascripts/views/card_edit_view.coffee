@@ -4,8 +4,6 @@ App.CardEditView = Em.View.extend
   didInsertElement: ->
     this.$('input:first').focus()
     @$().modal 'show'
-    @$().on 'hidden', =>
-      @get('controller.target.router').transitionTo('index')
 
   willDestroyElement: ->
     @$().modal 'hide'

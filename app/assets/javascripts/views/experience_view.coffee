@@ -3,8 +3,6 @@ App.ExperienceView = Em.View.extend
   didInsertElement: ->
     this.$('textarea:first').focus()
     @$().modal 'show'
-    @$().on 'hidden.bs.modal', =>
-      @get('controller.target.router').transitionTo('index')
 
   willDestroyElement: ->
     @$().modal 'hide'

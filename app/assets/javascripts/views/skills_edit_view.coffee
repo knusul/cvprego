@@ -4,8 +4,6 @@ App.SkillsEditView = Em.View.extend
   didInsertElement: ->
     this.$('input:first').focus()
     @$().modal 'show'
-    @$().on 'hidden.bs.modal', =>
-      @get('controller.target.router').transitionTo('index')
 
   willDestroyElement: ->
     @$().modal('hide')
