@@ -1,14 +1,15 @@
 App.IndexRoute = Ember.Route.extend
   model: ->
-    return Em.RSVP.hash(
-      card: @store.find('card', 'singleton')
-      experiences: @store.all('experience')
-      educations: @store.all('education')
-      skills: @store.all('skill')
-      languages: @store.all('language')
-      hobbies: @store.all('hobby')
-    ).then (hash) ->
-      return Em.RSVP.hash(hash)
+    if App.currentUser
+      return Em.RSVP.hash(
+        card: @store.find('card', 'singleton')
+        experiences: @store.all('experience')
+        educations: @store.all('education')
+        skills: @store.all('skill')
+        languages: @store.all('language')
+        hobbies: @store.all('hobby')
+      ).then (hash) ->
+        return Em.RSVP.hash(hash)
 
   setupController: (controller, model)->
     if App.currentUser
