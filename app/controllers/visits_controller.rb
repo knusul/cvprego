@@ -2,7 +2,8 @@ class VisitsController < InheritedResources::Base
   respond_to :json
 
   def create
-    Visit.increase(permitted_params['visit']['email'])
+    location_params = request.location.data.slice(:city, :country, :longitude, :latitude)
+    Visit.increase(permitted_params['visit']['email'], location_params)
     render :nothing => true
   end
 

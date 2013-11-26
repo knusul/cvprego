@@ -192,6 +192,7 @@ GEM
       railties (>= 3.0.0)
     ffi (1.9.0)
     formatador (0.2.4)
+    geocoder (1.1.8)
     guard (2.2.2)
       formatador (>= 0.2.4)
       listen (~> 2.1)
@@ -380,6 +381,7 @@ DEPENDENCIES
   ember-rails!
   ember-source!
   factory_girl_rails
+  geocoder
   guard-jasmine
   guard-rspec
   haml

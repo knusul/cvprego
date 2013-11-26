@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131123195345) do
+ActiveRecord::Schema.define(version: 20131126195413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +76,16 @@ ActiveRecord::Schema.define(version: 20131123195345) do
     t.string   "name"
   end
 
+  create_table "locations", force: true do |t|
+    t.string   "city"
+    t.string   "country"
+    t.string   "longitude"
+    t.string   "latitude"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "skills", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -102,9 +112,13 @@ ActiveRecord::Schema.define(version: 20131123195345) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "visits", force: true do |t|
-    t.integer "count",   default: 0
+    t.integer "count",     default: 0
     t.date    "date"
     t.integer "card_id"
+    t.string  "city"
+    t.string  "country"
+    t.string  "longitude"
+    t.string  "latitude"
   end
 
 end
