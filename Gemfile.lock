@@ -34,13 +34,6 @@ GIT
       activemodel (>= 4.0.0, < 4.1)
 
 GIT
-  remote: git://github.com/rails-api/active_model_serializers.git
-  revision: ebe3afe7163cd46045a4d992ca22576042e53dfb
-  specs:
-    active_model_serializers (0.9.0.pre)
-      activemodel (>= 3.2)
-
-GIT
   remote: git://github.com/rails/coffee-rails.git
   revision: 471ae515b57d484d494eba7e0a1f1016ebcc57e4
   specs:
@@ -122,6 +115,8 @@ GEM
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
+    active_model_serializers (0.8.1)
+      activemodel (>= 3.0)
     activemodel (4.0.1)
       activesupport (= 4.0.1)
       builder (~> 3.1.0)
@@ -366,7 +361,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_model_serializers!
+  active_model_serializers (= 0.8.1)
   airbrake
   better_errors
   capistrano

@@ -30,7 +30,7 @@ gem "ember-data-source", :git => "git@github.com:knusul/data.git"
 
 
 
-gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
+gem 'active_model_serializers', "0.8.1"
 
 group :development do
   gem 'quiet_assets', '~> 1.0.1'

@@ -1,4 +1,4 @@
-App.StatsController = Em.ObjectController.extend
+App.StatsController = Em.ArrayController.extend
   actions:
     edit: ->
       @set('clickable', true)

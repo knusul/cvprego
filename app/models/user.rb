@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
   has_many :skills, :dependent => :destroy
   has_many :languages, :dependent => :destroy
   has_many :hobbies, :dependent => :destroy
-  has_many :locations, :dependent => :destroy
   after_create :create_card
 
   private

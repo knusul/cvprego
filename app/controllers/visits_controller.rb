@@ -8,7 +8,7 @@ class VisitsController < InheritedResources::Base
   end
 
   def index
-    render :json => current_user.card.visits.from_last_week
+    render json: current_user.card.visits.from_last_week
   end
 
   private

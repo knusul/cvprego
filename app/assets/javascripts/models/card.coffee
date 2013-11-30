@@ -1,8 +1,3 @@
-App.Visit  = DS.Model.extend
-  email: DS.attr('string')
-  count: DS.attr('number')
-  date: DS.attr('date')
-
 App.Card  = DS.Model.extend Ember.Validations,
   validations:
     firstName:

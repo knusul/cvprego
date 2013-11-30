@@ -3,3 +3,28 @@
 </div>
 <legend>Last week visits per day:</legend>
 <canvas id="myChart" width="800" height="400"></canvas>
+
+
+<p>
+<legend>Last week visit locations:</legend>
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th>city</th>
+      <th>coutnry</th>
+      <th>ip</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each controller }}
+  {{#each locations }}
+  <tr>
+    <td>{{city}}</td>
+    <td>{{country}}</td>
+    <td>{{ip}}</td>
+  </tr>
+  {{/each}}
+  {{/each}}
+  </tbody>
+</table>
+</p>
