@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'pg'
+gem 'unicorn'
 gem "rails", "4.0.1"
 gem 'jquery-rails', "2.2.1"
 gem "jquery-fileupload-rails"
@@ -38,7 +39,8 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-ext'
   gem 'rvm-capistrano'
-  gem 'unicorn'
+  gem 'capistrano-unicorn', :require => false
+  gem 'capistrano-nginx-unicorn', require: false, group: :development
 end
 
 
