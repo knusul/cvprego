@@ -1,8 +1,10 @@
 set :stages, %w(production staging)
 set :default_stage, "staging"
-require 'capistrano/ext/multistage'
-
 set :application, "opencv"
+set :user, "opencv"
+require 'capistrano/ext/multistage'
+require 'capistrano-nginx-unicorn'
+
 set :repository,  "git@bitbucket.org:jakubn/opencv.git"
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
@@ -34,7 +36,6 @@ require 'bundler/capistrano'
 ssh_options[:forward_agent] = true
 set :deploy_via, :remote_cache
 set :use_sudo, false
-set :user, "opencv"
 set :rails_env, "production"
 
 set :rvm_type, :system

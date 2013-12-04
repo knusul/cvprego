@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/josevalim/inherited_resources.git
-  revision: cf9c44845c6af46739978fdca8ed06ea840d01a1
+  revision: e4fb9fc804488532014307190812946d63a480a3
   specs:
     inherited_resources (1.4.1)
       has_scope (~> 0.6.0.rc)
@@ -8,9 +8,9 @@ GIT
 
 GIT
   remote: git://github.com/plataformatec/devise.git
-  revision: 69d28f9b0e8150aaec9f3175ddd8d1a20af0633a
+  revision: 01f4a8f441a94c1450c156f7fa30ccd8ddc438db
   specs:
-    devise (3.1.0)
+    devise (3.2.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -27,9 +27,9 @@ GIT
 
 GIT
   remote: git://github.com/plataformatec/simple_form.git
-  revision: b5ae13112ccd6b2ec12a3c5190bc6264c993b42d
+  revision: 0a87f3d842b8901ebaf7474951c18c39570a426f
   specs:
-    simple_form (3.0.0)
+    simple_form (3.0.1)
       actionpack (>= 4.0.0, < 4.1)
       activemodel (>= 4.0.0, < 4.1)
 
@@ -43,16 +43,16 @@ GIT
 
 GIT
   remote: git://github.com/rails/sass-rails.git
-  revision: debabfce664370f18e5ed6e6ae2fb3772883a284
+  revision: 0fcdff806511d0cfaf0bf379f3530ad11cb16f5c
   specs:
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
-      sass (>= 3.1.10)
+      sass (>= 3.2.0)
       sprockets-rails (~> 2.0.0)
 
 GIT
   remote: git@github.com:knusul/data.git
-  revision: c15b8f80a473f8c7c3183d7796a37b353265f50b
+  revision: 772322a611e4574b6cf4723aeae63d24580383b3
   specs:
     ember-data-source (1.0.0.beta.4.canary)
       ember-source
@@ -66,7 +66,7 @@ GIT
 
 GIT
   remote: git@github.com:thoughtbot/capybara-webkit.git
-  revision: e3a5dfdd4d081f8fbd8c3ee11cbc86d00b4e1a16
+  revision: a29abf76f2c2aa52a32d8f5b7055b26b2f04de76
   specs:
     capybara-webkit (1.0.0)
       capybara (~> 2.0, >= 2.0.2)
@@ -81,20 +81,21 @@ GIT
 
 GIT
   remote: https://github.com/emberjs/ember-rails.git
-  revision: e152b0790cb86b87b17265db2c99f222d8942df9
+  revision: dcc6d39f73ce5d870231fce8830d6485c9038f77
   specs:
-    ember-rails (0.13.0)
+    ember-rails (0.14.1)
       active_model_serializers
       barber (>= 0.4.1)
       ember-data-source
       ember-source
       execjs (>= 1.2)
       handlebars-source
+      jquery-rails (>= 1.0.17)
       railties (>= 3.1)
 
 GIT
   remote: https://github.com/seyhunak/twitter-bootstrap-rails
-  revision: 1217908bea066df093b566c737baa23a78532e94
+  revision: 0607d70e520b3716257095c344828509cd751cdd
   branch: bootstrap3
   specs:
     twitter-bootstrap-rails (2.2.7)
@@ -159,7 +160,7 @@ GEM
       capistrano (>= 2.0)
     capistrano-unicorn (0.2.0)
       capistrano (< 3.0)
-    capybara (2.1.0)
+    capybara (2.2.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
@@ -173,46 +174,50 @@ GEM
       timers (~> 1.1.0)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
-    cliver (0.2.2)
-    coderay (1.0.9)
+    coderay (1.1.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
     commonjs (0.2.7)
     database_cleaner (1.2.0)
-    diff-lcs (1.2.4)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     execjs (2.0.2)
-    factory_girl (4.2.0)
+    factory_girl (4.3.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.2.1)
-      factory_girl (~> 4.2.0)
+    factory_girl_rails (4.3.0)
+      factory_girl (~> 4.3.0)
       railties (>= 3.0.0)
-    ffi (1.9.0)
+    faye-websocket (0.7.1)
+      eventmachine (>= 0.12.0)
+      websocket-driver (>= 0.3.1)
+    ffi (1.9.3)
     formatador (0.2.4)
     geocoder (1.1.8)
-    guard (2.2.2)
+    guard (2.2.4)
       formatador (>= 0.2.4)
       listen (~> 2.1)
       lumberjack (~> 1.0)
       pry (>= 0.9.12)
       thor (>= 0.18.1)
-    guard-jasmine (1.18.3)
+    guard-jasmine (1.19.0)
       childprocess
-      guard (>= 1.1.0)
+      guard (>= 2.0.0)
       multi_json
       thor
       tilt
-    guard-rspec (4.0.3)
+    guard-rspec (4.1.1)
       guard (>= 2.1.1)
       rspec (~> 2.14)
-    haml (4.0.3)
+    haml (4.0.4)
       tilt
     handlebars-source (1.0.12)
     highline (1.6.20)
     hike (1.2.3)
-    i18n (0.6.5)
+    http_parser.rb (0.5.3)
+    i18n (0.6.9)
     jquery-fileupload-rails (0.4.1)
       actionpack (>= 3.1)
       railties (>= 3.1)
@@ -220,8 +225,8 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
-    kgio (2.8.0)
-    launchy (2.3.0)
+    kgio (2.8.1)
+    launchy (2.4.2)
       addressable (~> 2.3)
     less (2.4.0)
       commonjs (~> 0.2.7)
@@ -231,7 +236,7 @@ GEM
     letter_opener (1.1.2)
       launchy (~> 2.2)
     libv8 (3.16.14.3)
-    listen (2.1.2)
+    listen (2.3.1)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -240,7 +245,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     method_source (0.8.2)
-    mime-types (1.25)
+    mime-types (1.25.1)
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.2)
@@ -253,19 +258,17 @@ GEM
       net-ssh (>= 2.6.5)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
-    orm_adapter (0.4.0)
+    orm_adapter (0.5.0)
     pdfkit (0.5.4)
     pg (0.17.0)
-    phantomjs (1.8.1.1)
-      poltergeist
-    poltergeist (1.4.1)
-      capybara (~> 2.1.0)
-      cliver (~> 0.2.1)
-      multi_json (~> 1.0)
-      websocket-driver (>= 0.2.0)
+    phantomjs (1.9.2.0)
+    poltergeist (1.1.0)
+      capybara (~> 2.0, >= 2.0.1)
+      faye-websocket (~> 0.4, >= 0.4.4)
+      http_parser.rb (~> 0.5.3)
     polyglot (0.3.3)
-    pry (0.9.12.2)
-      coderay (~> 1.0.5)
+    pry (0.9.12.4)
+      coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
     pry-nav (0.2.3)
@@ -292,7 +295,7 @@ GEM
       activesupport (= 4.0.1)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    raindrops (0.11.0)
+    raindrops (0.12.0)
     rake (10.1.0)
     rb-fsevent (0.9.3)
     rb-inotify (0.9.2)
@@ -305,8 +308,8 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    rspec-core (2.14.6)
-    rspec-expectations (2.14.3)
+    rspec-core (2.14.7)
+    rspec-expectations (2.14.4)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.4)
     rspec-rails (2.14.0)
@@ -325,8 +328,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0.0)
       websocket (~> 1.0.4)
-    slop (3.4.6)
-    sprockets (2.10.0)
+    slop (3.4.7)
+    sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -347,17 +350,17 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.38)
-    uglifier (2.3.0)
+    uglifier (2.3.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unicorn (4.6.2)
+    unicorn (4.7.0)
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
     websocket (1.0.7)
-    websocket-driver (0.3.0)
+    websocket-driver (0.3.1)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
