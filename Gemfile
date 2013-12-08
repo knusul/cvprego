@@ -38,7 +38,6 @@ group :development do
   gem "letter_opener"
   gem 'capistrano'
   gem 'capistrano-ext'
-  gem 'rvm-capistrano'
   gem 'capistrano-unicorn', :require => false
   gem 'capistrano-nginx-unicorn', require: false, group: :development
 end
