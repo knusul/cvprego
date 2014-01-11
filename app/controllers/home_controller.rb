@@ -7,11 +7,8 @@ class HomeController < ApplicationController
   def show
     respond_to do |format|
       format.pdf {
-        html = render_to_string(:layout => "pdf" , :action => "show.html.haml")
-        kit = PDFKit.new(html)
-        kit.stylesheets << "#{Rails.root}/app/assets/stylesheets/pdf.css"
-        send_data(kit.to_pdf, :filename => "#{@user.card.first_name}_#{@user.card.last_name}.pdf", :type => 'application/pdf')
-        return
+        user_pdf = CvPdf.new user: @user
+        send_data user_pdf.render, filename: "#{user_pdf.filename}", type: "application/pdf"
       }
     end
   end
@@ -23,7 +20,7 @@ class HomeController < ApplicationController
 
   def find_user
     @user = User.find_by_email(params[:email])
-    raise ActionController::RoutingError.new('Not Found') unless @user
+    raise ActionController::RoutingError.new('User not Found') unless @user
     @card = @user.card
   end
 end

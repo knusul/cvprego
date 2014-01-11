@@ -10,4 +10,13 @@ describe HomeController do
     response.code.should == "406"
   end
 
+  describe "#show" do
+    it "renders pdf for pdf type" do
+      user = FactoryGirl.create :user
+      get :show, email: user.email, format: :pdf
+      response.headers['Content-Disposition'].should == 'pdf'
+      response.headers['Content-Transfer-Encoding'].should == 'binary'
+    end
+  end
+
 end

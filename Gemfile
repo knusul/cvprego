@@ -14,7 +14,7 @@ gem 'simple_form', git: "git://github.com/plataformatec/simple_form.git"
 gem 'airbrake'
 gem 'geocoder'
 
-gem 'pdfkit'
+gem 'prawn'
 gem 'haml'
 gem 'rmagick'
 
