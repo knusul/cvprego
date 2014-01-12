@@ -15,8 +15,8 @@ class CvPdf < Prawn::Document
 
   private
   def hline
-    move_down 5
-    stroke_dashed_horizontal_line(0, 12.cm, :line_length => 1.0.cm, :space_length => 1.mm)
+    move_down 15
+    stroke_dashed_horizontal_line(0, 12.cm, :line_length => 4.0.cm, :space_length => 0.0.mm)
     move_down 15
   end
   def structure_of_page
@@ -61,15 +61,15 @@ class CvPdf < Prawn::Document
     return if @user.experiences.empty?
     header "Proffesional experience"
     @user.experiences.each do |experience|
-      position = cursor
-      bounding_box([0, position], :width => 150) do
+
+      span( 150, position: 0) do
         text "#{experience.from_date} - #{experience.to_date}"
       end
 
-      bounding_box([180, position], :width => 350) do
-        text "#{experience.role}: #{experience.company_name}"
-        text experience.description
-      end
+        span( 350, position: 300) do
+          text "#{experience.role}: #{experience.company_name}"
+          text experience.description
+        end
     end
   end
 

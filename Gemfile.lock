@@ -275,7 +275,7 @@ GEM
       faye-websocket (~> 0.4, >= 0.4.4)
       http_parser.rb (~> 0.5.3)
     polyglot (0.3.3)
-    prawn (0.13.1)
+    prawn (0.13.2)
       pdf-reader (~> 1.2)
       ruby-rc4
       ttfunk (~> 1.0.3)
