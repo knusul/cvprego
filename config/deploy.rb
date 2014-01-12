@@ -3,15 +3,10 @@ set :default_stage, "staging"
 set :application, "opencv"
 set :user, "opencv"
 require 'capistrano/ext/multistage'
-require 'capistrano-nginx-unicorn'
 
 default_run_options[:shell] = '/bin/bash'
 set :ruby_version, "2.0.0-p353"
-set :chruby_config, "/usr/local/share/chruby/chruby.sh"
-set :set_ruby_cmd, "source #{chruby_config} && chruby #{ruby_version}"
-set(:bundle_cmd) {
-  "#{set_ruby_cmd} && exec bundle"
-}
+set :bundle_cmd,    "chruby-exec #{ruby_version} -- bundle"
 
 set :repository,  "git@bitbucket.org:jakubn/opencv.git"
 
