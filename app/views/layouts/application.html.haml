@@ -1,9 +1,11 @@
 !!!
 %html
   %head
-    %title CVPrego
+    %title Best CV Curriculum Vitae and Resume pdf converter - Visitors tracker 
     - if user_signed_in?
       %meta{:content => UserSerializer.new(current_user).to_json(root: false), :name => "current-user"}/
+      %meta{content: "pdf, generation, cv, curriculum, curriculum vitae, resume, cover letter, letter, c.v", name: "keywords"}/
+      %meta{content: "Quick and robust CV generation tool", name: "description"}/
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = javascript_include_tag params[:controller]
