@@ -66,6 +66,8 @@ article.in_spacing{
 }
 .border-bottom {
   border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 div.clickable:hover, li.clickable{
   text-decoration: none;
