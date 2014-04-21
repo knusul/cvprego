@@ -27,6 +27,9 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails", :git => "https://github.com/seyhunak/twitter-bootstrap-rails", :branch => 'bootstrap3'
 gem "ember-rails", :git => "https://github.com/emberjs/ember-rails.git"
 
+gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+
 
 
 gem 'active_model_serializers', "0.8.1"
